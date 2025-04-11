@@ -1,36 +1,176 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pan African Informatics Olympiad (PAIO) Website
 
-## Getting Started
+![PAIO Website](https://img.shields.io/badge/PAIO-2025-blue)
+![Next.js](https://img.shields.io/badge/Next.js-15.2.0-black)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4.1-38bdf8)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-First, run the development server:
+Official website for the Pan African Informatics Olympiad (PAIO) 2025, a prestigious informatics competition that brings together talented young programmers from across the African continent.
+
+## 📋 Table of Contents
+
+- [Features](#-features)
+- [Technologies Used](#-technologies-used)
+- [Getting Started](#-getting-started)
+- [Project Structure](#-project-structure)
+- [Documentation](#-documentation)
+- [Contributing](#-contributing)
+- [License](#-license)
+
+## ✨ Features
+
+- **Modern Design**: Fully responsive design with fluid animations powered by Framer Motion
+- **Multi-language Support**: Support for different languages
+- **Official Documents**: Access to competition regulations and documents in multiple languages
+- **Competition Information**: Details about eligibility, team composition, and competition format
+- **Key Dates**: Timeline of important dates related to the competition
+- **Frequently Asked Questions**: Comprehensive FAQ section
+- **Contact Information**: Multiple ways to get in touch with the organizers
+
+## 🛠 Technologies Used
+
+- **Framework**: Next.js 15.2.0
+- **Styling**: TailwindCSS 3.4.1
+- **Animation**: Framer Motion
+- **Icons**: Lucide React
+- **UI Components**: Custom components and shadcn/ui
+- **TypeScript**: For type safety and better development experience
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18.x or later
+- npm, yarn, or bun package manager
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+cd PAIOWebsite
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+bun install
+```
+
+3. Start the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
 # or
-pnpm dev
-# or
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📂 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+PAIOWebsite/
+├── src/                    # Source files
+│   ├── app/                # Next.js App Router
+│   │   ├── regulations/    # Regulations page
+│   │   ├── important-dates/# Important dates page
+│   │   ├── sponsors/       # Sponsors page
+│   │   ├── faqs/           # FAQs page
+│   │   ├── contact/        # Contact page
+│   │   ├── media/          # Media page
+│   │   ├── visiting-south-africa/ # Visiting info page
+│   │   ├── globals.css     # Global styles
+│   │   ├── layout.tsx      # Root layout
+│   │   └── page.tsx        # Homepage
+│   ├── components/         # Reusable components
+│   │   ├── Footer.tsx      # Footer component
+│   │   ├── Navbar.tsx      # Navigation component
+│   │   ├── LanguageSelector.tsx # Language selector
+│   │   └── ui/             # UI components
+│   └── lib/                # Utility functions and libraries
+│       └── utils.ts        # Utility functions
+├── public/                 # Static assets
+│   └── AOA.svg             # African Olympiad Academy logo
+├── build/                  # Build output
+├── next.config.js          # Next.js configuration
+├── tailwind.config.ts      # Tailwind CSS configuration
+├── tsconfig.json           # TypeScript configuration
+└── package.json            # Project dependencies
+```
 
-## Learn More
+## 📚 Documentation
 
-To learn more about Next.js, take a look at the following resources:
+### Pages
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Home**: Introduction to PAIO with key information and registration links
+- **Regulations**: Official competition rules and guidelines
+- **Important Dates**: Timeline of registration deadlines and competition dates
+- **Sponsors**: Information about sponsors and supporting organizations
+- **FAQs**: Answers to frequently asked questions about the competition
+- **Contact**: Ways to get in touch with the organization team
+- **Visiting South Africa**: Information for participants visiting South Africa
+- **Media**: Press releases and news about the competition
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Adding Content
 
-## Deploy on Vercel
+#### Adding New Regulations Documents
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Update the document links in `src/app/regulations/page.tsx`:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```jsx
+<motion.a
+  href="http://example.com/path/to/document.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  whileHover={{ scale: 1.02 }}
+  whileTap={{ scale: 0.98 }}
+  className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700 text-white font-medium rounded-lg transition-all shadow-sm"
+>
+  <Download className="mr-2 h-4 w-4" />
+  Download
+</motion.a>
+```
+
+#### Updating Important Dates
+
+1. Modify the dates in `src/app/important-dates/page.tsx`:
+
+```jsx
+<tr className="transition-colors hover:bg-blue-50/30">
+  <td className="py-4 px-6 whitespace-nowrap text-sm font-medium text-gray-900">
+    Sat, Sep 13
+  </td>
+  <td className="py-4 px-6 whitespace-nowrap text-sm text-gray-500">
+    —
+  </td>
+  <td className="py-4 px-6 whitespace-nowrap text-sm text-gray-700 font-medium">
+    Contest Start
+  </td>
+</tr>
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
+
+Created and maintained by the Pan African Informatics Olympiad committee © 2025
