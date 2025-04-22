@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Calendar, Clock, Users, Award } from "lucide-react";
+import { Calendar, Clock, Users, Award, BookOpen, BookCheck } from "lucide-react";
 
 export default function ImportantDates() {
   // Animation variants
@@ -95,6 +95,52 @@ export default function ImportantDates() {
           >
             <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
               <div className="bg-gradient-to-br from-blue-500 to-indigo-500 p-4 rounded-xl text-white flex items-center justify-center min-w-[80px] h-[80px]">
+                <BookOpen className="h-10 w-10" />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  Call For Tasks Open
+                </h3>
+                <p className="text-xl font-semibold text-primary mb-1">
+                  April 23, 2025
+                </p>
+                <p className="text-gray-600">
+                  Submit proposals for contest questions. See [IOI 2025 Call For Tasks](https://ioi2025.bo/call-for-tasks.html) for task criteria. Submit [here](https://docs.google.com/forms/d/1Lsto7UKJrIBOKl5JBcjLyFA4-qfaE5cdeAhYvp-ZnD8/edit)
+                </p>
+              </div>
+              
+            </div>
+            
+          </motion.div>
+          <motion.div
+            variants={fadeInUp}
+            className="p-6 rounded-xl border border-blue-100 bg-gradient-to-r from-white to-blue-50 shadow-sm my-4"
+          >
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
+              <div className="bg-gradient-to-br from-blue-500 to-indigo-500 p-4 rounded-xl text-white flex items-center justify-center min-w-[80px] h-[80px]">
+                <BookCheck className="h-10 w-10" />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  Call For Tasks Close
+                </h3>
+                <p className="text-xl font-semibold text-primary mb-1">
+                  June 23, 2025
+                </p>
+                <p className="text-gray-600">
+                  Finalize contest questions
+                </p>
+              </div>
+              
+            </div>
+            
+          </motion.div>
+          <motion.div
+            variants={fadeInUp}
+            className="p-6 rounded-xl border border-blue-100 bg-gradient-to-r from-white to-blue-50 shadow-sm my-4"
+          >
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
+              <div className="bg-gradient-to-br from-blue-500 to-indigo-500 p-4 rounded-xl text-white flex items-center justify-center min-w-[80px] h-[80px]">
                 <Calendar className="h-10 w-10" />
               </div>
               <div>
@@ -102,13 +148,15 @@ export default function ImportantDates() {
                   Registration Deadline
                 </h3>
                 <p className="text-xl font-semibold text-primary mb-1">
-                  September 13, 2025
+                  June 30, 2025
                 </p>
                 <p className="text-gray-600">
                   Last day to confirm your team's participation in PAIO 2025
                 </p>
               </div>
+              
             </div>
+            
           </motion.div>
         </motion.section>
 
@@ -154,135 +202,41 @@ export default function ImportantDates() {
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-100">
+              <tr className="transition-colors hover:bg-blue-50/30">
+                  <td className="py-4 px-6 whitespace-nowrap text-sm font-medium text-gray-900">
+                    Fri, Sep 12
+                  </td>
+                  <td className="py-4 px-6 whitespace-nowrap text-sm text-primary font-medium">
+                    Opening Ceremony
+                  </td>
+                  <td className="py-4 px-6 whitespace-nowrap text-sm text-gray-700">
+                    Jury Meeting
+                    <br />
+                    Opening Ceremony
+                  </td>
+                </tr>
                 <tr className="transition-colors hover:bg-blue-50/30">
                   <td className="py-4 px-6 whitespace-nowrap text-sm font-medium text-gray-900">
                     Sat, Sep 13
                   </td>
-                  <td className="py-4 px-6 whitespace-nowrap text-sm text-gray-500">
-                    —
+                  <td className="py-4 px-6 whitespace-nowrap text-sm font-semibold text-primary">
+                    Contest
                   </td>
                   <td className="py-4 px-6 whitespace-nowrap text-sm text-gray-700 font-medium">
                     Contest Start
                   </td>
                 </tr>
-                <tr className="transition-colors hover:bg-blue-50/30">
-                  <td className="py-4 px-6 whitespace-nowrap text-sm font-medium text-gray-900">
-                    Sun, Aug 11
-                  </td>
-                  <td className="py-4 px-6 whitespace-nowrap text-sm text-gray-500">
-                    —
-                  </td>
-                  <td className="py-4 px-6 whitespace-nowrap text-sm text-gray-700 font-medium">
-                    Leaders Arrive
-                  </td>
-                </tr>
-                <tr className="transition-colors hover:bg-blue-50/30">
-                  <td className="py-4 px-6 whitespace-nowrap text-sm font-medium text-gray-900">
-                    Mon, Aug 12
-                  </td>
-                  <td className="py-4 px-6 whitespace-nowrap text-sm text-gray-500">
-                    —
-                  </td>
-                  <td className="py-4 px-6 whitespace-nowrap text-sm text-gray-700 font-medium">
-                    Jury Meeting
-                  </td>
-                </tr>
                 <tr className="bg-gradient-to-r from-blue-50/50 to-transparent transition-colors hover:bg-blue-50/80">
                   <td className="py-4 px-6 whitespace-nowrap text-sm font-medium text-gray-900">
-                    Tue, Aug 13
-                  </td>
-                  <td className="py-4 px-6 whitespace-nowrap text-sm text-primary font-medium">
-                    Arrival
-                  </td>
-                  <td className="py-4 px-6 whitespace-nowrap text-sm text-gray-700 font-medium">
-                    Jury Meeting
-                  </td>
-                </tr>
-                <tr className="transition-colors hover:bg-blue-50/30">
-                  <td className="py-4 px-6 whitespace-nowrap text-sm font-medium text-gray-900">
-                    Wed, Aug 14
-                  </td>
-                  <td className="py-4 px-6 whitespace-nowrap text-sm text-primary font-medium">
-                    Opening Ceremony
-                  </td>
-                  <td className="py-4 px-6 whitespace-nowrap text-sm text-gray-700">
-                    Jury Meeting
-                    <br />
-                    Opening Ceremony
-                  </td>
-                </tr>
-                <tr className="bg-gradient-to-r from-blue-50/50 to-transparent transition-colors hover:bg-blue-50/80">
-                  <td className="py-4 px-6 whitespace-nowrap text-sm font-medium text-gray-900">
-                    Thu, Aug 15
-                  </td>
-                  <td className="py-4 px-6 whitespace-nowrap text-sm font-semibold text-primary">
-                    Paper 1
-                  </td>
-                  <td className="py-4 px-6 whitespace-nowrap text-sm text-gray-700">
-                    Marking Schemes
-                    <br />
-                    Small excursion
-                  </td>
-                </tr>
-                <tr className="transition-colors hover:bg-blue-50/30">
-                  <td className="py-4 px-6 whitespace-nowrap text-sm font-medium text-gray-900">
-                    Fri, Aug 16
-                  </td>
-                  <td className="py-4 px-6 whitespace-nowrap text-sm font-semibold text-primary">
-                    Paper 2
-                  </td>
-                  <td className="py-4 px-6 whitespace-nowrap text-sm text-gray-700">
-                    Marking Schemes
-                    <br />
-                    Coordination
-                  </td>
-                </tr>
-                <tr className="bg-gradient-to-r from-blue-50/50 to-transparent transition-colors hover:bg-blue-50/80">
-                  <td className="py-4 px-6 whitespace-nowrap text-sm font-medium text-gray-900">
-                    Sat, Aug 17
-                  </td>
-                  <td className="py-4 px-6 whitespace-nowrap text-sm text-primary font-medium">
-                    Excursion
-                  </td>
-                  <td className="py-4 px-6 whitespace-nowrap text-sm text-gray-700 font-medium">
-                    Coordination
-                  </td>
-                </tr>
-                <tr className="transition-colors hover:bg-blue-50/30">
-                  <td className="py-4 px-6 whitespace-nowrap text-sm font-medium text-gray-900">
-                    Sun, Aug 18
-                  </td>
-                  <td className="py-4 px-6 whitespace-nowrap text-sm text-primary font-medium">
-                    Excursion
-                  </td>
-                  <td className="py-4 px-6 whitespace-nowrap text-sm text-gray-700">
-                    Coordination
-                    <br />
-                    Jury Meeting
-                  </td>
-                </tr>
-                <tr className="bg-gradient-to-r from-blue-50/50 to-transparent transition-colors hover:bg-blue-50/80">
-                  <td className="py-4 px-6 whitespace-nowrap text-sm font-medium text-gray-900">
-                    Mon, Aug 19
+                    Sun, Sep 14
                   </td>
                   <td className="py-4 px-6 whitespace-nowrap text-sm text-primary font-semibold">
-                    Closing Ceremony
+                    AI Friendly & Closing Ceremony
                   </td>
                   <td className="py-4 px-6 whitespace-nowrap text-sm text-gray-700">
                     Jury Meeting
                     <br />
                     Closing Ceremony
-                  </td>
-                </tr>
-                <tr className="transition-colors hover:bg-blue-50/30">
-                  <td className="py-4 px-6 whitespace-nowrap text-sm font-medium text-gray-900">
-                    Tue, Aug 20
-                  </td>
-                  <td className="py-4 px-6 whitespace-nowrap text-sm text-gray-500">
-                    Departure
-                  </td>
-                  <td className="py-4 px-6 whitespace-nowrap text-sm text-gray-500">
-                    Departure
                   </td>
                 </tr>
               </tbody>
@@ -320,7 +274,7 @@ export default function ImportantDates() {
                 </h3>
               </div>
               <p className="text-gray-700">
-                August 15-16: The main competition days where contestants solve
+                September 13: The main competition day where contestants solve
                 challenging informatics problems.
               </p>
             </motion.div>
@@ -338,7 +292,7 @@ export default function ImportantDates() {
                 </h3>
               </div>
               <p className="text-gray-700">
-                August 14 & 19: Opening and closing ceremonies to celebrate
+                September 12 & September 14: Opening and closing ceremonies to celebrate
                 participants and winners.
               </p>
             </motion.div>
@@ -356,7 +310,7 @@ export default function ImportantDates() {
                 </h3>
               </div>
               <p className="text-gray-700">
-                September 13: Final deadline to register your team for the
+                July 13: Final deadline to register your team for the
                 competition.
               </p>
             </motion.div>

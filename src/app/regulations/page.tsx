@@ -13,6 +13,7 @@ import {
   Code,
   FileDown,
   Globe,
+  Eye,
 } from "lucide-react";
 
 export default function Regulations() {
@@ -127,63 +128,22 @@ export default function Regulations() {
                   <div className="flex items-center justify-between bg-white/80 p-4 rounded-lg border border-green-100 hover:shadow-md transition-shadow">
                     <span className="text-lg flex items-center">
                       <FileDown className="h-5 w-5 mr-2 text-green-600" />
-                      PAMO-2025-Regulations
+                      PAIO-2025-Regulations
                     </span>
                     <motion.a
-                      href="http://pamo24.ms.wits.ac.za/wp-content/uploads/PAMO-2024-Regulations.docx"
+                      href="https://docs.google.com/document/d/11tjRLzlILvj_6STmVJ3wtYcRDZtmwxWLbZ9L37oEUiU/edit?tab=t.0"
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                       className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700 text-white font-medium rounded-lg transition-all shadow-sm"
                     >
-                      <Download className="mr-2 h-4 w-4" />
-                      Download
+                      <Eye className="mr-2 h-4 w-4" />
+                      View
                     </motion.a>
                   </div>
                 </div>
-
-                {/* Arabic Documents */}
-                <div className="space-y-4">
-                  <h3 className="text-xl font-semibold text-green-700">
-                    Arabic / العربية
-                  </h3>
-                  <div className="flex items-center justify-between bg-white/80 p-4 rounded-lg border border-green-100 hover:shadow-md transition-shadow">
-                    <span className="text-lg flex items-center">
-                      <FileDown className="h-5 w-5 mr-2 text-green-600" />
-                      لوائح-المشاركة-PAMO2024
-                    </span>
-                    <motion.a
-                      href="http://pamo24.ms.wits.ac.za/wp-content/uploads/لوائح-المشاركة-PAMO2024.docx"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                      className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700 text-white font-medium rounded-lg transition-all shadow-sm"
-                    >
-                      <Download className="mr-2 h-4 w-4" />
-                      Download
-                    </motion.a>
-                  </div>
-
-                  <div className="flex items-center justify-between bg-white/80 p-4 rounded-lg border border-green-100 hover:shadow-md transition-shadow">
-                    <span className="text-lg flex items-center">
-                      <FileDown className="h-5 w-5 mr-2 text-green-600" />
-                      PAMO-2024-لوائح-المشاركة-عن-بعد
-                    </span>
-                    <motion.a
-                      href="http://pamo24.ms.wits.ac.za/wp-content/uploads/PAMO-2024-لوائح-المشاركة-عن-بعد.docx"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                      className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700 text-white font-medium rounded-lg transition-all shadow-sm"
-                    >
-                      <Download className="mr-2 h-4 w-4" />
-                      Download
-                    </motion.a>
-                  </div>
-                </div>
+          
               </div>
             </motion.section>
 
@@ -262,9 +222,8 @@ export default function Regulations() {
                     <span className="h-2 w-2 rounded-full bg-gradient-to-br from-indigo-500 to-indigo-600 mr-3 mt-2.5"></span>
                     <p className="text-lg">
                       <span className={highlightedTextStyle}>
-                        Six contestants
+                        Four contestants
                       </span>
-                      : Three girls and three boys.
                     </p>
                   </li>
                   <li className="flex items-start">
@@ -399,18 +358,11 @@ export default function Regulations() {
                     <p className="text-lg">
                       Individual medals are awarded to approximately{" "}
                       <span className={highlightedTextStyle}>50%</span> of
-                      contestants:
+                      contestants. Top 1/12 Gold, next 1/6 Silver, next 1/4 Bronze.
                     </p>
-                    <ul className="list-disc ml-12 mt-2 space-y-2">
-                      <li className="text-lg">Gold: top 1/12 of contestants</li>
-                      <li className="text-lg">
-                        Silver: next 1/6 of contestants
-                      </li>
-                      <li className="text-lg">
-                        Bronze: next 1/4 of contestants
-                      </li>
-                    </ul>
+              
                   </li>
+                  
                   <li className="flex items-start mt-4">
                     <span className="h-2 w-2 rounded-full bg-gradient-to-br from-indigo-500 to-indigo-600 mr-3 mt-2.5"></span>
                     <p className="text-lg">

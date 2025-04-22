@@ -25,11 +25,6 @@ const navItems = [
   { path: "/sponsors", label: "Sponsors", priority: "high" },
   { path: "/faqs", label: "FAQs", priority: "high" },
   { path: "/contact", label: "Contact", priority: "medium" },
-  {
-    path: "/visiting-south-africa",
-    label: "Visiting South Africa",
-    priority: "low",
-  },
   { path: "/media", label: "Media", priority: "low" },
 ];
 

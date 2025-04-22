@@ -20,12 +20,12 @@ export default function FAQs() {
     {
       question: "How are teams composed?",
       answer:
-        "Each participating country team consists of six contestants, three girls and three boys, a team leader, a deputy team leader and observers.",
+        "Each participating country team consists of four contestants, a team leader, a deputy team leader and observers.",
     },
     {
       question: "What is the format of the competition?",
       answer:
-        "The competition usually spans two days and includes two rounds of challenging mathematical problems that test various areas of mathematics such as algebra, geometry, combinatorics, and number theory.",
+        "The competition usually spans one days and includes five hours of problems that test various areas of computer science such as algorithms, data structures, and programming.",
     },
     {
       question: "When and where is PAIO 2025 taking place?",
@@ -44,7 +44,7 @@ export default function FAQs() {
     {
       question: "Is there a registration fee?",
       answer:
-        "Yes, there is a registration fee for each participating country. Fee details are provided during the registration process and may vary based on the number of participants.",
+        "There is currently no registration fee this year thanks to our generous sponsor, African Olympiad Academy. There may be a fee in subsequent years though.",
     },
   ];
 

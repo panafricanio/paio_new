@@ -265,7 +265,7 @@ export default function Home() {
                       •
                     </span>
                     <span>
-                      <strong>Date:</strong> September 13, 2025
+                      <strong>Date:</strong> September 12 - 14, 2025
                     </span>
                   </li>
                   <li className="flex items-start">
@@ -281,7 +281,7 @@ export default function Home() {
                       •
                     </span>
                     <span>
-                      <strong>Duration:</strong> Two-day event with challenging
+                      <strong>Duration:</strong> Three-day event with challenging
                       rounds
                     </span>
                   </li>
@@ -314,8 +314,8 @@ export default function Home() {
                       •
                     </span>
                     <span>
-                      <strong>Team Composition:</strong> Six contestants per
-                      country (three girls, three boys)
+                      <strong>Team Composition:</strong> Four contestants per
+                      country 
                     </span>
                   </li>
                   <li className="flex items-start">

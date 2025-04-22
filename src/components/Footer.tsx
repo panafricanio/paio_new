@@ -34,11 +34,6 @@ const navItems: NavItemType[] = [
   { path: "/faqs", label: "FAQs", priority: "medium" },
   { path: "/sponsors", label: "Sponsors", priority: "medium" },
   { path: "/contact", label: "Contact", priority: "medium" },
-  {
-    path: "/visiting-south-africa",
-    label: "Visiting South Africa",
-    priority: "low",
-  },
   { path: "/media", label: "Media", priority: "low" },
 ];
 
@@ -182,7 +177,7 @@ const Footer = () => {
                   className="text-gray-400 mt-1 flex-shrink-0"
                 />
                 <span className="text-gray-600 text-sm">
-                  Pretoria, South Africa
+                  Kigali, Rwanda
                 </span>
               </li>
             </ul>
