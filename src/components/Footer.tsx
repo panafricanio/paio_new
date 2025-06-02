@@ -31,6 +31,7 @@ const navItems: NavItemType[] = [
     priority: "high",
   },
   { path: "/important-dates", label: "Important Dates", priority: "high" },
+  { path: "/committee", label: "Committee", priority: "high" },
   { path: "/faqs", label: "FAQs", priority: "medium" },
   { path: "/sponsors", label: "Sponsors", priority: "medium" },
   { path: "/contact", label: "Contact", priority: "medium" },

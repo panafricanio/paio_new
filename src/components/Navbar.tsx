@@ -22,6 +22,7 @@ const navItems = [
     priority: "high",
   },
   { path: "/important-dates", label: "Important Dates", priority: "high" },
+  { path: "/committee", label: "Committee", priority: "high" },
   { path: "/sponsors", label: "Sponsors", priority: "high" },
   { path: "/faqs", label: "FAQs", priority: "high" },
   { path: "/contact", label: "Contact", priority: "medium" },
