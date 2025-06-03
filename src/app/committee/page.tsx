@@ -110,7 +110,6 @@ export default function Committee() {
               <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
                 Anton Tsypko
               </h3>
-              <p className="text-gray-600 text-center mb-4">International Scientific Committee</p>
               <div className="space-y-2">
                 <div className="flex items-center text-gray-700">
                   <Award className="h-5 w-5 mr-2 text-blue-500" />
@@ -121,6 +120,162 @@ export default function Committee() {
                   <span>Team Leader, Ukraine</span>
                 </div>
               </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Organizing Committee Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-white to-purple-50/50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-purple-700 to-indigo-600 bg-clip-text text-transparent">
+              Organizing Committee
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Meet the team behind the organization and website of PAIO
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            {/* Joel Lee Card */}
+            <motion.div
+              className="bg-gradient-to-br from-white to-purple-50 border border-purple-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
+              variants={fadeInUp}
+              whileHover={{ y: -5 }}
+            >
+              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-purple-100">
+                <Image
+                  src="https://x.com/__joellee__/photo"
+                  alt="Joel Lee"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-purple-700 to-indigo-500 bg-clip-text text-transparent">
+                Joel Lee
+              </h3>
+              <p className="text-gray-600 text-center mb-4">Software Engineer</p>
+            </motion.div>
+
+            {/* NIYOKWIZERWA Jean Paul Elisa Card */}
+            <motion.div
+              className="bg-gradient-to-br from-white to-purple-50 border border-purple-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
+              variants={fadeInUp}
+              whileHover={{ y: -5 }}
+            >
+              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-purple-100">
+                <Image
+                  src="https://www.linkedin.com/in/jean-paul-elisa/overlay/photo/"
+                  alt="NIYOKWIZERWA Jean Paul Elisa"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-purple-700 to-indigo-500 bg-clip-text text-transparent">
+                NIYOKWIZERWA Jean Paul Elisa
+              </h3>
+              <p className="text-gray-600 text-center mb-4">Software Engineer, Website Creator</p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Team Leaders Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-white to-blue-50/50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-700 to-indigo-600 bg-clip-text text-transparent">
+              Team Leaders
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Meet the team leaders from participating countries
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            {/* Hirwa Arnold Card */}
+            <motion.div
+              className="bg-gradient-to-br from-white to-blue-50 border border-blue-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
+              variants={fadeInUp}
+              whileHover={{ y: -5 }}
+            >
+              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-100">
+                <Image
+                  src="/placeholder-profile.png"
+                  alt="Hirwa Arnold"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
+                Hirwa Arnold
+              </h3>
+              <p className="text-gray-600 text-center mb-4">Rwanda</p>
+            </motion.div>
+
+            {/* Raouf Ould ali Card */}
+            <motion.div
+              className="bg-gradient-to-br from-white to-blue-50 border border-blue-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
+              variants={fadeInUp}
+              whileHover={{ y: -5 }}
+            >
+              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-100">
+                <Image
+                  src="https://stats.ioinformatics.org/img/photos/2024/6037.png"
+                  alt="Raouf Ould ali"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
+                Raouf Ould ali
+              </h3>
+              <p className="text-gray-600 text-center mb-4">Algeria</p>
+            </motion.div>
+
+            {/* Prof James Katende Card */}
+            <motion.div
+              className="bg-gradient-to-br from-white to-blue-50 border border-blue-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
+              variants={fadeInUp}
+              whileHover={{ y: -5 }}
+            >
+              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-100">
+                <Image
+                  src="/placeholder-profile.png"
+                  alt="Prof James Katende"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
+                Prof James Katende
+              </h3>
+              <p className="text-gray-600 text-center mb-4">Kenya</p>
             </motion.div>
           </motion.div>
         </div>
