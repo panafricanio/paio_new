@@ -345,7 +345,7 @@ export default function Committee() {
                 />
               </div>
               <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
-                TBD
+                Dalton Omondi
               </h3>
               <p className="text-gray-600 text-center mb-4">Ghana</p>
             </motion.div>
