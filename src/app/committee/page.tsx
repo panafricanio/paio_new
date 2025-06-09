@@ -232,7 +232,7 @@ export default function Committee() {
             >
               <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-purple-100">
                 <Image
-                  src="https://www.linkedin.com/in/jean-paul-elisa/overlay/photo/"
+                  src="https://avatars.githubusercontent.com/u/140616733?v=4"
                   alt="NIYOKWIZERWA Jean Paul Elisa"
                   fill
                   className="object-cover"
@@ -280,7 +280,7 @@ export default function Committee() {
             >
               <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-100">
                 <Image
-                  src="/placeholder-profile.png"
+                  src="https://pbs.twimg.com/profile_images/1710422070792761344/7ZYj0MHk_400x400.jpg"
                   alt="Hirwa Arnold"
                   fill
                   className="object-cover"
@@ -320,7 +320,7 @@ export default function Committee() {
             >
               <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-100">
                 <Image
-                  src="/placeholder-profile.png"
+                  src="https://i1.rgstatic.net/ii/profile.image/11431281084327962-1663145452994_Q128/James-Katende-3.jpg"
                   alt="Prof James Katende"
                   fill
                   className="object-cover"
