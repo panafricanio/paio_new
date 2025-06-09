@@ -121,6 +121,60 @@ export default function Committee() {
                 </div>
               </div>
             </motion.div>
+            <motion.div
+              className="bg-gradient-to-br from-white to-blue-50 border border-blue-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
+              variants={fadeInUp}
+              whileHover={{ y: -5 }}
+            >
+              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-100">
+                <Image
+                  src="https://www.cs.princeton.edu/~pparedes/images/photo01.jpg"
+                  alt="Prof Pedro Paredes"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
+                Prof Pedro Paredes
+              </h3>
+              <div className="space-y-2">
+                <div className="flex items-center text-gray-700">
+                  <Award className="h-5 w-5 mr-2 text-blue-500" />
+                  <span>Teaching Professor, Princeton</span>
+                </div>
+                <div className="flex items-center text-gray-700">
+                  <GraduationCap className="h-5 w-5 mr-2 text-blue-500" />
+                  <span>Head of Portugal International Scientific Committee</span>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              className="bg-gradient-to-br from-white to-blue-50 border border-blue-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
+              variants={fadeInUp}
+              whileHover={{ y: -5 }}
+            >
+              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-100">
+                <Image
+                  src="https://stats.ioinformatics.org/img/photos/2024/5997.png"
+                  alt=""
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
+              Bartosz Kostka
+              </h3>
+              <div className="space-y-2">
+                <div className="flex items-center text-gray-700">
+                  <Award className="h-5 w-5 mr-2 text-blue-500" />
+                  <span>Software Engineer, Google </span>
+                </div>
+                <div className="flex items-center text-gray-700">
+                  <GraduationCap className="h-5 w-5 mr-2 text-blue-500" />
+                  <span>International Olympiad for Informatics Scientific Committee</span>
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -158,7 +212,7 @@ export default function Committee() {
             >
               <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-purple-100">
                 <Image
-                  src="https://x.com/__joellee__/photo"
+                  src="https://pbs.twimg.com/profile_images/1909628827371741184/cQcKA3j1_400x400.jpg"
                   alt="Joel Lee"
                   fill
                   className="object-cover"
@@ -246,7 +300,7 @@ export default function Committee() {
             >
               <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-100">
                 <Image
-                  src="https://stats.ioinformatics.org/img/photos/2024/6037.png"
+                  src="https://stats.ioinformatics.org/img/photos/2024/8241.png"
                   alt="Raouf Ould ali"
                   fill
                   className="object-cover"
