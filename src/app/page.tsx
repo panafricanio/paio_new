@@ -88,8 +88,8 @@ export default function Home() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.7 }}
             >
-              Discover the premier informatics competition bringing together
-              talented young programmers from across the African continent to
+              An informatics competition bringing together
+              talented young programmers from across the African continent for two days to
               showcase excellence and innovation.
             </motion.p>
 
@@ -125,13 +125,6 @@ export default function Home() {
             transition={{ delay: 0.8, duration: 0.7 }}
           >
             <div className="relative h-[240px] sm:h-[300px] md:h-[380px] w-full max-w-[800px] rounded-xl overflow-hidden shadow-2xl">
-              <div className="absolute inset-0 bg-blue-900/20 z-10 flex items-center justify-center">
-                <div className="bg-gradient-to-r from-white/90 to-white/80 backdrop-blur-sm rounded-lg p-4 px-6 shadow-lg">
-                  <p className="text-lg md:text-xl font-medium bg-gradient-to-r from-blue-700 to-indigo-600 bg-clip-text text-transparent">
-                    Join us at PAIO 2025 - Online
-                  </p>
-                </div>
-              </div>
               {/* Animated gradient background */}
               <div className="absolute inset-0">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500">
@@ -281,8 +274,7 @@ export default function Home() {
                       •
                     </span>
                     <span>
-                      <strong>Duration:</strong> Three-day event with challenging
-                      rounds
+                      <strong>Duration:</strong> Three-day event with two rounds of five hours each
                     </span>
                   </li>
                 </ul>

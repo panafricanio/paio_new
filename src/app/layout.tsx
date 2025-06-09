@@ -38,7 +38,7 @@ export default function RootLayout({
           <Navbar />
           <ClientBody>{children}</ClientBody>
           <Footer />
-          <LanguageSelector />
+          {/* <LanguageSelector /> Removed for now */}
         </div>
       </body>
     </html>

@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Calendar, Clock, Users, Award, BookOpen, BookCheck } from "lucide-react";
 
@@ -19,22 +19,12 @@ export default function ImportantDates() {
     },
   };
 
+  const [activeTab, setActiveTab] = useState<'overview' | 'criteria'>('overview');
+
   return (
     <div className="overflow-hidden">
       {/* Page Header with Gradient */}
       <section className="relative py-16 bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-100">
-        <div className="absolute inset-0 overflow-hidden">
-          <svg
-            className="absolute bottom-0 left-0 w-screen h-[60px] opacity-10 pointer-events-none"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-            style={{ minWidth: "100vw", maxWidth: "100vw" }}
-          >
-            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
-          </svg>
-        </div>
-
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             className="text-center"
@@ -75,6 +65,54 @@ export default function ImportantDates() {
       </section>
 
       <div className="container mx-auto px-4 py-10">
+        {/* Tabbed Info Section */}
+        <div className="mb-10">
+          <div className="flex gap-2 mb-4">
+            <button
+              className={`px-4 py-2 rounded-t-lg font-semibold border-b-2 transition-colors ${activeTab === 'overview' ? 'border-blue-600 text-blue-700 bg-white' : 'border-transparent text-gray-500 bg-blue-50'}`}
+              onClick={() => setActiveTab('overview')}
+            >
+              Overview
+            </button>
+            <button
+              className={`px-4 py-2 rounded-t-lg font-semibold border-b-2 transition-colors ${activeTab === 'criteria' ? 'border-blue-600 text-blue-700 bg-white' : 'border-transparent text-gray-500 bg-blue-50'}`}
+              onClick={() => setActiveTab('criteria')}
+            >
+              Task Criteria
+            </button>
+          </div>
+          <div className="bg-white rounded-b-xl shadow-sm border border-blue-100 p-6">
+            {activeTab === 'overview' && (
+              <div>
+                <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+                  Mark your calendar with these crucial dates for the Pan African Informatics Olympiad 2025
+                </p>
+              </div>
+            )}
+            {activeTab === 'criteria' && (
+              <div className="prose max-w-3xl mx-auto text-gray-700">
+                <h3>Task Criteria</h3>
+                <p>Task submission approximately mirrors IOI task submission - please use the Google Form provided. A task submission must contain:</p>
+                <ul>
+                  <li>A link to Statement in English, preferably formatted in PDF with required diagrams and pictures included.</li>
+                  <li>Description of the desired solution (a description of an algorithm which should get full score).</li>
+                  <li>Contact address (preferably an email address) and background information on the task author(s): affiliation, country, and a description of the author's role in national olympiad or similar.</li>
+                </ul>
+                <p><strong>It is also strongly recommended that it contains:</strong></p>
+                <ul>
+                  <li>At least one implementation of the desired solution in C++.</li>
+                  <li>Analysis of alternative solutions.</li>
+                  <li>Suggestions for grading.</li>
+                  <li>Test data or ideas for generating test data.</li>
+                  <li>The motivation behind the task.</li>
+                </ul>
+                <p>As this is the first edition the ISC</p>
+                <p>Submitted tasks must be kept in strict confidence until the end of PAIO 2025. After that, authors are free to do whatever they wish with the tasks, but may be asked to have them considered for PAIO 2026, in which case strict confidence would have to be maintained through until PAIO 2026.</p>
+                <p>ISC will reach out with respect to feedback on tasks as needed and the final tasks used in the competition will be decided by the ISC.</p>
+              </div>
+            )}
+          </div>
+        </div>
         {/* Key Deadlines Section */}
         <motion.section
           className="mb-16"
@@ -105,7 +143,7 @@ export default function ImportantDates() {
                   April 23, 2025
                 </p>
                 <p className="text-gray-600">
-                  Submit proposals for contest questions. See [IOI 2025 Call For Tasks](https://ioi2025.bo/call-for-tasks.html) for task criteria. Submit [here](https://docs.google.com/forms/d/1Lsto7UKJrIBOKl5JBcjLyFA4-qfaE5cdeAhYvp-ZnD8/edit)
+                  Submit proposals for contest questions. See <a href="https://ioi2025.bo/call-for-tasks.html" target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">IOI 2025 Call For Tasks</a> for task criteria. Submit <a href="https://docs.google.com/forms/d/1Lsto7UKJrIBOKl5JBcjLyFA4-qfaE5cdeAhYvp-ZnD8/edit" target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">here</a>.
                 </p>
               </div>
               
@@ -125,7 +163,7 @@ export default function ImportantDates() {
                   Call For Tasks Close
                 </h3>
                 <p className="text-xl font-semibold text-primary mb-1">
-                  June 23, 2025
+                  July 4, 2025
                 </p>
                 <p className="text-gray-600">
                   Finalize contest questions
@@ -220,7 +258,7 @@ export default function ImportantDates() {
                     Sat, Sep 13
                   </td>
                   <td className="py-4 px-6 whitespace-nowrap text-sm font-semibold text-primary">
-                    Contest
+                    Contest Day 1
                   </td>
                   <td className="py-4 px-6 whitespace-nowrap text-sm text-gray-700 font-medium">
                     Contest Start
@@ -231,7 +269,7 @@ export default function ImportantDates() {
                     Sun, Sep 14
                   </td>
                   <td className="py-4 px-6 whitespace-nowrap text-sm text-primary font-semibold">
-                    AI Friendly & Closing Ceremony
+                    Contest Day 2  & Closing Ceremony
                   </td>
                   <td className="py-4 px-6 whitespace-nowrap text-sm text-gray-700">
                     Jury Meeting
