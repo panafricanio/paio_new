@@ -25,7 +25,7 @@ export default function FAQs() {
     {
       question: "What is the format of the competition?",
       answer:
-        "The competition usually spans one days and includes five hours of problems that test various areas of computer science such as algorithms, data structures, and programming.",
+        "The competition usually spans two days and includes five hours of problems that test various areas of computer science such as algorithms, data structures, and programming.",
     },
     {
       question: "When and where is PAIO 2025 taking place?",
@@ -34,7 +34,7 @@ export default function FAQs() {
     {
       question: "How do countries register for PAIO?",
       answer:
-        "Countries register through their national informatics olympiad organization or designated educational body. Registration details are sent to national coordinators several months before the event.",
+        "Countries register through their national informatics olympiad organization or designated educational body. National coordinators will then fill the registration form on this website.",
     },
     {
       question: "What programming languages are allowed?",
