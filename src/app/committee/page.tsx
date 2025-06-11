@@ -68,7 +68,55 @@ export default function Committee() {
         </div>
       </section>
 
-      {/* Committee Members Section */}
+      {/* Host Scientific Committee Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-white to-green-50/50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-green-700 to-emerald-600 bg-clip-text text-transparent">
+              Host Scientific Committee
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Meet the local scientific committee members who ensure the quality of PAIO
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            {/* Hirwa Arnold Card */}
+            <motion.div
+              className="bg-gradient-to-br from-white to-green-50 border border-green-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
+              variants={fadeInUp}
+              whileHover={{ y: -5 }}
+            >
+              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-green-100">
+                <Image
+                  src="https://pbs.twimg.com/profile_images/1710422070792761344/7ZYj0MHk_400x400.jpg"
+                  alt="Hirwa Arnold"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-green-700 to-emerald-500 bg-clip-text text-transparent">
+                Hirwa Arnold
+              </h3>
+              <p className="text-gray-600 text-center mb-4">Host Scientific Committee</p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* International Scientific Committee Section */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-white to-blue-50/50">
         <div className="container mx-auto px-4">
           <motion.div
@@ -175,6 +223,33 @@ export default function Committee() {
                 </div>
               </div>
             </motion.div>
+            <motion.div
+              className="bg-gradient-to-br from-white to-blue-50 border border-blue-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
+              variants={fadeInUp}
+              whileHover={{ y: -5 }}
+            >
+              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-100">
+                <Image
+                  src="https://stats.ioinformatics.org/img/photos/2023/6337.png"
+                  alt=""
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
+              Tamio-Vesa Nakajima
+              </h3>
+              <div className="space-y-2">
+                <div className="flex items-center text-gray-700">
+                  <Award className="h-5 w-5 mr-2 text-blue-500" />
+                  <span>IOI 2017 Gold Medalist </span>
+                </div>
+                <div className="flex items-center text-gray-700">
+                  <GraduationCap className="h-5 w-5 mr-2 text-blue-500" />
+                  <span>Head of Romanian Scientific Committee</span>
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -272,7 +347,7 @@ export default function Committee() {
             whileInView="animate"
             viewport={{ once: true, margin: "-100px" }}
           >
-            {/* Hirwa Arnold Card */}
+            {/* TBD Rwanda Team Leader Card */}
             <motion.div
               className="bg-gradient-to-br from-white to-blue-50 border border-blue-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
               variants={fadeInUp}
@@ -280,14 +355,14 @@ export default function Committee() {
             >
               <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-100">
                 <Image
-                  src="https://pbs.twimg.com/profile_images/1710422070792761344/7ZYj0MHk_400x400.jpg"
-                  alt="Hirwa Arnold"
+                  src="/placeholder-profile.png"
+                  alt="TBD Rwanda Team Leader"
                   fill
                   className="object-cover"
                 />
               </div>
               <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
-                Hirwa Arnold
+                TBD
               </h3>
               <p className="text-gray-600 text-center mb-4">Rwanda</p>
             </motion.div>
