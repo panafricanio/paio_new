@@ -207,7 +207,7 @@ export default function Regulations() {
                     <span className="h-2 w-2 rounded-full bg-gradient-to-br from-indigo-500 to-indigo-600 mr-3 mt-2.5"></span>
                     <p className="text-lg">
                       <span className={highlightedTextStyle}>
-                        Four contestants
+                        Six contestants
                       </span>
                     </p>
                   </li>

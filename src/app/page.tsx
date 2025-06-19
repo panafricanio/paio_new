@@ -180,7 +180,7 @@ export default function Home() {
                 Recognition & Achievement
               </h3>
               <p className="text-gray-600">
-                Earn prestigious awards and recognition at a continental level
+                Earn awards and recognition at a continental level
                 for your programming abilities.
               </p>
             </motion.div>
@@ -365,7 +365,7 @@ export default function Home() {
             </h2>
             <p className="text-lg md:text-xl mb-8 text-blue-100">
               Join the Pan African Informatics Olympiad and be part of this
-              prestigious educational event that celebrates programming
+              educational event that celebrates programming
               excellence across Africa.
             </p>
 

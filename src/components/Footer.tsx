@@ -85,7 +85,7 @@ const Footer = () => {
               About PAIO
             </h3>
             <p className="text-gray-600 text-sm">
-              The Pan African Informatics Olympiad is a prestigious informatics
+              The Pan African Informatics Olympiad is an informatics
               competition that brings together talented young programmers from
               across the African continent.
             </p>
