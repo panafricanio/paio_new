@@ -306,7 +306,7 @@ export default function Home() {
                       •
                     </span>
                     <span>
-                      <strong>Team Composition:</strong> Four contestants per
+                      <strong>Team Composition:</strong> up to six contestants per
                       country 
                     </span>
                   </li>
