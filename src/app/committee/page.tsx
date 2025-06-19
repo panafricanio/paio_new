@@ -93,6 +93,24 @@ export default function Committee() {
             whileInView="animate"
             viewport={{ once: true, margin: "-100px" }}
           >
+            <motion.div
+              className="bg-gradient-to-br from-white to-green-50 border border-green-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
+              variants={fadeInUp}
+              whileHover={{ y: -5 }}
+            >
+              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-green-100">
+                <Image
+                  src=""
+                  alt="Dr. Papias Niyigena"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-green-700 to-emerald-500 bg-clip-text text-transparent">
+                Dr. Papias Niyigena
+              </h3>
+              <p className="text-gray-600 text-center mb-4">Host Scientific Committee</p>
+            </motion.div>
             {/* Hirwa Arnold Card */}
             <motion.div
               className="bg-gradient-to-br from-white to-green-50 border border-green-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"

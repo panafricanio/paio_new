@@ -20,7 +20,7 @@ export default function FAQs() {
     {
       question: "How are teams composed?",
       answer:
-        "Each participating country team consists of four contestants, a team leader, a deputy team leader and observers.",
+        "Each participating country team consists of up to six contestants, a team leader, a deputy team leader and observers.",
     },
     {
       question: "What is the format of the competition?",
