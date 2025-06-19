@@ -341,7 +341,7 @@ export default function Committee() {
               <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-purple-700 to-indigo-500 bg-clip-text text-transparent">
                 Joel Lee
               </h3>
-              <p className="text-gray-600 text-center mb-4">Software Engineer</p>
+              <p className="text-gray-600 text-center mb-4">Avocado Exporter, Software Enthusiast</p>
             </motion.div>
 
             {/* NIYOKWIZERWA Jean Paul Elisa Card */}
