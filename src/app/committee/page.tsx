@@ -275,7 +275,7 @@ export default function Committee() {
             >
               <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-100">
                 <Image
-                  src="https://stats.ioinformatics.org/img/photos/2023/7905.jpg"
+                  src="/Bernard.jpg"
                   alt="Bernard Ibrahimcha"
                   fill
                   className="object-cover"
@@ -291,7 +291,7 @@ export default function Committee() {
                 </div>
                 <div className="flex items-center text-gray-700">
                   <GraduationCap className="h-5 w-5 mr-2 text-blue-500" />
-                  <span>Head of Syrian Scientific Committee</span>
+                  <span>Syrian National Scientific Committee</span>
                 </div>
               </div>
             </motion.div>
@@ -469,7 +469,26 @@ export default function Committee() {
               </h3>
               <p className="text-gray-600 text-center mb-4">Ghana</p>
             </motion.div>
+            <motion.div
+              className="bg-gradient-to-br from-white to-blue-50 border border-blue-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
+              variants={fadeInUp}
+              whileHover={{ y: -5 }}
+            >
+              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-100">
+                <Image
+                  src="https://media.licdn.com/dms/image/v2/D4E03AQFUROMgdL0Q8g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1716402433098?e=1755734400&v=beta&t=ZtuPCf8MxRzQo-wI3w1aFexuGIZTsOJRMJ_HeMld96Q"
+                  alt=""
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
+                Dr. Anas Abou El Kalam 
+              </h3>
+              <p className="text-gray-600 text-center mb-4">Algeria</p>
           </motion.div>
+          </motion.div>
+          
         </div>
       </section>
     </div>
