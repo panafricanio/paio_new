@@ -291,7 +291,7 @@ export default function Committee() {
                 </div>
                 <div className="flex items-center text-gray-700">
                   <GraduationCap className="h-5 w-5 mr-2 text-blue-500" />
-                  <span>Syrian National Scientific Committee</span>
+                  <span>Syrian National Scientific Committee & International Informatics Olympiad in Team (IIOT) Scientific Committee</span>
                 </div>
               </div>
             </motion.div>
