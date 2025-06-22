@@ -341,7 +341,25 @@ export default function Committee() {
               <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-purple-700 to-indigo-500 bg-clip-text text-transparent">
                 Joel Lee
               </h3>
-              <p className="text-gray-600 text-center mb-4">Avocado Exporter, Software Enthusiast</p>
+              <p className="text-gray-600 text-center mb-4">Software Enthusiast</p>
+            </motion.div>
+            <motion.div
+              className="bg-gradient-to-br from-white to-purple-50 border border-purple-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
+              variants={fadeInUp}
+              whileHover={{ y: -5 }}
+            >
+              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-purple-100">
+                <Image
+                  src="https://media.licdn.com/dms/image/v2/D4D03AQHxW0Bb85a96Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1685351879823?e=1756339200&v=beta&t=mwqq4toymwKBSYLqf780XE84bm5Xw4qjMflV1mo6km8"
+                  alt="Norbert Ndayisenga"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-purple-700 to-indigo-500 bg-clip-text text-transparent">
+                Norbert Ndayisenga
+              </h3>
+              <p className="text-gray-600 text-center mb-4">Software Engineer, Rwanda Informatics Olympiad Coach</p>
             </motion.div>
 
             {/* NIYOKWIZERWA Jean Paul Elisa Card */}
