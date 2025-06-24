@@ -295,6 +295,33 @@ export default function Committee() {
                 </div>
               </div>
             </motion.div>
+            <motion.div
+              className="bg-gradient-to-br from-white to-blue-50 border border-blue-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
+              variants={fadeInUp}
+              whileHover={{ y: -5 }}
+            >
+              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-100">
+                <Image
+                  src="/qingyu.jpg"
+                  alt="Qingyu Shi"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
+              Qingyu Shi
+              </h3>
+              <div className="space-y-2">
+                <div className="flex items-center text-gray-700">
+                  <Award className="h-5 w-5 mr-2 text-blue-500" />
+                  <span>Asia Pacific Informatics Olympiad Scientific Committee </span>
+                </div>
+                <div className="flex items-center text-gray-700">
+                  <GraduationCap className="h-5 w-5 mr-2 text-blue-500" />
+                  <span> Co-President of Universal Cup</span>
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -483,7 +510,7 @@ export default function Committee() {
                 />
               </div>
               <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
-                Dalton Omondi
+                Maxwell Lambert
               </h3>
               <p className="text-gray-600 text-center mb-4">Ghana</p>
             </motion.div>
