@@ -68,72 +68,6 @@ export default function Committee() {
         </div>
       </section>
 
-      {/* Host Scientific Committee Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-white to-green-50/50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.5 }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-green-700 to-emerald-600 bg-clip-text text-transparent">
-              Host Scientific Committee
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Meet the local scientific committee members who ensure the quality of PAIO
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, margin: "-100px" }}
-          >
-            <motion.div
-              className="bg-gradient-to-br from-white to-green-50 border border-green-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
-              variants={fadeInUp}
-              whileHover={{ y: -5 }}
-            >
-              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-green-100">
-                <Image
-                  src=""
-                  alt="Dr. Papias Niyigena"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-green-700 to-emerald-500 bg-clip-text text-transparent">
-                Dr. Papias Niyigena
-              </h3>
-              <p className="text-gray-600 text-center mb-4">Host Scientific Committee</p>
-            </motion.div>
-            {/* Hirwa Arnold Card */}
-            <motion.div
-              className="bg-gradient-to-br from-white to-green-50 border border-green-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
-              variants={fadeInUp}
-              whileHover={{ y: -5 }}
-            >
-              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-green-100">
-                <Image
-                  src="https://pbs.twimg.com/profile_images/1710422070792761344/7ZYj0MHk_400x400.jpg"
-                  alt="Hirwa Arnold"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-green-700 to-emerald-500 bg-clip-text text-transparent">
-                Hirwa Arnold
-              </h3>
-              <p className="text-gray-600 text-center mb-4">Host Scientific Committee</p>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* International Scientific Committee Section */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-white to-blue-50/50">
         <div className="container mx-auto px-4">
@@ -337,10 +271,10 @@ export default function Committee() {
             transition={{ duration: 0.5 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-purple-700 to-indigo-600 bg-clip-text text-transparent">
-              Organizing Committee
+              Host Committee
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Meet the team behind the organization and website of PAIO
+              Meet the team behind the organization and website of PAIO 2025
             </p>
           </motion.div>
 
@@ -351,6 +285,62 @@ export default function Committee() {
             whileInView="animate"
             viewport={{ once: true, margin: "-100px" }}
           >
+            <motion.div
+              className="bg-gradient-to-br from-white to-green-50 border border-green-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
+              variants={fadeInUp}
+              whileHover={{ y: -5 }}
+            >
+              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-green-100">
+                <Image
+                  src="data:image/jpeg;base64,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"
+                  alt="Dr. Papias Niyigena"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-green-700 to-emerald-500 bg-clip-text text-transparent">
+                Dr. Papias Niyigena
+              </h3>
+              <p className="text-gray-600 text-center mb-4">Principal, Rwanda Coding Academy</p>
+            </motion.div>
+            {/* Hirwa Arnold Card */}
+            <motion.div
+              className="bg-gradient-to-br from-white to-green-50 border border-green-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
+              variants={fadeInUp}
+              whileHover={{ y: -5 }}
+            >
+              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-green-100">
+                <Image
+                  src="https://pbs.twimg.com/profile_images/1710422070792761344/7ZYj0MHk_400x400.jpg"
+                  alt="Hirwa Arnold"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-green-700 to-emerald-500 bg-clip-text text-transparent">
+                Hirwa Arnold
+              </h3>
+              <p className="text-gray-600 text-center mb-4">Rwanda Informatics Olympiad </p>
+            </motion.div>
+            <motion.div
+              className="bg-gradient-to-br from-white to-green-50 border border-green-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
+              variants={fadeInUp}
+              whileHover={{ y: -5 }}
+            >
+              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-green-100">
+                <Image
+                  src="https://pbs.twimg.com/profile_images/1400061787958124545/VXIjPUbg_400x400.jpg"
+                  alt="Arun Shanmuganathan"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-green-700 to-emerald-500 bg-clip-text text-transparent">
+                Arun Shanmuganathan
+              </h3>
+              <p className="text-gray-600 text-center mb-4">Founder, African Olympiad Academy</p>
+            </motion.div>
+     
             {/* Joel Lee Card */}
             <motion.div
               className="bg-gradient-to-br from-white to-purple-50 border border-purple-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
@@ -530,7 +520,43 @@ export default function Committee() {
               <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
                 Dr. Anas Abou El Kalam 
               </h3>
-              <p className="text-gray-600 text-center mb-4">Algeria</p>
+              <p className="text-gray-600 text-center mb-4">Morocco</p>
+          </motion.div>
+          <motion.div
+              className="bg-gradient-to-br from-white to-blue-50 border border-blue-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
+              variants={fadeInUp}
+              whileHover={{ y: -5 }}
+            >
+              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-100">
+                <Image
+                  src=""
+                  alt=""
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
+                TBD 
+              </h3>
+              <p className="text-gray-600 text-center mb-4">South Africa</p>
+          </motion.div>
+          <motion.div
+              className="bg-gradient-to-br from-white to-blue-50 border border-blue-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
+              variants={fadeInUp}
+              whileHover={{ y: -5 }}
+            >
+              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-100">
+                <Image
+                  src=""
+                  alt=""
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
+                TBD 
+              </h3>
+              <p className="text-gray-600 text-center mb-4">Nigeria</p>
           </motion.div>
           </motion.div>
           
