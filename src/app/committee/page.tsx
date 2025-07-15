@@ -572,6 +572,42 @@ export default function Committee() {
                 />
               </div>
               <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
+                Harbi Hassan Iltireh 
+              </h3>
+              <p className="text-gray-600 text-center mb-4">Djibouti</p>
+          </motion.div>
+          <motion.div
+              className="bg-gradient-to-br from-white to-blue-50 border border-blue-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
+              variants={fadeInUp}
+              whileHover={{ y: -5 }}
+            >
+              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-100">
+                <Image
+                  src=""
+                  alt=""
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
+                Mr. Mmoloki Lekhutile
+              </h3>
+              <p className="text-gray-600 text-center mb-4">Botswana</p>
+          </motion.div>
+          <motion.div
+              className="bg-gradient-to-br from-white to-blue-50 border border-blue-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
+              variants={fadeInUp}
+              whileHover={{ y: -5 }}
+            >
+              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-100">
+                <Image
+                  src=""
+                  alt=""
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
                 TBD 
               </h3>
               <p className="text-gray-600 text-center mb-4">Egypt</p>
