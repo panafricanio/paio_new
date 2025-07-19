@@ -583,7 +583,7 @@ export default function Committee() {
             >
               <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-100">
                 <Image
-                  src=""
+                  src="/mrmmoloki.jpg"
                   alt=""
                   fill
                   className="object-cover"
