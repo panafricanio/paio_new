@@ -536,7 +536,7 @@ export default function Committee() {
                 />
               </div>
               <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
-                TBD 
+                Noah Jacobsen 
               </h3>
               <p className="text-gray-600 text-center mb-4">South Africa</p>
           </motion.div>
@@ -565,14 +565,14 @@ export default function Committee() {
             >
               <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-100">
                 <Image
-                  src=""
+                  src="/DrHoussein.jpg"
                   alt=""
                   fill
                   className="object-cover"
                 />
               </div>
               <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
-                Harbi Hassan Iltireh 
+                Dr. Houssein Ahmed Assoweh
               </h3>
               <p className="text-gray-600 text-center mb-4">Djibouti</p>
           </motion.div>
