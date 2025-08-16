@@ -157,7 +157,7 @@ export default function CompetitionRules() {
                       <span className="text-lg font-medium">IOI Syllabus 2025</span>
                     </div>
                     <motion.a
-                      href="https://ioinformatics.org/files/ioi-syllabus-2015.pdf"
+                      href="https://ioinformatics.org/files/ioi-syllabus-2025.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.02 }}

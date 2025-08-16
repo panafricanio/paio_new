@@ -402,6 +402,132 @@ export default function Committee() {
         </div>
       </section>
 
+      {/* International Committee Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-white to-orange-50/50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-orange-700 to-amber-600 bg-clip-text text-transparent">
+              International Committee
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our international committee members providing global perspective and expertise
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8"
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            {/* Jennie Card */}
+            <motion.div
+              className="bg-gradient-to-br from-white to-orange-50 border border-orange-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
+              variants={fadeInUp}
+              whileHover={{ y: -5 }}
+            >
+              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-orange-100">
+                <Image
+                  src="https://stats.ioinformatics.org/img/photos/2024/4693.png"
+                  alt="Jennie Oluchi"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-orange-700 to-amber-600 bg-clip-text text-transparent">
+                Jennie Oluchi
+              </h3>
+              <p className="text-gray-600 text-center mb-4">Nigeria Olympiad Program</p>
+            </motion.div>
+
+            {/* Hirwa Card */}
+            <motion.div
+              className="bg-gradient-to-br from-white to-orange-50 border border-orange-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
+              variants={fadeInUp}
+              whileHover={{ y: -5 }}
+            >
+              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-orange-100">
+                <Image
+                  src="https://pbs.twimg.com/profile_images/1710422070792761344/7ZYj0MHk_400x400.jpg"
+                  alt="Hirwa Arnold"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-orange-700 to-amber-600 bg-clip-text text-transparent">
+                Hirwa Arnold
+              </h3>
+              <p className="text-gray-600 text-center mb-4">Rwanda Olympiad Program</p>
+            </motion.div>
+
+            {/* Obed Nsanzimfura Card */}
+            <motion.div
+              className="bg-gradient-to-br from-white to-orange-50 border border-orange-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
+              variants={fadeInUp}
+              whileHover={{ y: -5 }}
+            >
+              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-orange-100">
+                <Image
+                  src="https://media.licdn.com/dms/image/v2/D4D03AQGKNBJgYNwOQw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1701278097506?e=1756339200&v=beta&t=N4ggKdKUrH06dTzgTbhxJYNvU8wuwDfVEYgLfEK8_DY"
+                  alt="Obed Nsanzimfura"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-orange-700 to-amber-600 bg-clip-text text-transparent">
+                Obed Nsanzimfura
+              </h3>
+              <p className="text-gray-600 text-center mb-4">Rwanda Olympiad Program</p>
+            </motion.div>
+
+            {/* Sihine Negede Card */}
+            <motion.div
+              className="bg-gradient-to-br from-white to-orange-50 border border-orange-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
+              variants={fadeInUp}
+              whileHover={{ y: -5 }}
+            >
+              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-orange-100">
+                <Image
+                  src="https://pbs.twimg.com/profile_images/1837554424830726144/ux4ZQMJ5_400x400.jpg"
+                  alt="Sihine Negede"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-orange-700 to-amber-600 bg-clip-text text-transparent">
+                Sihine Negede
+              </h3>
+              <p className="text-gray-600 text-center mb-4">African Olympiad Academy</p>
+            </motion.div>
+            <motion.div
+              className="bg-gradient-to-br from-white to-orange-50 border border-orange-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
+              variants={fadeInUp}
+              whileHover={{ y: -5 }}
+            >
+              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-orange-100">
+                <Image
+                  src="https://pbs.twimg.com/profile_images/1837554424830726144/ux4ZQMJ5_400x400.jpg"
+                  alt="Sihine Negede"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-orange-700 to-amber-600 bg-clip-text text-transparent">
+                TBD
+              </h3>
+              <p className="text-gray-600 text-center mb-4">TBD</p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Team Leaders Section */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-white to-amber-50/50">
         <div className="container mx-auto px-4">
