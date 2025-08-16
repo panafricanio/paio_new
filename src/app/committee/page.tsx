@@ -358,7 +358,7 @@ export default function Committee() {
               <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-orange-700 to-amber-600 bg-clip-text text-transparent">
                 Joel Lee
               </h3>
-              <p className="text-gray-600 text-center mb-4">Software Enthusiast</p>
+              <p className="text-gray-600 text-center mb-4">Software and Avocado Enthusiast</p>
             </motion.div>
             <motion.div
               className="bg-gradient-to-br from-white to-orange-50 border border-orange-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
@@ -475,7 +475,7 @@ export default function Committee() {
             >
               <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-orange-100">
                 <Image
-                  src="https://media.licdn.com/dms/image/v2/D4D03AQGKNBJgYNwOQw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1701278097506?e=1756339200&v=beta&t=N4ggKdKUrH06dTzgTbhxJYNvU8wuwDfVEYgLfEK8_DY"
+                  src="https://media.licdn.com/dms/image/v2/D4D03AQHW7RVcmxA88w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1685408455466?e=1758153600&v=beta&t=FFapzmuCdkEbpLAcHymPOhSOXoYo8MI8_ZCYw5xJa-I"
                   alt="Obed Nsanzimfura"
                   fill
                   className="object-cover"
@@ -495,7 +495,7 @@ export default function Committee() {
             >
               <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-orange-100">
                 <Image
-                  src="https://pbs.twimg.com/profile_images/1837554424830726144/ux4ZQMJ5_400x400.jpg"
+                  src="https://media.licdn.com/dms/image/v2/D5603AQElDG0wuAe6qA/profile-displayphoto-shrink_800_800/B56ZPadxmNG4Ao-/0/1734537060324?e=1758153600&v=beta&t=JuIfe02aH28ZkOD7yCHg8fAlzaVUOmsPLSPnTWtzpyE"
                   alt="Sihine Negede"
                   fill
                   className="object-cover"
@@ -513,8 +513,8 @@ export default function Committee() {
             >
               <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-orange-100">
                 <Image
-                  src="https://pbs.twimg.com/profile_images/1837554424830726144/ux4ZQMJ5_400x400.jpg"
-                  alt="Sihine Negede"
+                  src=""
+                  alt="Coming Soon"
                   fill
                   className="object-cover"
                 />
