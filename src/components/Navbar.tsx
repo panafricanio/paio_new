@@ -16,6 +16,7 @@ import { Menu, X } from "lucide-react";
 const navItems = [
   // Home removed as logo will serve this purpose
   { path: "/regulations", label: "Regulations", priority: "high" },
+  { path: "/competition-rules", label: "Competition Rules", priority: "high" },
   {
     path: "https://docs.google.com/forms/d/e/1FAIpQLSe6S7qJlBiPr_HlunCuNPiXoGJsYfaV8oOkEhoFouxFTJ_arg/viewform",
     label: "Registration",
