@@ -31,12 +31,12 @@ export default function Regulations() {
     },
   };
 
-  const highlightedTextStyle = "font-semibold text-blue-600";
+  const highlightedTextStyle = "font-semibold text-amber-700";
 
   return (
     <div className="overflow-hidden">
       {/* Page Header with Gradient */}
-      <section className="relative py-16 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-100">
+      <section className="relative py-16 bg-gradient-to-br from-amber-50 via-orange-50 to-green-100">
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             className="text-center"
@@ -45,7 +45,7 @@ export default function Regulations() {
             transition={{ duration: 0.7 }}
           >
             <motion.div
-              className="inline-flex items-center justify-center bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full text-primary mb-6"
+              className="inline-flex items-center justify-center bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full text-amber-800 mb-6"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.5 }}
@@ -55,7 +55,7 @@ export default function Regulations() {
             </motion.div>
 
             <motion.h1
-              className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-700 to-indigo-600 text-transparent bg-clip-text"
+              className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-700 to-green-600 text-transparent bg-clip-text"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.7 }}
@@ -135,13 +135,13 @@ export default function Regulations() {
             {/* Eligibility */}
             <motion.section
               variants={fadeInUp}
-              className="bg-gradient-to-br from-white to-blue-50 p-8 rounded-xl shadow-sm border border-blue-100"
+              className="bg-gradient-to-br from-white to-amber-50 p-8 rounded-xl shadow-sm border border-amber-100"
             >
               <div className="flex items-center mb-6">
-                <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-3 rounded-lg text-white mr-4">
+                <div className="bg-gradient-to-br from-amber-600 to-orange-600 p-3 rounded-lg text-white mr-4">
                   <Users className="h-6 w-6" />
                 </div>
-                <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-700 to-indigo-600 text-transparent bg-clip-text">
+                <h2 className="text-3xl font-bold bg-gradient-to-r from-amber-700 to-green-600 text-transparent bg-clip-text">
                   Eligibility
                 </h2>
               </div>
@@ -153,14 +153,14 @@ export default function Regulations() {
                 </p>
                 <ul className="list-none space-y-3">
                   <li className="flex items-start">
-                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 mr-3 mt-2.5"></span>
+                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-amber-600 to-orange-600 mr-3 mt-2.5"></span>
                     <p className="text-lg">
                       Students enrolled in secondary education or below in an
                       African country during the competition period.
                     </p>
                   </li>
                   <li className="flex items-start">
-                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 mr-3 mt-2.5"></span>
+                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-amber-600 to-orange-600 mr-3 mt-2.5"></span>
                     <p className="text-lg">
                       Students must{" "}
                       <span className={highlightedTextStyle}>
@@ -170,7 +170,7 @@ export default function Regulations() {
                     </p>
                   </li>
                   <li className="flex items-start">
-                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 mr-3 mt-2.5"></span>
+                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-amber-600 to-orange-600 mr-3 mt-2.5"></span>
                     <p className="text-lg">
                       Students must{" "}
                       <span className={highlightedTextStyle}>
@@ -186,13 +186,13 @@ export default function Regulations() {
             {/* Team Composition */}
             <motion.section
               variants={fadeInUp}
-              className="bg-gradient-to-br from-white to-indigo-50 p-8 rounded-xl shadow-sm border border-indigo-100"
+              className="bg-gradient-to-br from-white to-green-50 p-8 rounded-xl shadow-sm border border-green-100"
             >
               <div className="flex items-center mb-6">
-                <div className="bg-gradient-to-br from-indigo-500 to-indigo-600 p-3 rounded-lg text-white mr-4">
+                <div className="bg-gradient-to-br from-green-600 to-emerald-600 p-3 rounded-lg text-white mr-4">
                   <Users className="h-6 w-6" />
                 </div>
-                <h2 className="text-3xl font-bold bg-gradient-to-r from-indigo-700 to-purple-600 text-transparent bg-clip-text">
+                <h2 className="text-3xl font-bold bg-gradient-to-r from-green-700 to-emerald-600 text-transparent bg-clip-text">
                   Team Composition
                 </h2>
               </div>
@@ -204,7 +204,7 @@ export default function Regulations() {
                 </p>
                 <ul className="list-none space-y-3">
                   <li className="flex items-start">
-                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-indigo-500 to-indigo-600 mr-3 mt-2.5"></span>
+                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-green-600 to-emerald-600 mr-3 mt-2.5"></span>
                     <p className="text-lg">
                       <span className={highlightedTextStyle}>
                         Six contestants
@@ -212,20 +212,20 @@ export default function Regulations() {
                     </p>
                   </li>
                   <li className="flex items-start">
-                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-indigo-500 to-indigo-600 mr-3 mt-2.5"></span>
+                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-green-600 to-emerald-600 mr-3 mt-2.5"></span>
                     <p className="text-lg">
                       One team leader responsible for the preparation of the
                       team.
                     </p>
                   </li>
                   <li className="flex items-start">
-                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-indigo-500 to-indigo-600 mr-3 mt-2.5"></span>
+                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-green-600 to-emerald-600 mr-3 mt-2.5"></span>
                     <p className="text-lg">
                       One deputy team leader to assist the team leader.
                     </p>
                   </li>
                   <li className="flex items-start">
-                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-indigo-500 to-indigo-600 mr-3 mt-2.5"></span>
+                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-green-600 to-emerald-600 mr-3 mt-2.5"></span>
                     <p className="text-lg">
                       Optional observers (as permitted by the host country).
                     </p>
@@ -237,13 +237,13 @@ export default function Regulations() {
             {/* Competition Structure */}
             <motion.section
               variants={fadeInUp}
-              className="bg-gradient-to-br from-white to-purple-50 p-8 rounded-xl shadow-sm border border-purple-100"
+              className="bg-gradient-to-br from-white to-orange-50 p-8 rounded-xl shadow-sm border border-orange-100"
             >
               <div className="flex items-center mb-6">
-                <div className="bg-gradient-to-br from-purple-500 to-purple-600 p-3 rounded-lg text-white mr-4">
+                <div className="bg-gradient-to-br from-orange-600 to-amber-700 p-3 rounded-lg text-white mr-4">
                   <FileText className="h-6 w-6" />
                 </div>
-                <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-700 to-purple-600 text-transparent bg-clip-text">
+                <h2 className="text-3xl font-bold bg-gradient-to-r from-orange-700 to-amber-700 text-transparent bg-clip-text">
                   Competition Structure
                 </h2>
               </div>
@@ -252,7 +252,7 @@ export default function Regulations() {
                 <p className="text-lg">The competition consists of:</p>
                 <ul className="list-none space-y-3">
                   <li className="flex items-start">
-                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 mr-3 mt-2.5"></span>
+                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-orange-600 to-amber-700 mr-3 mt-2.5"></span>
                     <p className="text-lg">
                       <span className={highlightedTextStyle}>
                         Two online competition days
@@ -261,14 +261,14 @@ export default function Regulations() {
                     </p>
                   </li>
                   <li className="flex items-start">
-                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 mr-3 mt-2.5"></span>
+                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-orange-600 to-amber-700 mr-3 mt-2.5"></span>
                     <p className="text-lg">
                       Contestants will work individually on problems using their
                       own computers.
                     </p>
                   </li>
                   <li className="flex items-start">
-                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 mr-3 mt-2.5"></span>
+                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-orange-600 to-amber-700 mr-3 mt-2.5"></span>
                     <p className="text-lg">
                       Solutions will be submitted through an online judging
                       system that provides immediate feedback.
@@ -281,13 +281,13 @@ export default function Regulations() {
             {/* Languages and Tools */}
             <motion.section
               variants={fadeInUp}
-              className="bg-gradient-to-br from-white to-blue-50 p-8 rounded-xl shadow-sm border border-blue-100"
+              className="bg-gradient-to-br from-white to-amber-50 p-8 rounded-xl shadow-sm border border-amber-100"
             >
               <div className="flex items-center mb-6">
-                <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-3 rounded-lg text-white mr-4">
+                <div className="bg-gradient-to-br from-amber-600 to-orange-600 p-3 rounded-lg text-white mr-4">
                   <Code className="h-6 w-6" />
                 </div>
-                <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-700 to-indigo-600 text-transparent bg-clip-text">
+                <h2 className="text-3xl font-bold bg-gradient-to-r from-amber-700 to-green-600 text-transparent bg-clip-text">
                   Programming Languages
                 </h2>
               </div>
@@ -299,15 +299,15 @@ export default function Regulations() {
                 </p>
                 <ul className="list-none space-y-3">
                   <li className="flex items-start">
-                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 mr-3 mt-2.5"></span>
+                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-amber-600 to-orange-600 mr-3 mt-2.5"></span>
                     <p className="text-lg">C++ (g++ compiler)</p>
                   </li>
                   <li className="flex items-start">
-                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 mr-3 mt-2.5"></span>
+                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-amber-600 to-orange-600 mr-3 mt-2.5"></span>
                     <p className="text-lg">Java (OpenJDK)</p>
                   </li>
                   <li className="flex items-start">
-                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 mr-3 mt-2.5"></span>
+                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-amber-600 to-orange-600 mr-3 mt-2.5"></span>
                     <p className="text-lg">Python (Python 3)</p>
                   </li>
                 </ul>
@@ -321,13 +321,13 @@ export default function Regulations() {
             {/* Scoring and Awards */}
             <motion.section
               variants={fadeInUp}
-              className="bg-gradient-to-br from-white to-indigo-50 p-8 rounded-xl shadow-sm border border-indigo-100"
+              className="bg-gradient-to-br from-white to-green-50 p-8 rounded-xl shadow-sm border border-green-100"
             >
               <div className="flex items-center mb-6">
-                <div className="bg-gradient-to-br from-indigo-500 to-indigo-600 p-3 rounded-lg text-white mr-4">
+                <div className="bg-gradient-to-br from-green-600 to-emerald-600 p-3 rounded-lg text-white mr-4">
                   <Award className="h-6 w-6" />
                 </div>
-                <h2 className="text-3xl font-bold bg-gradient-to-r from-indigo-700 to-purple-600 text-transparent bg-clip-text">
+                <h2 className="text-3xl font-bold bg-gradient-to-r from-green-700 to-emerald-600 text-transparent bg-clip-text">
                   Scoring and Awards
                 </h2>
               </div>
@@ -339,7 +339,7 @@ export default function Regulations() {
                 </p>
                 <ul className="list-none space-y-3">
                   <li className="flex items-start">
-                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-indigo-500 to-indigo-600 mr-3 mt-2.5"></span>
+                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-green-600 to-emerald-600 mr-3 mt-2.5"></span>
                     <p className="text-lg">
                       Individual medals are awarded to approximately{" "}
                       <span className={highlightedTextStyle}>50%</span> of
@@ -349,14 +349,14 @@ export default function Regulations() {
                   </li>
                   
                   <li className="flex items-start mt-4">
-                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-indigo-500 to-indigo-600 mr-3 mt-2.5"></span>
+                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-green-600 to-emerald-600 mr-3 mt-2.5"></span>
                     <p className="text-lg">
                       Country rankings are determined by the sum of the scores
                       of all team members.
                     </p>
                   </li>
                   <li className="flex items-start">
-                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-indigo-500 to-indigo-600 mr-3 mt-2.5"></span>
+                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-green-600 to-emerald-600 mr-3 mt-2.5"></span>
                     <p className="text-lg">
                       Special awards may be given for outstanding solutions to
                       specific problems.
@@ -369,13 +369,13 @@ export default function Regulations() {
             {/* Code of Conduct */}
             <motion.section
               variants={fadeInUp}
-              className="bg-gradient-to-br from-white to-purple-50 p-8 rounded-xl shadow-sm border border-purple-100"
+              className="bg-gradient-to-br from-white to-orange-50 p-8 rounded-xl shadow-sm border border-orange-100"
             >
               <div className="flex items-center mb-6">
-                <div className="bg-gradient-to-br from-purple-500 to-purple-600 p-3 rounded-lg text-white mr-4">
+                <div className="bg-gradient-to-br from-orange-600 to-amber-700 p-3 rounded-lg text-white mr-4">
                   <CheckCircle className="h-6 w-6" />
                 </div>
-                <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-700 to-purple-600 text-transparent bg-clip-text">
+                <h2 className="text-3xl font-bold bg-gradient-to-r from-orange-700 to-amber-700 text-transparent bg-clip-text">
                   Code of Conduct
                 </h2>
               </div>
@@ -387,27 +387,27 @@ export default function Regulations() {
                 </p>
                 <ul className="list-none space-y-3">
                   <li className="flex items-start">
-                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 mr-3 mt-2.5"></span>
+                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-orange-600 to-amber-700 mr-3 mt-2.5"></span>
                     <p className="text-lg">
                       Participants must act with integrity and honesty at all
                       times.
                     </p>
                   </li>
                   <li className="flex items-start">
-                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 mr-3 mt-2.5"></span>
+                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-orange-600 to-amber-700 mr-3 mt-2.5"></span>
                     <p className="text-lg">
                       Any form of cheating or plagiarism will result in
                       immediate disqualification.
                     </p>
                   </li>
                   <li className="flex items-start">
-                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 mr-3 mt-2.5"></span>
+                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-orange-600 to-amber-700 mr-3 mt-2.5"></span>
                     <p className="text-lg">
                       Participants must treat others with respect and courtesy.
                     </p>
                   </li>
                   <li className="flex items-start">
-                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 mr-3 mt-2.5"></span>
+                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-orange-600 to-amber-700 mr-3 mt-2.5"></span>
                     <p className="text-lg">
                       Any form of harassment or discrimination will not be
                       tolerated.

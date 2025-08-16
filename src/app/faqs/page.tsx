@@ -65,7 +65,7 @@ export default function FAQs() {
   return (
     <div className="overflow-hidden">
       {/* Page Header with Gradient */}
-      <section className="relative py-16 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-100">
+      <section className="relative py-16 bg-gradient-to-br from-amber-50 via-orange-50 to-green-100">
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             className="text-center"
@@ -74,7 +74,7 @@ export default function FAQs() {
             transition={{ duration: 0.7 }}
           >
             <motion.div
-              className="inline-flex items-center justify-center bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full text-primary mb-6"
+              className="inline-flex items-center justify-center bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full text-amber-800 mb-6"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.5 }}
@@ -84,7 +84,7 @@ export default function FAQs() {
             </motion.div>
 
             <motion.h1
-              className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-700 to-indigo-600 text-transparent bg-clip-text"
+              className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-700 to-green-600 text-transparent bg-clip-text"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.7 }}
@@ -118,20 +118,20 @@ export default function FAQs() {
               <motion.div
                 key={index}
                 variants={fadeInUp}
-                className="bg-gradient-to-br from-white to-blue-50 rounded-xl shadow-sm border border-blue-100 overflow-hidden"
+                className="bg-gradient-to-br from-white to-amber-50 rounded-xl shadow-sm border border-amber-100 overflow-hidden"
               >
                 <button
                   onClick={() => toggleFAQ(index)}
                   className="w-full p-5 flex items-center justify-between text-left focus:outline-none transition-all"
                 >
-                  <span className="text-xl font-semibold bg-gradient-to-r from-blue-700 to-indigo-600 text-transparent bg-clip-text">
+                  <span className="text-xl font-semibold bg-gradient-to-r from-amber-700 to-green-600 text-transparent bg-clip-text">
                     {faq.question}
                   </span>
                   <div className="flex-shrink-0">
                     {openIndex === index ? (
-                      <ChevronUp className="h-5 w-5 text-blue-600" />
+                      <ChevronUp className="h-5 w-5 text-amber-600" />
                     ) : (
-                      <ChevronDown className="h-5 w-5 text-blue-600" />
+                      <ChevronDown className="h-5 w-5 text-amber-600" />
                     )}
                   </div>
                 </button>
@@ -144,7 +144,7 @@ export default function FAQs() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <div className="p-5 pt-0 border-t border-blue-100">
+                      <div className="p-5 pt-0 border-t border-amber-100">
                         <p className="text-lg text-gray-700">{faq.answer}</p>
                       </div>
                     </motion.div>
@@ -156,13 +156,13 @@ export default function FAQs() {
 
           {/* Contact section */}
           <motion.div
-            className="mt-16 p-8 bg-gradient-to-br from-white to-indigo-50 rounded-xl shadow-sm border border-indigo-100 text-center"
+            className="mt-16 p-8 bg-gradient-to-br from-white to-green-50 rounded-xl shadow-sm border border-green-100 text-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-indigo-700 to-purple-600 text-transparent bg-clip-text">
+            <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-green-700 to-emerald-600 text-transparent bg-clip-text">
               Still Have Questions?
             </h3>
             <p className="text-lg mb-6 text-gray-700">
@@ -173,7 +173,7 @@ export default function FAQs() {
               href="mailto:joel@pafricanoi.com"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-medium rounded-lg transition-all shadow-sm"
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white font-medium rounded-lg transition-all shadow-sm"
             >
               Contact Us
               <svg
