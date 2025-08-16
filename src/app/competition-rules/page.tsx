@@ -154,10 +154,10 @@ export default function CompetitionRules() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
                       <FileText className="h-5 w-5 mr-2 text-green-600" />
-                      <span className="text-lg font-medium">IOI Syllabus 2018</span>
+                      <span className="text-lg font-medium">IOI Syllabus 2025</span>
                     </div>
                     <motion.a
-                      href="https://ioinformatics.org/files/ioi-syllabus-2018.pdf"
+                      href="https://ioinformatics.org/files/ioi-syllabus-2015.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.02 }}
