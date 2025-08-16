@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   NavigationMenu,
@@ -56,27 +57,33 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
       className={`w-full sticky top-0 z-50 transition-all duration-300 border-b ${
         scrolled
-          ? "bg-gradient-to-r from-white/95 to-blue-50/95 backdrop-blur-md shadow-sm"
-          : "bg-gradient-to-r from-white to-blue-50/40"
+          ? "bg-gradient-to-r from-white/95 to-amber-50/95 backdrop-blur-md shadow-sm"
+          : "bg-gradient-to-r from-white to-amber-50/40"
       }`}
     >
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center space-x-2 font-semibold text-primary"
+          className="flex items-center space-x-2 font-semibold"
         >
           <span className="sr-only">Pan African Informatics Olympiad</span>
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="flex items-center"
           >
-            {/* You could add a logo SVG here */}
-            <span className="text-xl md:text-2xl font-bold bg-gradient-to-br from-primary via-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <Image
+              src="/logo.png"
+              alt="PAIO 2025 Logo"
+              width={40}
+              height={40}
+              className="w-8 h-8 md:w-10 md:h-10"
+            />
+            <span className="text-xl md:text-2xl font-bold bg-gradient-to-br from-amber-700 via-orange-600 to-green-600 bg-clip-text text-transparent ml-2">
               PAIO
             </span>
-            <span className="hidden md:inline-block ml-2">
-              Pan African Informatics Olympiad
+            <span className="hidden lg:inline-block ml-2 text-amber-800 font-medium">
+              2025
             </span>
           </motion.div>
         </Link>
@@ -91,7 +98,7 @@ const Navbar = () => {
                     <motion.div whileHover={{ scale: 1.05 }}>
                       <Link
                         href={item.path}
-                        className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-gradient-to-r hover:from-primary/5 hover:to-blue-500/10`}
+                        className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-gradient-to-r hover:from-amber-500/5 hover:to-green-500/10`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -102,7 +109,7 @@ const Navbar = () => {
                     <motion.div whileHover={{ scale: 1.05 }}>
                       <Link
                         href={item.path}
-                        className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-gradient-to-r hover:from-primary/5 hover:to-blue-500/10`}
+                        className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-gradient-to-r hover:from-amber-500/5 hover:to-green-500/10`}
                       >
                         {item.label}
                       </Link>
@@ -117,14 +124,14 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <motion.button
           whileTap={{ scale: 0.95 }}
-          className="md:hidden flex items-center p-2 rounded-md hover:bg-blue-50"
+          className="md:hidden flex items-center p-2 rounded-md hover:bg-amber-50"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
           {mobileMenuOpen ? (
-            <X className="h-5 w-5 text-primary" />
+            <X className="h-5 w-5 text-amber-700" />
           ) : (
-            <Menu className="h-5 w-5 text-primary" />
+            <Menu className="h-5 w-5 text-amber-700" />
           )}
         </motion.button>
       </div>
@@ -136,7 +143,7 @@ const Navbar = () => {
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.3 }}
-          className="md:hidden bg-gradient-to-b from-white to-blue-50/50 border-t border-gray-100 shadow-sm"
+          className="md:hidden bg-gradient-to-b from-white to-amber-50/50 border-t border-gray-100 shadow-sm"
         >
           <div className="container mx-auto py-3 px-4">
             <ul className="space-y-3">
@@ -149,7 +156,7 @@ const Navbar = () => {
                   {item.external ? (
                     <Link
                       href={item.path}
-                      className="text-gray-800 hover:text-primary font-medium flex items-center justify-between"
+                      className="text-gray-800 hover:text-amber-700 font-medium flex items-center justify-between"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => setMobileMenuOpen(false)}
@@ -160,7 +167,7 @@ const Navbar = () => {
                   ) : (
                     <Link
                       href={item.path}
-                      className="text-gray-800 hover:text-primary font-medium block w-full"
+                      className="text-gray-800 hover:text-amber-700 font-medium block w-full"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.label}

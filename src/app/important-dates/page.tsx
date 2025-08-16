@@ -24,7 +24,7 @@ export default function ImportantDates() {
   return (
     <div className="overflow-hidden">
       {/* Page Header with Gradient */}
-      <section className="relative py-16 bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-100">
+      <section className="relative py-16 bg-gradient-to-br from-amber-50 via-orange-50 to-green-100">
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             className="text-center"
@@ -43,7 +43,7 @@ export default function ImportantDates() {
             </motion.div>
 
             <motion.h1
-              className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-700 to-indigo-600 text-transparent bg-clip-text"
+              className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-700 to-green-600 text-transparent bg-clip-text"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.7 }}
@@ -69,19 +69,19 @@ export default function ImportantDates() {
         <div className="mb-10">
           <div className="flex gap-2 mb-4">
             <button
-              className={`px-4 py-2 rounded-t-lg font-semibold border-b-2 transition-colors ${activeTab === 'overview' ? 'border-blue-600 text-blue-700 bg-white' : 'border-transparent text-gray-500 bg-blue-50'}`}
+              className={`px-4 py-2 rounded-t-lg font-semibold border-b-2 transition-colors ${activeTab === 'overview' ? 'border-amber-600 text-amber-700 bg-white' : 'border-transparent text-gray-500 bg-amber-50'}`}
               onClick={() => setActiveTab('overview')}
             >
               Overview
             </button>
             <button
-              className={`px-4 py-2 rounded-t-lg font-semibold border-b-2 transition-colors ${activeTab === 'criteria' ? 'border-blue-600 text-blue-700 bg-white' : 'border-transparent text-gray-500 bg-blue-50'}`}
+              className={`px-4 py-2 rounded-t-lg font-semibold border-b-2 transition-colors ${activeTab === 'criteria' ? 'border-amber-600 text-amber-700 bg-white' : 'border-transparent text-gray-500 bg-amber-50'}`}
               onClick={() => setActiveTab('criteria')}
             >
               Task Criteria
             </button>
           </div>
-          <div className="bg-white rounded-b-xl shadow-sm border border-blue-100 p-6">
+          <div className="bg-white rounded-b-xl shadow-sm border border-amber-100 p-6">
             {activeTab === 'overview' && (
               <div>
                 <p className="text-lg text-gray-700 max-w-3xl mx-auto">
@@ -122,17 +122,17 @@ export default function ImportantDates() {
         >
           <motion.h2
             variants={fadeInUp}
-            className="text-3xl font-bold mb-8 bg-gradient-to-br from-blue-700 to-indigo-600 text-transparent bg-clip-text inline-block"
+            className="text-3xl font-bold mb-8 bg-gradient-to-br from-amber-700 to-green-600 text-transparent bg-clip-text inline-block"
           >
             Key Deadlines
           </motion.h2>
 
           <motion.div
             variants={fadeInUp}
-            className="p-6 rounded-xl border border-blue-100 bg-gradient-to-r from-white to-blue-50 shadow-sm"
+            className="p-6 rounded-xl border border-amber-100 bg-gradient-to-r from-white to-amber-50 shadow-sm"
           >
             <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
-              <div className="bg-gradient-to-br from-blue-500 to-indigo-500 p-4 rounded-xl text-white flex items-center justify-center min-w-[80px] h-[80px]">
+              <div className="bg-gradient-to-br from-amber-600 to-orange-600 p-4 rounded-xl text-white flex items-center justify-center min-w-[80px] h-[80px]">
                 <BookOpen className="h-10 w-10" />
               </div>
               <div>
@@ -143,7 +143,7 @@ export default function ImportantDates() {
                   April 23, 2025
                 </p>
                 <p className="text-gray-600">
-                  Submit proposals for contest questions. See <a href="https://ioi2025.bo/call-for-tasks.html" target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">IOI 2025 Call For Tasks</a> for task criteria. Submit <a href="https://docs.google.com/forms/d/1Lsto7UKJrIBOKl5JBcjLyFA4-qfaE5cdeAhYvp-ZnD8/edit" target="_blank" rel="noopener noreferrer" className="text-blue-700 underline">here</a>.
+                  Submit proposals for contest questions. See <a href="https://ioi2025.bo/call-for-tasks.html" target="_blank" rel="noopener noreferrer" className="text-amber-700 underline">IOI 2025 Call For Tasks</a> for task criteria. Submit <a href="https://docs.google.com/forms/d/1Lsto7UKJrIBOKl5JBcjLyFA4-qfaE5cdeAhYvp-ZnD8/edit" target="_blank" rel="noopener noreferrer" className="text-amber-700 underline">here</a>.
                 </p>
               </div>
               
@@ -152,10 +152,10 @@ export default function ImportantDates() {
           </motion.div>
           <motion.div
             variants={fadeInUp}
-            className="p-6 rounded-xl border border-blue-100 bg-gradient-to-r from-white to-blue-50 shadow-sm my-4"
+            className="p-6 rounded-xl border border-amber-100 bg-gradient-to-r from-white to-amber-50 shadow-sm my-4"
           >
             <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
-              <div className="bg-gradient-to-br from-blue-500 to-indigo-500 p-4 rounded-xl text-white flex items-center justify-center min-w-[80px] h-[80px]">
+              <div className="bg-gradient-to-br from-amber-600 to-orange-600 p-4 rounded-xl text-white flex items-center justify-center min-w-[80px] h-[80px]">
                 <BookCheck className="h-10 w-10" />
               </div>
               <div>
@@ -175,10 +175,10 @@ export default function ImportantDates() {
           </motion.div>
           <motion.div
             variants={fadeInUp}
-            className="p-6 rounded-xl border border-blue-100 bg-gradient-to-r from-white to-blue-50 shadow-sm my-4"
+            className="p-6 rounded-xl border border-amber-100 bg-gradient-to-r from-white to-amber-50 shadow-sm my-4"
           >
             <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
-              <div className="bg-gradient-to-br from-blue-500 to-indigo-500 p-4 rounded-xl text-white flex items-center justify-center min-w-[80px] h-[80px]">
+              <div className="bg-gradient-to-br from-amber-600 to-orange-600 p-4 rounded-xl text-white flex items-center justify-center min-w-[80px] h-[80px]">
                 <Calendar className="h-10 w-10" />
               </div>
               <div>
@@ -207,17 +207,17 @@ export default function ImportantDates() {
         >
           <motion.h2
             variants={fadeInUp}
-            className="text-3xl font-bold mb-8 bg-gradient-to-br from-blue-700 to-indigo-600 text-transparent bg-clip-text inline-block"
+            className="text-3xl font-bold mb-8 bg-gradient-to-br from-amber-700 to-green-600 text-transparent bg-clip-text inline-block"
           >
             PAIO 2025 Agenda
           </motion.h2>
 
           <motion.div
             variants={fadeInUp}
-            className="overflow-x-auto bg-white p-4 md:p-6 rounded-xl border border-blue-100 shadow-sm"
+            className="overflow-x-auto bg-white p-4 md:p-6 rounded-xl border border-amber-100 shadow-sm"
           >
             <table className="min-w-full divide-y divide-gray-200">
-              <thead className="bg-gradient-to-r from-blue-50 to-indigo-50">
+              <thead className="bg-gradient-to-r from-amber-50 to-orange-50">
                 <tr>
                   <th
                     scope="col"
@@ -240,7 +240,7 @@ export default function ImportantDates() {
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-100">
-              <tr className="transition-colors hover:bg-blue-50/30">
+              <tr className="transition-colors hover:bg-amber-50/30">
                   <td className="py-4 px-6 whitespace-nowrap text-sm font-medium text-gray-900">
                     Fri, Sep 12
                   </td>
@@ -253,7 +253,7 @@ export default function ImportantDates() {
                     Opening Ceremony
                   </td>
                 </tr>
-                <tr className="transition-colors hover:bg-blue-50/30">
+                <tr className="transition-colors hover:bg-amber-50/30">
                   <td className="py-4 px-6 whitespace-nowrap text-sm font-medium text-gray-900">
                     Sat, Sep 13
                   </td>
@@ -264,7 +264,7 @@ export default function ImportantDates() {
                     Contest Start
                   </td>
                 </tr>
-                <tr className="bg-gradient-to-r from-blue-50/50 to-transparent transition-colors hover:bg-blue-50/80">
+                <tr className="bg-gradient-to-r from-amber-50/50 to-transparent transition-colors hover:bg-amber-50/80">
                   <td className="py-4 px-6 whitespace-nowrap text-sm font-medium text-gray-900">
                     Sun, Sep 14
                   </td>
@@ -290,7 +290,7 @@ export default function ImportantDates() {
         >
           <motion.h2
             variants={fadeInUp}
-            className="text-3xl font-bold mb-8 bg-gradient-to-br from-blue-700 to-indigo-600 text-transparent bg-clip-text inline-block"
+            className="text-3xl font-bold mb-8 bg-gradient-to-br from-amber-700 to-green-600 text-transparent bg-clip-text inline-block"
           >
             Key Events
           </motion.h2>
@@ -301,11 +301,11 @@ export default function ImportantDates() {
           >
             <motion.div
               variants={fadeInUp}
-              className="p-6 rounded-xl border border-blue-100 bg-gradient-to-br from-blue-50 to-indigo-50/50 shadow-sm hover:shadow-md transition-shadow"
+              className="p-6 rounded-xl border border-amber-100 bg-gradient-to-br from-amber-50 to-orange-50/50 shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="flex items-center mb-4">
-                <div className="rounded-full bg-blue-100 p-2 mr-3">
-                  <Award className="h-6 w-6 text-blue-600" />
+                <div className="rounded-full bg-amber-100 p-2 mr-3">
+                  <Award className="h-6 w-6 text-amber-600" />
                 </div>
                 <h3 className="font-semibold text-lg text-gray-900">
                   Competition Days
@@ -319,11 +319,11 @@ export default function ImportantDates() {
 
             <motion.div
               variants={fadeInUp}
-              className="p-6 rounded-xl border border-blue-100 bg-gradient-to-br from-purple-50 to-blue-50/50 shadow-sm hover:shadow-md transition-shadow"
+              className="p-6 rounded-xl border border-amber-100 bg-gradient-to-br from-green-50 to-emerald-50/50 shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="flex items-center mb-4">
-                <div className="rounded-full bg-purple-100 p-2 mr-3">
-                  <Users className="h-6 w-6 text-purple-600" />
+                <div className="rounded-full bg-green-100 p-2 mr-3">
+                  <Users className="h-6 w-6 text-green-600" />
                 </div>
                 <h3 className="font-semibold text-lg text-gray-900">
                   Ceremonies
@@ -337,11 +337,11 @@ export default function ImportantDates() {
 
             <motion.div
               variants={fadeInUp}
-              className="p-6 rounded-xl border border-blue-100 bg-gradient-to-br from-indigo-50 to-blue-50/50 shadow-sm hover:shadow-md transition-shadow"
+              className="p-6 rounded-xl border border-amber-100 bg-gradient-to-br from-orange-50 to-amber-50/50 shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="flex items-center mb-4">
-                <div className="rounded-full bg-indigo-100 p-2 mr-3">
-                  <Clock className="h-6 w-6 text-indigo-600" />
+                <div className="rounded-full bg-orange-100 p-2 mr-3">
+                  <Clock className="h-6 w-6 text-orange-600" />
                 </div>
                 <h3 className="font-semibold text-lg text-gray-900">
                   Registration

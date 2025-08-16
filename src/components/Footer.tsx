@@ -70,7 +70,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gradient-to-br from-gray-50 to-blue-50 pt-12 pb-6 border-t border-gray-200">
+    <footer className="bg-gradient-to-br from-gray-50 to-amber-50 pt-12 pb-6 border-t border-gray-200">
       <div className="container mx-auto px-4">
         <motion.div
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
@@ -81,7 +81,7 @@ const Footer = () => {
         >
           {/* About Section */}
           <motion.div variants={childVariants} className="space-y-4">
-            <h3 className="text-lg font-semibold bg-gradient-to-br from-blue-700 to-primary bg-clip-text text-transparent">
+            <h3 className="text-lg font-semibold bg-gradient-to-br from-amber-700 to-green-600 bg-clip-text text-transparent">
               About PAIO
             </h3>
             <p className="text-gray-600 text-sm">
@@ -95,7 +95,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
-                className="text-gray-600 hover:text-primary"
+                className="text-gray-600 hover:text-amber-700"
               >
                 <Twitter size={18} />
                 <span className="sr-only">Twitter</span>
@@ -105,7 +105,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
-                className="text-gray-600 hover:text-primary"
+                className="text-gray-600 hover:text-amber-700"
               >
                 <Facebook size={18} />
                 <span className="sr-only">Facebook</span>
@@ -115,7 +115,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
-                className="text-gray-600 hover:text-primary"
+                className="text-gray-600 hover:text-amber-700"
               >
                 <Instagram size={18} />
                 <span className="sr-only">Instagram</span>
@@ -125,7 +125,7 @@ const Footer = () => {
 
           {/* Quick Links Section */}
           <motion.div variants={childVariants} className="space-y-4">
-            <h3 className="text-lg font-semibold bg-gradient-to-br from-blue-700 to-primary bg-clip-text text-transparent">
+            <h3 className="text-lg font-semibold bg-gradient-to-br from-amber-700 to-green-600 bg-clip-text text-transparent">
               Quick Links
             </h3>
             <ul className="space-y-2">
@@ -134,7 +134,7 @@ const Footer = () => {
                   {item.external ? (
                     <Link
                       href={item.path}
-                      className="text-gray-600 hover:text-primary text-sm flex items-center gap-1 group"
+                      className="text-gray-600 hover:text-amber-700 text-sm flex items-center gap-1 group"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -147,7 +147,7 @@ const Footer = () => {
                   ) : (
                     <Link
                       href={item.path}
-                      className="text-gray-600 hover:text-primary text-sm"
+                      className="text-gray-600 hover:text-amber-700 text-sm"
                     >
                       {item.label}
                     </Link>
@@ -159,7 +159,7 @@ const Footer = () => {
 
           {/* Contact Information */}
           <motion.div variants={childVariants} className="space-y-4">
-            <h3 className="text-lg font-semibold bg-gradient-to-br from-blue-700 to-primary bg-clip-text text-transparent">
+            <h3 className="text-lg font-semibold bg-gradient-to-br from-amber-700 to-green-600 bg-clip-text text-transparent">
               Contact Us
             </h3>
             <ul className="space-y-3">
@@ -167,7 +167,7 @@ const Footer = () => {
                 <Mail size={16} className="text-gray-400 mt-1 flex-shrink-0" />
                 <a
                   href="mailto:joel@pafricanoi.com"
-                  className="text-gray-600 hover:text-primary text-sm"
+                  className="text-gray-600 hover:text-amber-700 text-sm"
                 >
                   joel@pafricanoi.com
                 </a>
@@ -195,7 +195,7 @@ const Footer = () => {
         >
           <p>
             © {currentYear}{" "}
-            <Link href="/" className="hover:text-primary">
+            <Link href="/" className="hover:text-amber-700">
               Pan African Informatics Olympiad
             </Link>{" "}
             • All Rights Reserved
