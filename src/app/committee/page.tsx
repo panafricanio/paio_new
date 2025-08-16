@@ -763,14 +763,14 @@ export default function Committee() {
             >
               <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-amber-100">
                 <Image
-                  src="https://stats.ioinformatics.org/img/photos/2024/8295.png"
+                  src="https://stats.ioinformatics.org/img/photos/2024/8483.png"
                   alt=""
                   fill
                   className="object-cover"
                 />
               </div>
               <h3 className="text-xl font-semibold mb-2 text-center bg-gradient-to-r from-amber-700 to-orange-600 bg-clip-text text-transparent">
-                Ahmad Osman 
+                Ahmad Usman
               </h3>
               <p className="text-gray-600 text-center mb-4">Pakistan (Guest)</p>
           </motion.div>
