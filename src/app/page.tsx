@@ -176,6 +176,7 @@ export default function Home() {
                     { flag: '🇪🇬', name: 'Egypt' },
                     { flag: '🇬🇭', name: 'Ghana' },
                     { flag: '🇰🇪', name: 'Kenya' },
+                    { flag: '🇲🇱', name: 'Mali' },
                     { flag: '🇲🇦', name: 'Morocco' },
                     { flag: '🇳🇬', name: 'Nigeria' },
                     { flag: '🇵🇰', name: 'Pakistan' },
@@ -210,7 +211,7 @@ export default function Home() {
                   transition={{ delay: 2.5, duration: 0.6 }}
                 >
                   <div className="text-sm md:text-base opacity-75">
-                    Total: <span className="font-semibold">14 Countries</span>
+                    Total: <span className="font-semibold">15 Countries</span>
                   </div>
                 </motion.div>
               </div>
