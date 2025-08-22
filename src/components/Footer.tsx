@@ -89,38 +89,6 @@ const Footer = () => {
               competition that brings together talented young programmers from
               across the African continent.
             </p>
-            <div className="flex space-x-4 pt-2">
-              <motion.a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1 }}
-                className="text-gray-600 hover:text-amber-700"
-              >
-                <Twitter size={18} />
-                <span className="sr-only">Twitter</span>
-              </motion.a>
-              <motion.a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1 }}
-                className="text-gray-600 hover:text-amber-700"
-              >
-                <Facebook size={18} />
-                <span className="sr-only">Facebook</span>
-              </motion.a>
-              <motion.a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1 }}
-                className="text-gray-600 hover:text-amber-700"
-              >
-                <Instagram size={18} />
-                <span className="sr-only">Instagram</span>
-              </motion.a>
-            </div>
           </motion.div>
 
           {/* Quick Links Section */}

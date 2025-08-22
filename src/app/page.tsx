@@ -271,11 +271,10 @@ export default function Home() {
                 <Users className="h-6 w-6" />
               </div>
               <h3 className="text-xl font-semibold mb-3 bg-gradient-to-r from-green-700 to-emerald-600 bg-clip-text text-transparent">
-                Networking
+                Community
               </h3>
               <p className="text-gray-600">
-                Connect with like-minded peers and build relationships with
-                fellow programming enthusiasts from across Africa.
+                Connect with like-minded peers from across Africa, share knowledge, and collaborate to tackle challenging problems.
               </p>
             </motion.div>
 
