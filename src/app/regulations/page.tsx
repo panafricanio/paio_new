@@ -257,7 +257,7 @@ export default function Regulations() {
                       <span className={highlightedTextStyle}>
                         Two online competition days
                       </span>{" "}
-                      each with 3 algorithmic problems to be solved in 5 hours.
+                      each with 3-4 algorithmic problems to be solved in 5 hours.
                     </p>
                   </li>
                   <li className="flex items-start">

@@ -29,7 +29,7 @@ export default function FAQs() {
     },
     {
       question: "When and where is PAIO 2025 taking place?",
-      answer: "PAIO 2025 will take place on 13th September online.",
+      answer: "PAIO 2025 will take place on 13th and 14th September September online.",
     },
     {
       question: "How do countries register for PAIO?",
