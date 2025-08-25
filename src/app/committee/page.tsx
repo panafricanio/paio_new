@@ -692,7 +692,7 @@ export default function Committee() {
             >
               <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-amber-100">
                 <Image
-                  src="https://media.licdn.com/dms/image/v2/D4E03AQFUROMgdL0Q8g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1716402433098?e=1755734400&v=beta&t=ZtuPCf8MxRzQo-wI3w1aFexuGIZTsOJRMJ_HeMld96Q"
+                  src="https://stats.ioinformatics.org/img/photos/2024/6078.png"
                   alt=""
                   fill
                   className="object-cover"
