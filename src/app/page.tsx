@@ -181,9 +181,7 @@ export default function Home() {
                     { flag: '🇳🇬', name: 'Nigeria' },
                     { flag: '🇵🇰', name: 'Pakistan' },
                     { flag: '🇷🇼', name: 'Rwanda' },
-                    { flag: '🇸🇦', name: 'Saudi Arabia' },
                     { flag: '🇿🇦', name: 'South Africa' },
-                    { flag: '🇸🇾', name: 'Syria' },
                     { flag: '🇹🇳', name: 'Tunisia' },
                   ].map((country, index) => (
                     <motion.div
@@ -211,7 +209,7 @@ export default function Home() {
                   transition={{ delay: 2.5, duration: 0.6 }}
                 >
                   <div className="text-sm md:text-base opacity-75">
-                    Total: <span className="font-semibold">15 Countries</span>
+                    Total: <span className="font-semibold">13 Countries</span>
                   </div>
                 </motion.div>
               </div>
