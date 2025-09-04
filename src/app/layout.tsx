@@ -30,9 +30,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+    <html
+      lang="en"
+      className="scroll-smooth"
+      suppressHydrationWarning
+      data-scroll-behavior="smooth"
+    >
       <body
         className={`${poppins.variable} ${inter.variable} font-sans bg-background text-foreground antialiased`}
+        suppressHydrationWarning={true}
       >
         <div className="flex flex-col min-h-screen">
           <Navbar />
