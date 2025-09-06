@@ -57,7 +57,7 @@ export const hostCommittee: CommitteeMember[] = [
   },
   {
     name: "Norbert Ndayisenga",
-    image: "/placeholder-profile.svg", 
+    image: "/norbert.jpg", 
     roles: ["Software Engineer, Rwanda Informatics Olympiad Coach"],
   },
   {
