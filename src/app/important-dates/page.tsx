@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Calendar, Clock, Users, Award, BookOpen, BookCheck } from "lucide-react";
+import { scheduleData, practiceContestInfo } from "../../../data/scheduleData";
+import ScheduleSection from "../../components/ScheduleSection";
 
 export default function ImportantDates() {
   // Animation variants
@@ -19,7 +21,7 @@ export default function ImportantDates() {
     },
   };
 
-  const [activeTab, setActiveTab] = useState<'overview' | 'criteria'>('overview');
+  const [activeTab, setActiveTab] = useState<'overview' | 'criteria' | 'schedule'>('schedule');
 
   return (
     <div className="overflow-hidden">
@@ -80,6 +82,12 @@ export default function ImportantDates() {
             >
               Task Criteria
             </button>
+            <button
+              className={`px-4 py-2 rounded-t-lg font-semibold border-b-2 transition-colors ${activeTab === 'schedule' ? 'border-amber-600 text-amber-700 bg-white' : 'border-transparent text-gray-500 bg-amber-50'}`}
+              onClick={() => setActiveTab('schedule')}
+            >
+              Schedule
+            </button>
           </div>
           <div className="bg-white rounded-b-xl shadow-sm border border-amber-100 p-6">
             {activeTab === 'overview' && (
@@ -109,6 +117,24 @@ export default function ImportantDates() {
                 <p>As this is the first edition the ISC</p>
                 <p>Submitted tasks must be kept in strict confidence until the end of PAIO 2025. After that, authors are free to do whatever they wish with the tasks, but may be asked to have them considered for PAIO 2026, in which case strict confidence would have to be maintained through until PAIO 2026.</p>
                 <p>ISC will reach out with respect to feedback on tasks as needed and the final tasks used in the competition will be decided by the ISC.</p>
+              </div>
+            )}
+            {activeTab === 'schedule' && (
+              <div>
+                <div className="mb-8 p-6 bg-blue-50 rounded-xl border border-blue-200">
+                  <h3 className="text-xl font-bold mb-4 text-gray-900">{practiceContestInfo.title}</h3>
+                  <p className="text-gray-700 mb-4">{practiceContestInfo.description}</p>
+                  <p className="text-gray-700">{practiceContestInfo.briefingInfo}</p>
+                </div>
+                <motion.div
+                  initial="initial"
+                  animate="animate"
+                  variants={staggerContainer}
+                >
+                  {scheduleData.map((section, index) => (
+                    <ScheduleSection key={index} section={section} index={index} />
+                  ))}
+                </motion.div>
               </div>
             )}
           </div>
