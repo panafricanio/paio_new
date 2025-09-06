@@ -13,5 +13,6 @@ export const countries = [
     { flag: "🇿🇦", name: "South Africa" },
     { flag: "🇹🇳", name: "Tunisia" },
     { flag: "🇱🇾", name: "Libya" },
+    { flag: "🇦🇴" , name: "Angola" }
   ];
   

@@ -37,7 +37,7 @@ export const internationalScientificCommittee: CommitteeMember[] = [
 export const hostCommittee: CommitteeMember[] = [
   {
     name: "Dr. Papias Niyigena",
-    image: "", // Base64 image was truncated - TODO: Restore full image
+    image: "/placeholder-profile.svg", 
     roles: ["Principal, Rwanda Coding Academy"],
   },
   {
@@ -57,7 +57,7 @@ export const hostCommittee: CommitteeMember[] = [
   },
   {
     name: "Norbert Ndayisenga",
-    image: "/placeholder-profile.svg",
+    image: "/placeholder-profile.svg", 
     roles: ["Software Engineer, Rwanda Informatics Olympiad Coach"],
   },
   {
@@ -118,17 +118,17 @@ export const teamLeaders: CommitteeMember[] = [
   },
   {
     name: "Elias Konadu",
-    image: "/placeholder-profile.svg",
+    image: "/placeholder-profile.svg", 
     roles: ["Ghana"],
   },
   {
     name: "Prof James Katende",
-    image: "/placeholder-profile.svg",
+    image: "/placeholder-profile.svg", 
     roles: ["Kenya"],
   },
   {
     name: "Sébastian Diarra",
-    image: "", 
+    image: "/placeholder-profile.svg", 
     roles: ["Mali"],
   },
   {
@@ -148,7 +148,7 @@ export const teamLeaders: CommitteeMember[] = [
   },
   {
     name: "Noah Jacobsen",
-    image: "", 
+    image: "/placeholder-profile.svg", 
     roles: ["South Africa"],
   },
   {
