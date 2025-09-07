@@ -11,6 +11,7 @@ import {
   internationalCommittee,
   teamLeaders,
 } from "../../../data/committeeMembers";
+import { coaches } from "../../../data/coaches";
 
 export default function Committee() {
   // Animation variants
@@ -33,6 +34,7 @@ export default function Committee() {
     hostCommittee,
     internationalCommittee,
     teamLeaders,
+    coaches,
   ];
 
   return (
@@ -54,7 +56,8 @@ export default function Committee() {
           staggerContainer={staggerContainer}
           centerRoles={
             section.title === "Host Committee" ||
-            section.title === "Team Leaders"
+            section.title === "Team Leaders" ||
+            section.title === "Coaches"
           }
         />
       ))}
