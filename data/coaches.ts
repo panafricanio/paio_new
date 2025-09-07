@@ -6,6 +6,7 @@ export const coaches: CommitteeMember[] = [
     roles: ["Coach"],
     image: "/images/hirwa.jpeg",
   },
+  
   {
     name: "Kagaba Etienne",
     roles: ["Coach"],
