@@ -178,7 +178,7 @@ export default function Home() {
                   transition={{ delay: 1.2, duration: 0.8 }}
                 >
                   {/* Country flags with names */}
-                  {countries.map((country, index) =>
+                  {sortedCountries.map((country, index) =>
                     country.flag && country.flag !== "" ? (
                       <motion.div
                         key={index}
