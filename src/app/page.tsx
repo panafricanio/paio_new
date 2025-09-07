@@ -33,6 +33,10 @@ const staggerContainer = {
 };
 
 export default function Home() {
+  const sortedCountries = countries.sort((a, b) =>
+    a.name.localeCompare(b.name)
+  );
+
   return (
     <div className="overflow-hidden">
       {/* Hero Section with Enhanced Gradients */}
