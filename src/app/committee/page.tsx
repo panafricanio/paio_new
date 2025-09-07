@@ -11,7 +11,7 @@ import {
   internationalCommittee,
   teamLeaders,
 } from "../../../data/committeeMembers";
-import { coaches } from "../../../data/coaches";
+// import { coaches } from "../../../data/coaches";
 
 export default function Committee() {
   // Animation variants
@@ -34,7 +34,7 @@ export default function Committee() {
     hostCommittee,
     internationalCommittee,
     teamLeaders,
-    coaches,
+    // coaches,
   ];
 
   return (
