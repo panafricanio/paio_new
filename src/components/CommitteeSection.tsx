@@ -25,7 +25,7 @@ const CommitteeSection: React.FC<CommitteeSectionProps> = ({
   staggerContainer,
   centerRoles = false,
 }) => {
-  const sortedMember = members.sort((a, b) => a.name.localeCompare(b.name));
+  const sortedMember = members?.sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <section className={`py-16 md:py-24 ${getBackgroundClass(colorScheme)}`}>
@@ -56,7 +56,7 @@ const CommitteeSection: React.FC<CommitteeSectionProps> = ({
           whileInView="animate"
           viewport={{ once: true, margin: "-100px" }}
         >
-          {sortedMember.map((member, idx) => (
+          {sortedMember?.map((member, idx) => (
             <CommitteeMemberCard
               key={member.name + idx}
               member={member}

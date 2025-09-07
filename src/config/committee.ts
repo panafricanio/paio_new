@@ -22,9 +22,10 @@ export const committeeSections: SectionConfig[] = [
     description: "Meet the team leaders from participating countries",
     colorScheme: "amber",
   },
-  {
+  /**{
     title: "Coaches",
     description: "Pan-African Informatic Olympiad coaches.",
     colorScheme: "orange"
   }
+    */
 ];
