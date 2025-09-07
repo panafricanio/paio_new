@@ -161,4 +161,9 @@ export const teamLeaders: CommitteeMember[] = [
     image: "https://stats.ioinformatics.org/img/photos/2024/8483.png",
     roles: ["Pakistan (Guest)"],
   },
+  {
+    name: "João Ndombele",
+    image: "//placeholder-profile.svg",
+    roles: ["Angola"]
+  }
 ];
