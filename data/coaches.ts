@@ -6,22 +6,13 @@ export const coaches: CommitteeMember[] = [
     roles: ["Coach"],
     image: "/images/hirwa.jpeg",
   },
-  {
-    name: "Jose Esperazano",
-    roles: ["Coach"],
-    image: "/images/jose_1.webp",
-  },
+  
   {
     name: "Kagaba Etienne",
     roles: ["Coach"],
     image: "/images/kagaba.webp",
   },
   {
-    name: "Arun shanmuganathan",
-    roles: ["Coach"],
-    image: "/images/arun.webp",
-  },
-    {
     name: "Niyokwizera Jean D'Amour",
     roles: ["Coach"],
     image: "/images/brojeid.webp",
@@ -47,31 +38,10 @@ export const coaches: CommitteeMember[] = [
     image: "/images/Afsa.webp",
   },
   {
-    name: "Niyogisubizo Jehovanis",
+    name: "Jean Paul Elisa NIYOKWIZERWA",
     roles: ["Coach"],
-    image: "/images/jehovanis.webp",
-  },
-  {
-    name: "Hakim Nshimiyimana",
-    roles: ["Coach"],
-    image: "/images/hakim.webp",
-  },
-  {
-        name: "Jean Paul Elisa NIYOKWIZERWA",
-        roles: ["Coach"],
-        image: "https://avatars.githubusercontent.com/u/140616733?v=4",
+    image: "https://avatars.githubusercontent.com/u/140616733?v=4",
     },
-  {
-    name: "Ishimwe Frank",
-    roles: ["Coach"],
-    image: "/images/frank.webp",
-  },
-  {
-    name: "Sezikeye Jado Fils",
-    roles: ["Coach"],
-    image: "/images/jado.webp",
-  },
-
   {
     name: "Kelly Irakoze Ntawigenga",
     roles: ["Coach"],
