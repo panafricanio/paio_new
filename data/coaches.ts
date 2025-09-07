@@ -13,7 +13,7 @@ export const coaches: CommitteeMember[] = [
   },
   {
     name: "Kagaba Etienne",
-    roles: ["Team Leader"],
+    roles: ["Coach"],
     image: "/images/kagaba.webp",
   },
   {
@@ -23,7 +23,7 @@ export const coaches: CommitteeMember[] = [
   },
     {
     name: "Niyokwizera Jean D'Amour",
-    roles: ["Deputy Leader"],
+    roles: ["Coach"],
     image: "/images/brojeid.webp",
   },
   {
