@@ -6,8 +6,9 @@ import { CommitteeMember, ColorScheme } from "@/types/committee";
 import { getColorConfig } from "@/utils/colorUtils";
 import {
   validateImageUrl,
-  getImageSrc,
+  getImageSrcWithFallback,
   logMissingImage,
+  knownMissingImages,
 } from "@/utils/imageUtils";
 
 interface CommitteeMemberCardProps {
@@ -28,11 +29,11 @@ const CommitteeMemberCard: React.FC<CommitteeMemberCardProps> = ({
   const colors = getColorConfig(colorScheme);
 
   // Enhanced image validation and logging
-  const hasValidImage = validateImageUrl(member.image);
-  const imageSrc = getImageSrc(member.image, member.name);
+  const hasValidImage = validateImageUrl(member.image) && !knownMissingImages.has(member.image);
+  const imageSrc = getImageSrcWithFallback(member.image, member.name);
 
-  // Only log if there's an image URL but it's invalid (don't log for empty strings or placeholders)
-  if (!hasValidImage && member.image && !member.image.includes("placeholder")) {
+  // Only log if there's an image URL but it's invalid (don't log for known missing images or placeholders)
+  if (!hasValidImage && member.image && !member.image.includes("placeholder") && !knownMissingImages.has(member.image)) {
     logMissingImage(member.name, member.image);
   }
 
