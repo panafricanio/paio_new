@@ -67,7 +67,8 @@ export default function ImportantDates() {
       </section>
 
       <div className="container mx-auto px-4 py-10">
-        {/* Tabbed Info Section */}
+        <div className="max-w-4xl mx-auto">
+          {/* Tabbed Info Section */}
         <div className="mb-10">
           <div className="flex gap-2 mb-4">
             <button
@@ -139,13 +140,13 @@ export default function ImportantDates() {
             )}
           </div>
         </div>
-        {/* Key Deadlines Section */}
-        <motion.section
-          className="mb-16"
-          initial="initial"
-          animate="animate"
-          variants={staggerContainer}
-        >
+          {/* Key Deadlines Section */}
+          <motion.section
+            className="mb-16"
+            initial="initial"
+            animate="animate"
+            variants={staggerContainer}
+          >
           <motion.h2
             variants={fadeInUp}
             className="text-3xl font-bold mb-8 bg-gradient-to-br from-amber-700 to-green-600 text-transparent bg-clip-text inline-block"
@@ -224,13 +225,13 @@ export default function ImportantDates() {
           </motion.div>
         </motion.section>
 
-        {/* Agenda Section with Gradient Table */}
-        <motion.section
-          initial="initial"
-          animate="animate"
-          variants={staggerContainer}
-          className="mb-12"
-        >
+          {/* Agenda Section with Gradient Table */}
+          <motion.section
+            initial="initial"
+            animate="animate"
+            variants={staggerContainer}
+            className="mb-12"
+          >
           <motion.h2
             variants={fadeInUp}
             className="text-3xl font-bold mb-8 bg-gradient-to-br from-amber-700 to-green-600 text-transparent bg-clip-text inline-block"
@@ -308,12 +309,12 @@ export default function ImportantDates() {
           </motion.div>
         </motion.section>
 
-        {/* Key Events Cards */}
-        <motion.section
-          initial="initial"
-          animate="animate"
-          variants={staggerContainer}
-        >
+          {/* Key Events Cards */}
+          <motion.section
+            initial="initial"
+            animate="animate"
+            variants={staggerContainer}
+          >
           <motion.h2
             variants={fadeInUp}
             className="text-3xl font-bold mb-8 bg-gradient-to-br from-amber-700 to-green-600 text-transparent bg-clip-text inline-block"
@@ -379,7 +380,8 @@ export default function ImportantDates() {
               </p>
             </motion.div>
           </motion.div>
-        </motion.section>
+          </motion.section>
+        </div>
       </div>
     </div>
   );

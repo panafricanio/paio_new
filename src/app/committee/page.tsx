@@ -44,23 +44,27 @@ export default function Committee() {
         description="Meet the dedicated professionals who make PAIO possible"
       />
 
-      {committeeSections.map((section, index) => (
-        <CommitteeSection
-          key={section.title}
-          title={section.title}
-          description={section.description}
-          members={memberData[index]}
-          colorScheme={section.colorScheme}
-          gridCols={section.gridCols}
-          fadeInUp={fadeInUp}
-          staggerContainer={staggerContainer}
-          centerRoles={
-            section.title === "Host Committee" ||
-            section.title === "Team Leaders" ||
-            section.title === "Coaches"
-          }
-        />
-      ))}
+      <div className="container mx-auto px-4 py-10">
+        <div className="max-w-4xl mx-auto">
+          {committeeSections.map((section, index) => (
+            <CommitteeSection
+              key={section.title}
+              title={section.title}
+              description={section.description}
+              members={memberData[index]}
+              colorScheme={section.colorScheme}
+              gridCols={section.gridCols}
+              fadeInUp={fadeInUp}
+              staggerContainer={staggerContainer}
+              centerRoles={
+                section.title === "Host Committee" ||
+                section.title === "Team Leaders" ||
+                section.title === "Coaches"
+              }
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
