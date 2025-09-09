@@ -3,7 +3,7 @@ import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import LanguageSelector from "@/components/LanguageSelector";
+// import LanguageSelector from "@/components/LanguageSelector";
 import ClientBody from "./ClientBody";
 
 // Updated font system with display font for headings and body font for text

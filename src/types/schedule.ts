@@ -8,4 +8,5 @@ export interface ScheduleSection {
   title: string;
   events: ScheduleEvent[];
   notes?: string[];
+  headers?: string[];
 }

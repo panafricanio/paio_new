@@ -19,7 +19,7 @@ export default function ScheduleSection({
   return (
     <motion.div variants={fadeInUp} className="mb-8">
       <h3 className="text-2xl font-bold mb-4 text-gray-900">{section.title}</h3>
-      <ScheduleTable events={section.events} />
+      <ScheduleTable events={section.events} headers={section.headers} />
       {section.notes && (
         <div className="mt-4 p-4 bg-amber-50 rounded-lg border border-amber-200">
           {section.notes.map((note, noteIndex) => (
