@@ -28,6 +28,17 @@ export const scheduleData: ScheduleSection[] = [
     ]
   },
   {
+    title: "Problemset Translation: 11th September - Friday",
+    headers: ["Time (UTC)", "Participant", "Description"],
+    events: [
+      {
+        time: "1800",
+        participant: "Team Leaders/Deputy Leaders",
+        teamLeader: "Translation of PAIO problemset in different languages(ex: Arabic)"
+      }
+    ]
+  },
+  {
     title: "Day 0: 12th September",
     events: [
       {

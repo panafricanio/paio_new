@@ -2,24 +2,27 @@ import { motion } from "framer-motion";
 import { ScheduleEvent } from "@/types/schedule";
 
 interface ScheduleTableProps {
+  headers?: string[];
   events: ScheduleEvent[];
 }
 
-export default function ScheduleTable({ events }: ScheduleTableProps) {
+export default function ScheduleTable({
+  headers = ["Time (UTC)", "Participant", "Team Leader / Deputy Leader"],
+  events,
+}: ScheduleTableProps) {
   return (
     <div className="overflow-x-auto bg-white p-4 md:p-6 rounded-xl border border-amber-100 shadow-sm">
       <table className="min-w-full divide-y divide-gray-200">
         <thead className="bg-gradient-to-r from-amber-50 to-orange-50">
           <tr>
-            <th className="py-4 px-6 text-left text-sm font-semibold text-gray-900 rounded-tl-lg">
-              Time (UTC)
-            </th>
-            <th className="py-4 px-6 text-left text-sm font-semibold text-gray-900">
-              Participant
-            </th>
-            <th className="py-4 px-6 text-left text-sm font-semibold text-gray-900 rounded-tr-lg">
-              Team Leader / Deputy Leader
-            </th>
+            {headers.map((header, index) => (
+              <th
+                key={index}
+                className="py-4 px-6 text-left text-sm font-semibold text-gray-900"
+              >
+                {header}
+              </th>
+            ))}
           </tr>
         </thead>
         <tbody className="bg-white divide-y divide-gray-100">

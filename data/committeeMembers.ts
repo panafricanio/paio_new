@@ -61,7 +61,7 @@ export const hostCommittee: CommitteeMember[] = [
     roles: ["Software Engineer, Rwanda Informatics Olympiad Coach"],
   },
   {
-    name: "NIYOKWIZERWA Jean Paul Elisa",
+    name: "Jean Paul Elisa NIYOKWIZERWA",
     image: "https://avatars.githubusercontent.com/u/140616733?v=4",
     roles: ["Software Engineer, Website Creator"],
   },
