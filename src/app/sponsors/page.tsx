@@ -34,6 +34,22 @@ export default function Sponsors() {
     <div className="overflow-hidden">
       {/* Page Header with Gradient */}
       <section className="relative py-16 bg-gradient-to-br from-amber-50 via-orange-50 to-green-100">
+        <div className="absolute inset-0 overflow-hidden">
+          {/* Decorative gradients */}
+          <div className="absolute -top-24 -left-24 w-72 h-72 bg-amber-300/20 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-green-300/20 rounded-full blur-3xl"></div>
+
+          <svg
+            className="absolute bottom-0 left-0 right-0 transform translate-y-1/2 opacity-10"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+            style={{ height: "60px" }}
+          >
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+          </svg>
+        </div>
+
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             className="text-center"
@@ -52,7 +68,7 @@ export default function Sponsors() {
             </motion.div>
 
             <motion.h1
-              className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-700 to-green-600 text-transparent bg-clip-text"
+              className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-700 via-orange-600 to-green-600 text-transparent bg-clip-text"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.7 }}
