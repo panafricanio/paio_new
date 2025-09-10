@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Calendar, Clock, Users, Award, BookOpen, BookCheck } from "lucide-react";
+import Typography from "@/components/Typography";
 import { scheduleData, practiceContestInfo } from "../../../data/scheduleData";
 import ScheduleSection from "../../components/ScheduleSection";
 
@@ -44,30 +45,33 @@ export default function ImportantDates() {
               <span className="font-medium text-sm">PAIO 2025 Calendar</span>
             </motion.div>
 
-            <motion.h1
-              className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-700 to-green-600 text-transparent bg-clip-text"
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.7 }}
             >
-              Important Dates
-            </motion.h1>
+              <Typography variant="h1" gradient className="mb-4">
+                Important Dates
+              </Typography>
+            </motion.div>
 
-            <motion.p
-              className="text-lg text-gray-700 max-w-3xl mx-auto"
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.7 }}
             >
-              Mark your calendar with these crucial dates for the Pan African
-              Informatics Olympiad 2025
-            </motion.p>
+              <Typography variant="body" className="text-gray-700 max-w-3xl mx-auto">
+                Mark your calendar with these crucial dates for the Pan African
+                Informatics Olympiad 2025
+              </Typography>
+            </motion.div>
           </motion.div>
         </div>
       </section>
 
       <div className="container mx-auto px-4 py-10">
-        {/* Tabbed Info Section */}
+        <div className="max-w-4xl mx-auto">
+          {/* Tabbed Info Section */}
         <div className="mb-10">
           <div className="flex gap-2 mb-4">
             <button
@@ -139,19 +143,18 @@ export default function ImportantDates() {
             )}
           </div>
         </div>
-        {/* Key Deadlines Section */}
-        <motion.section
-          className="mb-16"
-          initial="initial"
-          animate="animate"
-          variants={staggerContainer}
-        >
-          <motion.h2
-            variants={fadeInUp}
-            className="text-3xl font-bold mb-8 bg-gradient-to-br from-amber-700 to-green-600 text-transparent bg-clip-text inline-block"
+          {/* Key Deadlines Section */}
+          <motion.section
+            className="mb-16"
+            initial="initial"
+            animate="animate"
+            variants={staggerContainer}
           >
-            Key Deadlines
-          </motion.h2>
+          <motion.div variants={fadeInUp} className="mb-8">
+            <Typography variant="h2" gradient>
+              Key Deadlines
+            </Typography>
+          </motion.div>
 
           <motion.div
             variants={fadeInUp}
@@ -162,15 +165,15 @@ export default function ImportantDates() {
                 <BookOpen className="h-10 w-10" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                <Typography variant="h3" className="text-gray-900 mb-2">
                   Call For Tasks Open
-                </h3>
-                <p className="text-xl font-semibold text-primary mb-1">
+                </Typography>
+                <Typography variant="body" className="font-semibold text-primary mb-1">
                   April 23, 2025
-                </p>
-                <p className="text-gray-600">
+                </Typography>
+                <Typography variant="body" className="text-gray-600">
                   Submit proposals for contest questions. See <a href="https://ioi2025.bo/call-for-tasks.html" target="_blank" rel="noopener noreferrer" className="text-amber-700 underline">IOI 2025 Call For Tasks</a> for task criteria. Submit <a href="https://docs.google.com/forms/d/1Lsto7UKJrIBOKl5JBcjLyFA4-qfaE5cdeAhYvp-ZnD8/edit" target="_blank" rel="noopener noreferrer" className="text-amber-700 underline">here</a>.
-                </p>
+                </Typography>
               </div>
               
             </div>
@@ -185,15 +188,15 @@ export default function ImportantDates() {
                 <BookCheck className="h-10 w-10" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                <Typography variant="h3" className="text-gray-900 mb-2">
                   Call For Tasks Close
-                </h3>
-                <p className="text-xl font-semibold text-primary mb-1">
+                </Typography>
+                <Typography variant="body" className="font-semibold text-primary mb-1">
                   July 4, 2025
-                </p>
-                <p className="text-gray-600">
+                </Typography>
+                <Typography variant="body" className="text-gray-600">
                   Finalize contest questions
-                </p>
+                </Typography>
               </div>
               
             </div>
@@ -208,15 +211,15 @@ export default function ImportantDates() {
                 <Calendar className="h-10 w-10" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                <Typography variant="h3" className="text-gray-900 mb-2">
                   Registration Deadline
-                </h3>
-                <p className="text-xl font-semibold text-primary mb-1">
+                </Typography>
+                <Typography variant="body" className="font-semibold text-primary mb-1">
                   June 30, 2025
-                </p>
-                <p className="text-gray-600">
+                </Typography>
+                <Typography variant="body" className="text-gray-600">
                   Last day to confirm your team's participation in PAIO 2025
-                </p>
+                </Typography>
               </div>
               
             </div>
@@ -224,19 +227,18 @@ export default function ImportantDates() {
           </motion.div>
         </motion.section>
 
-        {/* Agenda Section with Gradient Table */}
-        <motion.section
-          initial="initial"
-          animate="animate"
-          variants={staggerContainer}
-          className="mb-12"
-        >
-          <motion.h2
-            variants={fadeInUp}
-            className="text-3xl font-bold mb-8 bg-gradient-to-br from-amber-700 to-green-600 text-transparent bg-clip-text inline-block"
+          {/* Agenda Section with Gradient Table */}
+          <motion.section
+            initial="initial"
+            animate="animate"
+            variants={staggerContainer}
+            className="mb-12"
           >
-            PAIO 2025 Agenda
-          </motion.h2>
+          <motion.div variants={fadeInUp} className="mb-8">
+            <Typography variant="h2" gradient>
+              PAIO 2025 Agenda
+            </Typography>
+          </motion.div>
 
           <motion.div
             variants={fadeInUp}
@@ -267,40 +269,58 @@ export default function ImportantDates() {
               </thead>
               <tbody className="bg-white divide-y divide-gray-100">
               <tr className="transition-colors hover:bg-amber-50/30">
-                  <td className="py-4 px-6 whitespace-nowrap text-sm font-medium text-gray-900">
-                    Fri, Sep 12
+                  <td className="py-6 px-6 whitespace-nowrap">
+                    <Typography variant="body" className="font-medium text-gray-900">
+                      Fri, Sep 12
+                    </Typography>
                   </td>
-                  <td className="py-4 px-6 whitespace-nowrap text-sm text-primary font-medium">
-                    Opening Ceremony
+                  <td className="py-6 px-6 whitespace-nowrap">
+                    <Typography variant="body" className="text-primary font-medium">
+                      Opening Ceremony
+                    </Typography>
                   </td>
-                  <td className="py-4 px-6 whitespace-nowrap text-sm text-gray-700">
-                    Jury Meeting
-                    <br />
-                    Opening Ceremony
+                  <td className="py-6 px-6">
+                    <Typography variant="body" className="text-gray-700">
+                      Jury Meeting
+                      <br />
+                      Opening Ceremony
+                    </Typography>
                   </td>
                 </tr>
                 <tr className="transition-colors hover:bg-amber-50/30">
-                  <td className="py-4 px-6 whitespace-nowrap text-sm font-medium text-gray-900">
-                    Sat, Sep 13
+                  <td className="py-6 px-6 whitespace-nowrap">
+                    <Typography variant="body" className="font-medium text-gray-900">
+                      Sat, Sep 13
+                    </Typography>
                   </td>
-                  <td className="py-4 px-6 whitespace-nowrap text-sm font-semibold text-primary">
-                    Contest Day 1
+                  <td className="py-6 px-6 whitespace-nowrap">
+                    <Typography variant="body" className="font-semibold text-primary">
+                      Contest Day 1
+                    </Typography>
                   </td>
-                  <td className="py-4 px-6 whitespace-nowrap text-sm text-gray-700 font-medium">
-                    Contest Start
+                  <td className="py-6 px-6">
+                    <Typography variant="body" className="text-gray-700 font-medium">
+                      Contest Start
+                    </Typography>
                   </td>
                 </tr>
                 <tr className="bg-gradient-to-r from-amber-50/50 to-transparent transition-colors hover:bg-amber-50/80">
-                  <td className="py-4 px-6 whitespace-nowrap text-sm font-medium text-gray-900">
-                    Sun, Sep 14
+                  <td className="py-6 px-6 whitespace-nowrap">
+                    <Typography variant="body" className="font-medium text-gray-900">
+                      Sun, Sep 14
+                    </Typography>
                   </td>
-                  <td className="py-4 px-6 whitespace-nowrap text-sm text-primary font-semibold">
-                    Contest Day 2  & Closing Ceremony
+                  <td className="py-6 px-6 whitespace-nowrap">
+                    <Typography variant="body" className="text-primary font-semibold">
+                      Contest Day 2 & Closing Ceremony
+                    </Typography>
                   </td>
-                  <td className="py-4 px-6 whitespace-nowrap text-sm text-gray-700">
-                    Jury Meeting
-                    <br />
-                    Closing Ceremony
+                  <td className="py-6 px-6">
+                    <Typography variant="body" className="text-gray-700">
+                      Jury Meeting
+                      <br />
+                      Closing Ceremony
+                    </Typography>
                   </td>
                 </tr>
               </tbody>
@@ -308,18 +328,17 @@ export default function ImportantDates() {
           </motion.div>
         </motion.section>
 
-        {/* Key Events Cards */}
-        <motion.section
-          initial="initial"
-          animate="animate"
-          variants={staggerContainer}
-        >
-          <motion.h2
-            variants={fadeInUp}
-            className="text-3xl font-bold mb-8 bg-gradient-to-br from-amber-700 to-green-600 text-transparent bg-clip-text inline-block"
+          {/* Key Events Cards */}
+          <motion.section
+            initial="initial"
+            animate="animate"
+            variants={staggerContainer}
           >
-            Key Events
-          </motion.h2>
+          <motion.div variants={fadeInUp} className="mb-8">
+            <Typography variant="h2" gradient>
+              Key Events
+            </Typography>
+          </motion.div>
 
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
@@ -379,7 +398,8 @@ export default function ImportantDates() {
               </p>
             </motion.div>
           </motion.div>
-        </motion.section>
+          </motion.section>
+        </div>
       </div>
     </div>
   );

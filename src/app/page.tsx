@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Typography from "@/components/Typography";
 import {
   Calendar,
   MapPin,
@@ -89,30 +90,32 @@ export default function Home() {
               <span>September 13, 2025</span>
             </motion.div>
 
-            <motion.h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight"
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.7 }}
             >
-              <span className="bg-gradient-to-r from-amber-700 via-orange-600 to-amber-800 bg-clip-text text-transparent">
-                Pan African
-              </span>{" "}
-              <span className="bg-gradient-to-r from-green-600 to-emerald-700 bg-clip-text text-transparent">
-                Informatics Olympiad
-              </span>
-            </motion.h1>
+              <Typography variant="h1" className="mb-6 tracking-tight text-4xl md:text-5xl lg:text-6xl">
+                <span className="bg-gradient-to-r from-amber-700 via-orange-600 to-amber-800 bg-clip-text text-transparent">
+                  Pan African
+                </span>{" "}
+                <span className="bg-gradient-to-r from-green-600 to-emerald-700 bg-clip-text text-transparent">
+                  Informatics Olympiad
+                </span>
+              </Typography>
+            </motion.div>
 
-            <motion.p
-              className="text-lg md:text-xl text-gray-700 mb-8 max-w-3xl"
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.7 }}
             >
-              An informatics competition bringing together talented young
-              programmers from across the African continent for two days to
-              showcase excellence and innovation.
-            </motion.p>
+              <Typography variant="lead" className="text-gray-700 mb-8 max-w-3xl">
+                An informatics competition bringing together talented young
+                programmers from across the African continent for two days to
+                showcase excellence and innovation.
+              </Typography>
+            </motion.div>
 
             <motion.div
               className="flex flex-col sm:flex-row gap-4 mb-10"
@@ -231,13 +234,13 @@ export default function Home() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-amber-700 to-green-600 bg-clip-text text-transparent">
+            <Typography variant="h2" gradient className="mb-4">
               Why Participate?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            </Typography>
+            <Typography variant="lead" className="text-gray-600 max-w-3xl mx-auto">
               The Pan African Informatics Olympiad offers unique opportunities
               for young programmers to grow and excel
-            </p>
+            </Typography>
           </motion.div>
 
           <motion.div
@@ -315,9 +318,9 @@ export default function Home() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center bg-gradient-to-r from-amber-700 to-green-600 bg-clip-text text-transparent">
+            <Typography variant="h2" gradient className="mb-10 text-center">
               Key Information
-            </h2>
+            </Typography>
 
             <div className="space-y-8">
               <motion.div
@@ -440,14 +443,14 @@ export default function Home() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <Typography variant="h2" className="mb-6">
               Ready to Participate?
-            </h2>
-            <p className="text-lg md:text-xl mb-8 text-blue-100">
+            </Typography>
+            <Typography variant="lead" className="mb-8 text-blue-100">
               Join the Pan African Informatics Olympiad and be part of this
               educational event that celebrates programming excellence across
               Africa.
-            </p>
+            </Typography>
 
             <motion.div
               whileHover={{ scale: 1.05 }}

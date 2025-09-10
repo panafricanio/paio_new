@@ -33,7 +33,7 @@ export default function Sponsors() {
   return (
     <div className="overflow-hidden">
       {/* Page Header with Gradient */}
-      <section className="relative py-16 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-100">
+      <section className="relative py-16 bg-gradient-to-br from-amber-50 via-orange-50 to-green-100">
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             className="text-center"
@@ -42,7 +42,7 @@ export default function Sponsors() {
             transition={{ duration: 0.7 }}
           >
             <motion.div
-              className="inline-flex items-center justify-center bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full text-primary mb-6"
+              className="inline-flex items-center justify-center bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full text-amber-800 mb-6"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.5 }}
@@ -52,7 +52,7 @@ export default function Sponsors() {
             </motion.div>
 
             <motion.h1
-              className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-700 to-indigo-600 text-transparent bg-clip-text"
+              className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-700 to-green-600 text-transparent bg-clip-text"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.7 }}
@@ -87,7 +87,7 @@ export default function Sponsors() {
                 key={index}
                 variants={fadeInUp}
                 whileHover={{ y: -5 }}
-                className="bg-gradient-to-br from-white to-blue-50 p-6 rounded-xl shadow-md text-center border border-blue-100 transition-all"
+                className="bg-gradient-to-br from-white to-amber-50 p-6 rounded-xl shadow-sm text-center border border-amber-100 transition-all"
               >
                 <div className="flex justify-center mb-6">
                   <div className="w-32 h-32 bg-gradient-to-br from-gray-50 to-white rounded-full flex items-center justify-center p-2 shadow-sm">
@@ -98,7 +98,7 @@ export default function Sponsors() {
                     />
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-3 bg-gradient-to-r from-blue-700 to-indigo-600 text-transparent bg-clip-text">
+                <h3 className="text-xl font-semibold mb-3 bg-gradient-to-r from-amber-700 to-green-600 text-transparent bg-clip-text">
                   {sponsor.name}
                 </h3>
                 <motion.div
@@ -109,7 +109,7 @@ export default function Sponsors() {
                     href={sponsor.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center text-primary hover:text-primary/80 font-medium"
+                    className="inline-flex items-center text-amber-700 hover:text-amber-600 font-medium"
                   >
                     Visit Website
                     <ExternalLink className="h-4 w-4 ml-1" />
@@ -120,17 +120,17 @@ export default function Sponsors() {
           </motion.div>
 
           <motion.div
-            className="mt-16 text-center p-8 bg-gradient-to-br from-white to-indigo-50 rounded-xl shadow-sm border border-indigo-100"
+            className="mt-16 text-center p-8 bg-gradient-to-br from-white to-green-50 rounded-xl shadow-sm border border-green-100"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <div className="inline-flex items-center justify-center bg-indigo-100 p-3 rounded-full text-indigo-600 mb-6">
+            <div className="inline-flex items-center justify-center bg-green-100 p-3 rounded-full text-green-600 mb-6">
               <HeartHandshake className="h-8 w-8" />
             </div>
 
-            <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-700 to-indigo-600 text-transparent bg-clip-text">
+            <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-green-700 to-emerald-600 text-transparent bg-clip-text">
               Become a Sponsor
             </h3>
             <p className="text-lg mb-6 text-gray-700">
@@ -145,7 +145,7 @@ export default function Sponsors() {
             >
               <Link
                 href="mailto:joel@pafricanoi.com"
-                className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-medium px-6 py-3 rounded-lg inline-flex items-center gap-2 transition-all shadow-sm"
+                className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-medium px-6 py-3 rounded-lg inline-flex items-center gap-2 transition-all shadow-sm"
               >
                 Contact Us About Sponsorship
                 <ExternalLink className="h-4 w-4" />

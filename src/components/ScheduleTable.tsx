@@ -18,7 +18,7 @@ export default function ScheduleTable({
             {headers.map((header, index) => (
               <th
                 key={index}
-                className="py-4 px-6 text-left text-sm font-semibold text-gray-900"
+                className="py-4 px-6 text-left text-xl font-semibold text-gray-900"
               >
                 {header}
               </th>
@@ -28,13 +28,13 @@ export default function ScheduleTable({
         <tbody className="bg-white divide-y divide-gray-100">
           {events.map((event, index) => (
             <tr key={index} className="transition-colors hover:bg-amber-50/30">
-              <td className="py-4 px-6 text-sm font-medium text-gray-900">
+              <td className="py-4 px-6 text-md font-medium text-gray-900">
                 {event.time}
               </td>
-              <td className="py-4 px-6 text-sm text-primary font-medium">
+              <td className="py-4 px-6 text-md text-primary font-medium">
                 {event.participant}
               </td>
-              <td className="py-4 px-6 text-sm text-gray-700">
+              <td className="py-4 px-6 text-md text-gray-700">
                 {event.teamLeader}
               </td>
             </tr>

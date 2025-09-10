@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Users } from "lucide-react";
+import Typography from "./Typography";
 
 interface PageHeaderProps {
   badge?: string;
@@ -40,23 +41,25 @@ const PageHeader: React.FC<PageHeaderProps> = ({
             <span className="font-medium text-sm">{badge}</span>
           </motion.div>
 
-          <motion.h1
-            className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-700 to-green-600 text-transparent bg-clip-text"
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.7 }}
           >
-            {title}
-          </motion.h1>
+            <Typography variant="h1" gradient className="mb-4">
+              {title}
+            </Typography>
+          </motion.div>
 
-          <motion.p
-            className="text-lg text-gray-700 max-w-3xl mx-auto"
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.7 }}
           >
-            {description}
-          </motion.p>
+            <Typography variant="body" className="text-gray-700 max-w-3xl mx-auto">
+              {description}
+            </Typography>
+          </motion.div>
         </motion.div>
       </div>
     </section>

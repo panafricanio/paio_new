@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ScheduleSection as ScheduleSectionType } from "../types/schedule";
 import ScheduleTable from "./ScheduleTable";
+import Typography from "./Typography";
 
 interface ScheduleSectionProps {
   section: ScheduleSectionType;
@@ -18,14 +19,14 @@ export default function ScheduleSection({
 }: ScheduleSectionProps) {
   return (
     <motion.div variants={fadeInUp} className="mb-8">
-      <h3 className="text-2xl font-bold mb-4 text-gray-900">{section.title}</h3>
+      <Typography variant="h3" className="mb-4 text-gray-900">{section.title}</Typography>
       <ScheduleTable events={section.events} headers={section.headers} />
       {section.notes && (
         <div className="mt-4 p-4 bg-amber-50 rounded-lg border border-amber-200">
           {section.notes.map((note, noteIndex) => (
-            <p key={noteIndex} className="text-sm text-gray-700">
+            <Typography key={noteIndex} variant="small" className="text-gray-700">
               {note}
-            </p>
+            </Typography>
           ))}
         </div>
       )}
