@@ -25,19 +25,14 @@ const navItems = [
   { path: "/committee", label: "Committee", priority: "high" },
   { path: "/sponsors", label: "Sponsors", priority: "high" },
   { path: "/faqs", label: "FAQs", priority: "high" },
-  { path: "/contact", label: "Contact", priority: "medium" },
-  { path: "/history", label: "History", priority: "medium" },
-  { path: "/archive", label: "Archive", priority: "medium" },
-  { path: "/contestants", label: "Contestants", priority: "low" },
   { path: "/resources", label: "Resources", priority: "low" },
-  { path: "/news", label: "News", priority: "low" },
-  { path: "/members", label: "Members", priority: "low" },
-  { path: "/events", label: "Events", priority: "low" },
 ];
 
 // Filter items for primary navigation (high priority only)
 const primaryNavItems = navItems.filter((item) => item.priority === "high");
-const othersNavItems = navItems.filter((item) => item.priority === "medium" || item.priority === "low");
+const othersNavItems = navItems.filter(
+  (item) => item.priority === "medium" || item.priority === "low"
+);
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -62,13 +57,13 @@ const Navbar = () => {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as Element;
-      if (!target.closest('.others-dropdown')) {
+      if (!target.closest(".others-dropdown")) {
         setOthersDropdownOpen(false);
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
@@ -228,15 +223,21 @@ const Navbar = () => {
                   )}
                 </motion.li>
               ))}
-              
+
               {/* Others Section in Mobile */}
               <motion.li className="py-2 border-b border-gray-100">
                 <button
-                  onClick={() => setOthersCollapsedMobile(!othersCollapsedMobile)}
+                  onClick={() =>
+                    setOthersCollapsedMobile(!othersCollapsedMobile)
+                  }
                   className="text-gray-800 hover:text-amber-700 font-medium flex items-center justify-between w-full"
                 >
                   <span>Others</span>
-                  <ChevronDown className={`h-4 w-4 transition-transform ${othersCollapsedMobile ? '' : 'rotate-180'}`} />
+                  <ChevronDown
+                    className={`h-4 w-4 transition-transform ${
+                      othersCollapsedMobile ? "" : "rotate-180"
+                    }`}
+                  />
                 </button>
                 {!othersCollapsedMobile && (
                   <motion.div
