@@ -2,7 +2,7 @@
 export type NewsItem = {
   id: string;
   title: string;
-  date: string; // ISO date
+  date: string;
   excerpt?: string;
   href?: string;
 };
