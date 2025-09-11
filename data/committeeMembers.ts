@@ -137,6 +137,11 @@ export const teamLeaders: CommitteeMember[] = [
     roles: ["Morocco"],
   },
   {
+    name: 'Valentine Sherekete',
+    image: "/placeholder-profile.svg",
+    roles: ["Zimbabwe"],
+  },
+  {
     name: "Jennie Oluchi",
     image: "https://stats.ioinformatics.org/img/photos/2024/4693.png",
     roles: ["Nigeria"],
