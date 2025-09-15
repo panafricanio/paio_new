@@ -11,21 +11,28 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { CONFIG } from "@/config/constants";
 
 const navItems = [
-  { path: "/regulations", label: "Regulations", priority: "high" },
-  { path: "/competition-rules", label: "Rules", priority: "high" },
+  { path: CONFIG.NAVIGATION.REGULATIONS, label: "Regulations", priority: "high" },
+  { path: CONFIG.NAVIGATION.RULES, label: "Rules", priority: "high" },
   {
-    path: "https://docs.google.com/forms/d/e/1FAIpQLSe6S7qJlBiPr_HlunCuNPiXoGJsYfaV8oOkEhoFouxFTJ_arg/viewform",
+    path: CONFIG.NAVIGATION.REGISTER,
     label: "Register",
     external: true,
     priority: "high",
   },
-  { path: "/important-dates", label: "Important Dates", priority: "high" },
-  { path: "/committee", label: "Committee", priority: "high" },
-  { path: "/sponsors", label: "Sponsors", priority: "high" },
-  { path: "/faqs", label: "FAQs", priority: "high" },
-  { path: "/resources", label: "Resources", priority: "low" },
+  { path: CONFIG.NAVIGATION.IMPORTANT_DATES, label: "Important Dates", priority: "high" },
+  { path: CONFIG.NAVIGATION.COMMITTEE, label: "Committee", priority: "high" },
+  { path: CONFIG.NAVIGATION.SPONSORS, label: "Sponsors", priority: "high" },
+  { path: CONFIG.NAVIGATION.FAQS, label: "FAQs", priority: "high" },
+  {
+    path: CONFIG.NAVIGATION.RESULTS,
+    label: "Results",
+    external: true,
+    priority: "high",
+  },
+  { path: CONFIG.NAVIGATION.RESOURCES, label: "Resources", priority: "low" },
 ];
 
 // Filter items for primary navigation (high priority only)
