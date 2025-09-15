@@ -1289,7 +1289,7 @@ export const competitionStats = {
   totalProblems: 8,
   goldMedals: 9,
   silverMedals: 11,
-  bronzeMedals: 10,
-  honorableMentions: 2,
+  bronzeMedals: 14,
+  honorableMentions: 6,
   unofficialParticipants: 3
 };
