@@ -4,6 +4,26 @@ module.exports = {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  safelist: [
+    // Ensure all color classes used in the results page are included
+    'bg-amber-600', 'bg-amber-700', 'bg-amber-50', 'bg-amber-100', 'bg-amber-200',
+    'bg-yellow-100', 'bg-yellow-300', 'bg-yellow-900',
+    'bg-gray-100', 'bg-gray-200', 'bg-gray-300', 'bg-gray-400', 'bg-gray-500', 'bg-gray-600', 'bg-gray-700', 'bg-gray-800',
+    'bg-green-100', 'bg-green-300', 'bg-green-600', 'bg-green-900', 'bg-green-50',
+    'bg-blue-100', 'bg-blue-200', 'bg-blue-300', 'bg-blue-600', 'bg-blue-900',
+    'bg-white', 'bg-gray-50',
+    'text-white', 'text-gray-600', 'text-gray-700', 'text-gray-800', 'text-gray-900',
+    'text-amber-600', 'text-amber-700', 'text-amber-800', 'text-amber-900',
+    'text-yellow-600', 'text-yellow-700', 'text-yellow-800', 'text-yellow-900',
+    'text-green-600', 'text-green-700', 'text-green-800', 'text-green-900',
+    'text-blue-600', 'text-blue-700', 'text-blue-800', 'text-blue-900',
+    'border-amber-200', 'border-amber-400', 'border-amber-100',
+    'border-gray-200', 'border-gray-300',
+    'border-green-300', 'border-blue-300',
+    'hover:bg-amber-700', 'hover:bg-gray-100',
+    'hover:text-gray-900', 'hover:text-amber-600',
   ],
   theme: {
     extend: {
