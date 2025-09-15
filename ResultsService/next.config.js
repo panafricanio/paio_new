@@ -6,8 +6,13 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://results.pafricanoi.com' : '',
-  basePath: ''
+  // Remove assetPrefix to prevent CSS loading issues
+  // assetPrefix: process.env.NODE_ENV === 'production' ? 'https://results.pafricanoi.com' : '',
+  basePath: '',
+  // Ensure proper CSS handling in production
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
 }
 
 module.exports = nextConfig
