@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Filter, ArrowLeft, Home } from 'lucide-react';
 import { resultsData, competitionStats, type ContestantResult } from '@/data/results';
+import { CONFIG } from '@/config/constants';
 
 export default function ResultsPage() {
   const [selectedDay, setSelectedDay] = useState<'all' | 'day1' | 'day2'>('all');
@@ -61,7 +62,7 @@ export default function ResultsPage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
               <a
-                href="https://pafricanoi.com"
+                href={CONFIG.MAIN_SYSTEM_URL}
                 className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
               >
                 <ArrowLeft className="w-4 h-4" />
@@ -69,7 +70,7 @@ export default function ResultsPage() {
               </a>
               <div className="h-4 w-px bg-gray-300"></div>
               <a
-                href="https://pafricanoi.com"
+                href={CONFIG.MAIN_SYSTEM_URL}
                 className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
               >
                 <Home className="w-4 h-4" />
@@ -77,7 +78,7 @@ export default function ResultsPage() {
               </a>
             </div>
             <div className="text-sm text-gray-500">
-              PAIO 2025 Results
+              {CONFIG.COMPETITION.SHORT_NAME} {CONFIG.COMPETITION.YEAR} Results
             </div>
           </div>
         </div>
@@ -88,10 +89,10 @@ export default function ResultsPage() {
         <div className="container mx-auto px-4 py-8">
           <div className="text-center">
             <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
-              PAIO 2025 Results
+              {CONFIG.COMPETITION.SHORT_NAME} {CONFIG.COMPETITION.YEAR} Results
             </h1>
             <p className="text-lg text-gray-600 mb-6">
-              Pan African Informatics Olympiad - Official Competition Results
+              {CONFIG.COMPETITION.NAME} - Official Competition Results
             </p>
             
             {/* Simple Stats */}
