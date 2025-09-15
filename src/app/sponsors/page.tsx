@@ -107,9 +107,11 @@ export default function Sponsors() {
               >
                 <div className="flex justify-center mb-6">
                   <div className="w-32 h-32 bg-gradient-to-br from-gray-50 to-white rounded-full flex items-center justify-center p-2 shadow-sm">
-                    <img
+                    <Image
                       src={sponsor.logo}
                       alt={`${sponsor.name} logo`}
+                      width={128}
+                      height={128}
                       className="w-full h-full object-contain"
                     />
                   </div>
