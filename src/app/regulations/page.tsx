@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Typography from "@/components/Typography";
 import {
   Book,
   Users,
@@ -54,24 +55,26 @@ export default function Regulations() {
               <span className="font-medium text-sm">Official Rules</span>
             </motion.div>
 
-            <motion.h1
-              className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-700 to-green-600 text-transparent bg-clip-text"
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.7 }}
             >
-              PAIO 2025 Regulations
-            </motion.h1>
+              <Typography variant="h1" gradient className="mb-4">
+                PAIO 2025 Regulations
+              </Typography>
+            </motion.div>
 
-            <motion.p
-              className="text-lg text-gray-700 max-w-3xl mx-auto"
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.7 }}
             >
-              Official competition rules and guidelines for the Pan African
-              Informatics Olympiad
-            </motion.p>
+              <Typography variant="body" className="text-gray-700 max-w-3xl mx-auto">
+                Official competition rules and guidelines for the Pan African
+                Informatics Olympiad
+              </Typography>
+            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -94,9 +97,9 @@ export default function Regulations() {
                 <div className="bg-gradient-to-br from-green-500 to-green-600 p-3 rounded-lg text-white mr-4">
                   <Globe className="h-6 w-6" />
                 </div>
-                <h2 className="text-3xl font-bold bg-gradient-to-r from-green-700 to-teal-600 text-transparent bg-clip-text">
+                <Typography variant="h2" gradient>
                   Official Documents
-                </h2>
+                </Typography>
               </div>
 
               <div className="space-y-6 text-gray-700">
@@ -141,9 +144,9 @@ export default function Regulations() {
                 <div className="bg-gradient-to-br from-amber-600 to-orange-600 p-3 rounded-lg text-white mr-4">
                   <Users className="h-6 w-6" />
                 </div>
-                <h2 className="text-3xl font-bold bg-gradient-to-r from-amber-700 to-green-600 text-transparent bg-clip-text">
+                <Typography variant="h2" gradient>
                   Eligibility
-                </h2>
+                </Typography>
               </div>
 
               <div className="space-y-4 text-gray-700">
@@ -192,9 +195,9 @@ export default function Regulations() {
                 <div className="bg-gradient-to-br from-green-600 to-emerald-600 p-3 rounded-lg text-white mr-4">
                   <Users className="h-6 w-6" />
                 </div>
-                <h2 className="text-3xl font-bold bg-gradient-to-r from-green-700 to-emerald-600 text-transparent bg-clip-text">
+                <Typography variant="h2" gradient>
                   Team Composition
-                </h2>
+                </Typography>
               </div>
 
               <div className="space-y-4 text-gray-700">
@@ -243,9 +246,9 @@ export default function Regulations() {
                 <div className="bg-gradient-to-br from-orange-600 to-amber-700 p-3 rounded-lg text-white mr-4">
                   <FileText className="h-6 w-6" />
                 </div>
-                <h2 className="text-3xl font-bold bg-gradient-to-r from-orange-700 to-amber-700 text-transparent bg-clip-text">
+                <Typography variant="h2" gradient>
                   Competition Structure
-                </h2>
+                </Typography>
               </div>
 
               <div className="space-y-4 text-gray-700">
@@ -287,9 +290,9 @@ export default function Regulations() {
                 <div className="bg-gradient-to-br from-amber-600 to-orange-600 p-3 rounded-lg text-white mr-4">
                   <Code className="h-6 w-6" />
                 </div>
-                <h2 className="text-3xl font-bold bg-gradient-to-r from-amber-700 to-green-600 text-transparent bg-clip-text">
+                <Typography variant="h2" gradient>
                   Programming Languages
-                </h2>
+                </Typography>
               </div>
 
               <div className="space-y-4 text-gray-700">
@@ -327,9 +330,9 @@ export default function Regulations() {
                 <div className="bg-gradient-to-br from-green-600 to-emerald-600 p-3 rounded-lg text-white mr-4">
                   <Award className="h-6 w-6" />
                 </div>
-                <h2 className="text-3xl font-bold bg-gradient-to-r from-green-700 to-emerald-600 text-transparent bg-clip-text">
+                <Typography variant="h2" gradient>
                   Scoring and Awards
-                </h2>
+                </Typography>
               </div>
 
               <div className="space-y-4 text-gray-700">
@@ -375,9 +378,9 @@ export default function Regulations() {
                 <div className="bg-gradient-to-br from-orange-600 to-amber-700 p-3 rounded-lg text-white mr-4">
                   <CheckCircle className="h-6 w-6" />
                 </div>
-                <h2 className="text-3xl font-bold bg-gradient-to-r from-orange-700 to-amber-700 text-transparent bg-clip-text">
+                <Typography variant="h2" gradient>
                   Code of Conduct
-                </h2>
+                </Typography>
               </div>
 
               <div className="space-y-4 text-gray-700">

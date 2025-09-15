@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Typography from "@/components/Typography";
 import {
   Calendar,
   MapPin,
@@ -16,6 +17,7 @@ import {
   Brain,
   GraduationCap,
 } from "lucide-react";
+import { countries } from "../../data/Countries";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -32,6 +34,10 @@ const staggerContainer = {
 };
 
 export default function Home() {
+  const sortedCountries = countries.sort((a, b) =>
+    a.name.localeCompare(b.name)
+  );
+
   return (
     <div className="overflow-hidden">
       {/* Hero Section with Enhanced Gradients */}
@@ -84,30 +90,32 @@ export default function Home() {
               <span>September 13, 2025</span>
             </motion.div>
 
-            <motion.h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight"
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.7 }}
             >
-              <span className="bg-gradient-to-r from-amber-700 via-orange-600 to-amber-800 bg-clip-text text-transparent">
-                Pan African
-              </span>{" "}
-              <span className="bg-gradient-to-r from-green-600 to-emerald-700 bg-clip-text text-transparent">
-                Informatics Olympiad
-              </span>
-            </motion.h1>
+              <Typography variant="h1" className="mb-6 tracking-tight text-4xl md:text-5xl lg:text-6xl">
+                <span className="bg-gradient-to-r from-amber-700 via-orange-600 to-amber-800 bg-clip-text text-transparent">
+                  Pan African
+                </span>{" "}
+                <span className="bg-gradient-to-r from-green-600 to-emerald-700 bg-clip-text text-transparent">
+                  Informatics Olympiad
+                </span>
+              </Typography>
+            </motion.div>
 
-            <motion.p
-              className="text-lg md:text-xl text-gray-700 mb-8 max-w-3xl"
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.7 }}
             >
-              An informatics competition bringing together
-              talented young programmers from across the African continent for two days to
-              showcase excellence and innovation.
-            </motion.p>
+              <Typography variant="lead" className="text-gray-700 mb-8 max-w-3xl">
+                An informatics competition bringing together talented young
+                programmers from across the African continent for two days to
+                showcase excellence and innovation.
+              </Typography>
+            </motion.div>
 
             <motion.div
               className="flex flex-col sm:flex-row gap-4 mb-10"
@@ -148,7 +156,7 @@ export default function Home() {
                   <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/20 to-transparent"></div>
                 </div>
               </div>
-              
+
               {/* Content */}
               <div className="relative z-10 h-full flex flex-col justify-center items-center text-white p-8">
                 <motion.div
@@ -157,10 +165,14 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1, duration: 0.8 }}
                 >
-                  <div className="text-4xl md:text-5xl font-bold mb-2">Participating Countries</div>
-                  <div className="text-lg md:text-xl opacity-90">14 Nations United</div>
+                  <div className="text-4xl md:text-5xl font-bold mb-2">
+                    Participating Countries
+                  </div>
+                  <div className="text-lg md:text-xl opacity-90">
+                    {countries.length} Nations United
+                  </div>
                 </motion.div>
-                
+
                 {/* Country flags grid */}
                 <motion.div
                   className="grid grid-cols-5 md:grid-cols-8 gap-3 md:gap-4 items-center justify-center max-w-full"
@@ -169,38 +181,29 @@ export default function Home() {
                   transition={{ delay: 1.2, duration: 0.8 }}
                 >
                   {/* Country flags with names */}
-                  {[
-                    { flag: '🇩🇿', name: 'Algeria' },
-                    { flag: '🇧🇼', name: 'Botswana' },
-                    { flag: '🇩🇯', name: 'Djibouti' },
-                    { flag: '🇪🇬', name: 'Egypt' },
-                    { flag: '🇬🇭', name: 'Ghana' },
-                    { flag: '🇰🇪', name: 'Kenya' },
-                    { flag: '🇲🇱', name: 'Mali' },
-                    { flag: '🇲🇦', name: 'Morocco' },
-                    { flag: '🇳🇬', name: 'Nigeria' },
-                    { flag: '🇵🇰', name: 'Pakistan' },
-                    { flag: '🇷🇼', name: 'Rwanda' },
-                    { flag: '🇿🇦', name: 'South Africa' },
-                    { flag: '🇹🇳', name: 'Tunisia' },
-                  ].map((country, index) => (
-                    <motion.div
-                      key={index}
-                      className="relative group text-3xl md:text-4xl hover:scale-110 transition-transform cursor-pointer flex justify-center"
-                      initial={{ opacity: 0, scale: 0.5 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: 1.3 + index * 0.08, duration: 0.3 }}
-                      whileHover={{ scale: 1.2 }}
-                    >
-                      {country.flag}
-                      {/* Tooltip on hover */}
-                      <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-black/80 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none z-20">
-                        {country.name}
-                      </div>
-                    </motion.div>
-                  ))}
+                  {sortedCountries.map((country, index) =>
+                    country.flag && country.flag !== "" ? (
+                      <motion.div
+                        key={index}
+                        className="relative group text-3xl md:text-4xl hover:scale-110 transition-transform cursor-pointer flex justify-center"
+                        initial={{ opacity: 0, scale: 0.5 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{
+                          delay: 1.3 + index * 0.08,
+                          duration: 0.3,
+                        }}
+                        whileHover={{ scale: 1.2 }}
+                      >
+                        {country.flag}
+                        {/* Tooltip on hover */}
+                        <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-black/80 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none z-20">
+                          {country.name}
+                        </div>
+                      </motion.div>
+                    ) : null
+                  )}
                 </motion.div>
-                
+
                 {/* Total count display */}
                 <motion.div
                   className="mt-6 text-center"
@@ -209,7 +212,10 @@ export default function Home() {
                   transition={{ delay: 2.5, duration: 0.6 }}
                 >
                   <div className="text-sm md:text-base opacity-75">
-                    Total: <span className="font-semibold">13 Countries</span>
+                    Total:{" "}
+                    <span className="font-semibold">
+                      {countries.length} Countries
+                    </span>
                   </div>
                 </motion.div>
               </div>
@@ -228,13 +234,13 @@ export default function Home() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-amber-700 to-green-600 bg-clip-text text-transparent">
+            <Typography variant="h2" gradient className="mb-4">
               Why Participate?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            </Typography>
+            <Typography variant="lead" className="text-gray-600 max-w-3xl mx-auto">
               The Pan African Informatics Olympiad offers unique opportunities
               for young programmers to grow and excel
-            </p>
+            </Typography>
           </motion.div>
 
           <motion.div
@@ -256,8 +262,8 @@ export default function Home() {
                 Recognition & Achievement
               </h3>
               <p className="text-gray-600">
-                Earn awards and recognition at a continental level
-                for your programming abilities.
+                Earn awards and recognition at a continental level for your
+                programming abilities.
               </p>
             </motion.div>
 
@@ -273,7 +279,8 @@ export default function Home() {
                 Community
               </h3>
               <p className="text-gray-600">
-                Connect with like-minded peers from across Africa, share knowledge, and collaborate to tackle challenging problems.
+                Connect with like-minded peers from across Africa, share
+                knowledge, and collaborate to tackle challenging problems.
               </p>
             </motion.div>
 
@@ -311,9 +318,9 @@ export default function Home() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center bg-gradient-to-r from-amber-700 to-green-600 bg-clip-text text-transparent">
+            <Typography variant="h2" gradient className="mb-10 text-center">
               Key Information
-            </h2>
+            </Typography>
 
             <div className="space-y-8">
               <motion.div
@@ -349,7 +356,8 @@ export default function Home() {
                       •
                     </span>
                     <span>
-                      <strong>Duration:</strong> Three-day event with two rounds of five hours each
+                      <strong>Duration:</strong> Three-day event with two rounds
+                      of five hours each
                     </span>
                   </li>
                 </ul>
@@ -381,8 +389,8 @@ export default function Home() {
                       •
                     </span>
                     <span>
-                      <strong>Team Composition:</strong> up to six contestants per
-                      country 
+                      <strong>Team Composition:</strong> up to six contestants
+                      per country
                     </span>
                   </li>
                   <li className="flex items-start">
@@ -435,14 +443,14 @@ export default function Home() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <Typography variant="h2" className="mb-6">
               Ready to Participate?
-            </h2>
-            <p className="text-lg md:text-xl mb-8 text-blue-100">
+            </Typography>
+            <Typography variant="lead" className="mb-8 text-blue-100">
               Join the Pan African Informatics Olympiad and be part of this
-              educational event that celebrates programming
-              excellence across Africa.
-            </p>
+              educational event that celebrates programming excellence across
+              Africa.
+            </Typography>
 
             <motion.div
               whileHover={{ scale: 1.05 }}

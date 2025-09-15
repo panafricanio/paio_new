@@ -3,7 +3,7 @@ import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import LanguageSelector from "@/components/LanguageSelector";
+// import LanguageSelector from "@/components/LanguageSelector";
 import ClientBody from "./ClientBody";
 
 // Updated font system with display font for headings and body font for text
@@ -30,9 +30,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+    <html
+      lang="en"
+      className="scroll-smooth"
+      suppressHydrationWarning
+      data-scroll-behavior="smooth"
+    >
       <body
         className={`${poppins.variable} ${inter.variable} font-sans bg-background text-foreground antialiased`}
+        suppressHydrationWarning={true}
       >
         <div className="flex flex-col min-h-screen">
           <Navbar />
