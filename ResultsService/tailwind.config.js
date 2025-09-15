@@ -7,8 +7,8 @@ module.exports = {
     './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   safelist: [
-    // Ensure all color classes used in the results page are included
-    'bg-amber-600', 'bg-amber-700', 'bg-amber-50', 'bg-amber-100', 'bg-amber-200',
+    // Essential classes for the results page
+    'bg-amber-600', 'bg-amber-700', 'bg-amber-50', 'bg-amber-100',
     'bg-yellow-100', 'bg-yellow-300', 'bg-yellow-900',
     'bg-gray-100', 'bg-gray-200', 'bg-gray-300', 'bg-gray-400', 'bg-gray-500', 'bg-gray-600', 'bg-gray-700', 'bg-gray-800',
     'bg-green-100', 'bg-green-300', 'bg-green-600', 'bg-green-900', 'bg-green-50',
