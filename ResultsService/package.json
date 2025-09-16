@@ -4,7 +4,7 @@
   "description": "PAIO 2025 Results - Independent Results Display System",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3002",
+    "dev": "next dev",
     "build": "rm -rf .next && next build",
     "build:prod": "rm -rf .next && NODE_ENV=production next build",
     "build:clean": "rm -rf .next && rm -rf out && next build",

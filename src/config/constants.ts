@@ -1,7 +1,7 @@
 // Configuration constants for PAIO Main System
 export const CONFIG = {
   // External URLs
-  RESULTS_SERVICE_URL: 'https://results.pafricanoi.com/',
+  RESULTS_SERVICE_URL: 'https://results.panafricanio.com/',
   REGISTRATION_FORM_URL: 'https://docs.google.com/forms/d/e/1FAIpQLSe6S7qJlBiPr_HlunCuNPiXoGJsYfaV8oOkEhoFouxFTJ_arg/viewform',
   
   // Competition information
@@ -29,7 +29,7 @@ export const CONFIG = {
     COMMITTEE: '/committee',
     SPONSORS: '/sponsors',
     FAQS: '/faqs',
-    RESULTS: 'https://results.pafricanoi.com/',
+    RESULTS: 'https://results.panafricanio.com/',
     RESOURCES: '/resources'
   }
 } as const;
