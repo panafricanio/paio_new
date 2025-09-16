@@ -52,7 +52,7 @@ export default function ResultsPage() {
 
     // Use actual rank numbers for highlighting ranges (as per original request)
     if (contestant.rank >= 1 && contestant.rank <= 9) {
-      return 'bg-yellow-100'; // Gold highlighting for ranks 1-9
+      return 'bg-yellow-200'; // Gold highlighting for ranks 1-9
     }
     if (contestant.rank >= 10 && contestant.rank <= 21) {
       return 'bg-gray-100'; // Silver highlighting for ranks 10-21
@@ -269,9 +269,6 @@ export default function ResultsPage() {
                       <div className="text-sm font-medium text-gray-900">
                         {contestant.firstName} {contestant.lastName}
                       </div>
-                      {contestant.isUnofficial && (
-                        <span className="text-xs text-gray-500">Unofficial</span>
-                      )}
                     </td>
                     <td className="px-2 py-2 border-r border-amber-100">
                       <span className="text-sm text-gray-700">{contestant.country || 'N/A'}</span>
