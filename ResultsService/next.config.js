@@ -6,9 +6,9 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  // Remove assetPrefix to prevent CSS loading issues
-  // assetPrefix: process.env.NODE_ENV === 'production' ? 'https://results.pafricanoi.com' : '',
   basePath: '',
+  // Explicitly disable assetPrefix to prevent CSS loading issues
+  assetPrefix: '',
   // Ensure proper CSS handling in production
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
