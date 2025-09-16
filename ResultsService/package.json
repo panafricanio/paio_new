@@ -5,8 +5,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3002",
-    "build": "next build",
-    "build:prod": "NODE_ENV=production next build",
+    "build": "rm -rf .next && next build",
+    "build:prod": "rm -rf .next && NODE_ENV=production next build",
+    "build:clean": "rm -rf .next && rm -rf out && next build",
     "start": "next start -p 3002",
     "lint": "next lint",
     "export": "next export",
