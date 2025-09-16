@@ -54,12 +54,12 @@ export default function ResultsPage() {
     if (contestant.rank >= 1 && contestant.rank <= 9) {
       return 'bg-yellow-200'; // Gold highlighting for ranks 1-9
     }
-    
+
     if (contestant.rank >= 10 && contestant.rank <= 21) {
       return 'bg-gray-100'; // Silver highlighting for ranks 10-21
     }
     if (contestant.rank >= 22 && contestant.rank <= 36) {
-      return 'bg-amber-100'; // Bronze highlighting for ranks 22-36
+      return 'bg-amber-600'; // Bronze highlighting for ranks 22-36
     }
     if (contestant.rank >= 37 && contestant.rank <= 41) {
       return 'bg-green-100'; // Green highlighting for Day 2 HM range (37-41)
