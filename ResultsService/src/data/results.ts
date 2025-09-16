@@ -82,7 +82,7 @@ export const resultsData: ContestantResult[] = [
   {
     rank: 4,
     firstName: "Ahmed Imran",
-    lastName: "Mali",
+    lastName: "Malik",
     country: "Pakistan (Guest)",
     cards: 100,
     gcd: 40,
