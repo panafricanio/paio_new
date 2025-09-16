@@ -217,7 +217,7 @@ export default function Home() {
                   <div className="text-sm md:text-base opacity-75">
                     Total:{" "}
                     <span className="font-semibold">
-                      {totalCountries} Countries + 1 Guest Country
+                      {totalCountries} Countries + 1 Guest Country.
                     </span>
                   </div>
                 </motion.div>
