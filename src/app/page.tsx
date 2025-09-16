@@ -38,6 +38,9 @@ export default function Home() {
     a.name.localeCompare(b.name)
   );
 
+   const totalCountries = countries.length - 1; // -1 for Pakistan (Guest)
+
+
   return (
     <div className="overflow-hidden">
       {/* Hero Section with Enhanced Gradients */}
@@ -169,7 +172,7 @@ export default function Home() {
                     Participating Countries
                   </div>
                   <div className="text-lg md:text-xl opacity-90">
-                    {countries.length} Nations United
+                    {totalCountries} Nations United
                   </div>
                 </motion.div>
 
@@ -214,7 +217,7 @@ export default function Home() {
                   <div className="text-sm md:text-base opacity-75">
                     Total:{" "}
                     <span className="font-semibold">
-                      {countries.length} Countries
+                      {totalCountries} Countries + 1 Guest Country.
                     </span>
                   </div>
                 </motion.div>
