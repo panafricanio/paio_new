@@ -10,6 +10,14 @@ export default function ResultsPage() {
   const [selectedCountry, setSelectedCountry] = useState<string>('all');
   const [showFilters, setShowFilters] = useState(false);
 
+  // Function to scroll to competition summary
+  const scrollToSummary = () => {
+    const summaryElement = document.getElementById('competition-summary');
+    if (summaryElement) {
+      summaryElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   // Get unique countries
   const countries = Array.from(new Set(resultsData.map(r => r.country).filter(c => c && c !== '')));
   
@@ -89,9 +97,19 @@ export default function ResultsPage() {
                 <span className="text-sm font-medium">PAIO Home</span>
               </a>
             </div>
-            <div className="text-sm text-gray-500">
-              {CONFIG.COMPETITION.SHORT_NAME} {CONFIG.COMPETITION.YEAR} Results
+
+            <div className="flex items-center gap-4">
+              <button
+                onClick={scrollToSummary}
+                className="flex items-center gap-2 px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors text-sm font-medium"
+              >
+                <span>Summary</span>
+              </button>
+              <div className="text-sm text-gray-500">
+                {CONFIG.COMPETITION.SHORT_NAME} {CONFIG.COMPETITION.YEAR} Results
+              </div>
             </div>
+            
           </div>
         </div>
       </nav>
@@ -327,7 +345,7 @@ export default function ResultsPage() {
         </div>
 
         {/* Footer Info */}
-        <div className="mt-8 space-y-6">
+        <div id="competition-summary" className="mt-8 space-y-6">
           {/* Official Competition Summary */}
           <div className="bg-white rounded-lg border border-amber-200 p-8 text-center">
             <h3 className="text-2xl font-bold text-gray-800 mb-6">Official Competition Summary</h3>
