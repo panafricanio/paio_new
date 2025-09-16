@@ -110,7 +110,7 @@ export default function ResultsPage() {
                 <div className="text-sm text-gray-600">Problems</div>
               </div>
               <div className="bg-white border border-amber-200 rounded-lg p-4">
-                <div className="text-2xl font-bold text-gray-800">38h</div>
+                <div className="text-2xl font-bold text-gray-800">38</div>
                 <div className="text-sm text-gray-600">Medals</div>
               </div>
             </div>
