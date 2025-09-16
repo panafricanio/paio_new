@@ -1,6 +1,5 @@
 export const countries = [
     { flag: "🇩🇿", name: "Algeria" },
-    { flag: "🇧🇼", name: "Botswana" },
     { flag: "🇩🇯", name: "Djibouti" },
     { flag: "🇪🇬", name: "Egypt" },
     { flag: "🇬🇭", name: "Ghana" },
@@ -13,7 +12,6 @@ export const countries = [
     { flag: "🇿🇦", name: "South Africa" },
     { flag: "🇹🇳", name: "Tunisia" },
     { flag: "🇱🇾", name: "Libya" },
-    { flag: "🇦🇴" , name: "Angola" },
     {name: "Zimbabwe", flag: "🇿🇼"}
   ];
   
