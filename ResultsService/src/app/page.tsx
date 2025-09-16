@@ -16,8 +16,8 @@ export default function ResultsPage() {
   // Filter data based on selections
   const filteredData = resultsData.filter(contestant => {
     const dayFilter = selectedDay === 'all' || 
-      (selectedDay === 'day1' && contestant.day1Total > 0) ||
-      (selectedDay === 'day2' && contestant.day2Total > 0);
+      (selectedDay === 'day1' && contestant.day1Total >= 0) ||
+      (selectedDay === 'day2' && contestant.day2Total >= 0);
     
     const countryFilter = selectedCountry === 'all' || contestant.country === selectedCountry;
     
@@ -110,7 +110,7 @@ export default function ResultsPage() {
                 <div className="text-sm text-gray-600">Problems</div>
               </div>
               <div className="bg-white border border-amber-200 rounded-lg p-4">
-                <div className="text-2xl font-bold text-gray-800">40</div>
+                <div className="text-2xl font-bold text-gray-800">38h</div>
                 <div className="text-sm text-gray-600">Medals</div>
               </div>
             </div>
