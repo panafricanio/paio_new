@@ -12,6 +12,13 @@ export default function ResultsPage() {
 
   // Get unique countries
   const countries = Array.from(new Set(resultsData.map(r => r.country).filter(c => c && c !== '')));
+  
+  // Calculate statistics
+  const officialParticipants = resultsData.filter(r => !r.isUnofficial && r.country !== 'Pakistan (Guest)').length;
+  const guestParticipants = resultsData.filter(r => r.country === 'Pakistan (Guest)').length;
+  const unofficialParticipants = resultsData.filter(r => r.isUnofficial).length;
+  const officialCountries = Array.from(new Set(resultsData.filter(r => !r.isUnofficial && r.country !== 'Pakistan (Guest)').map(r => r.country).filter(c => c && c !== ''))).length;
+  
 
   // Filter data based on selections
   const filteredData = resultsData.filter(contestant => {
@@ -24,11 +31,16 @@ export default function ResultsPage() {
     return dayFilter && countryFilter;
   });
 
-  // Function to get row background color - unofficial contestants are skipped from highlighting
+  // Function to get row background color - unofficial and guest contestants are skipped from highlighting
   const getRowBackgroundColor = (contestant: ContestantResult) => {
     // Unofficial contestants get simple gray highlighting and are skipped from rank-based highlighting
     if (contestant.isUnofficial) {
       return 'bg-gray-200';
+    }
+    
+    // Guest contestants (Pakistan) get purple highlighting and are skipped from rank-based highlighting
+    if (contestant.country === 'Pakistan (Guest)') {
+      return 'bg-purple-100';
     }
 
     // Special awards override rank-based coloring (only for official contestants)
@@ -98,20 +110,36 @@ export default function ResultsPage() {
             {/* Simple Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto text-center">
               <div className="bg-white border border-amber-200 rounded-lg p-4">
-                <div className="text-2xl font-bold text-gray-800">{competitionStats.totalParticipants}</div>
-                <div className="text-sm text-gray-600">Participants</div>
+                <div className="text-2xl font-bold text-gray-800">{officialParticipants}</div>
+                <div className="text-sm text-gray-600">Official Contestants</div>
               </div>
               <div className="bg-white border border-amber-200 rounded-lg p-4">
-                <div className="text-2xl font-bold text-gray-800">{competitionStats.countriesRepresented}+</div>
-                <div className="text-sm text-gray-600">Countries</div>
+                <div className="text-2xl font-bold text-gray-800">16</div>
+                <div className="text-sm text-gray-600">Countries + 1 Guest Country</div>
               </div>
               <div className="bg-white border border-amber-200 rounded-lg p-4">
                 <div className="text-2xl font-bold text-gray-800">{competitionStats.totalProblems}</div>
                 <div className="text-sm text-gray-600">Problems</div>
               </div>
               <div className="bg-white border border-amber-200 rounded-lg p-4">
-                <div className="text-2xl font-bold text-gray-800">38</div>
+                <div className="text-2xl font-bold text-gray-800">40</div>
                 <div className="text-sm text-gray-600">Medals</div>
+              </div>
+            </div>
+            
+            {/* Additional Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-xl mx-auto text-center mt-4">
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-3">
+                <div className="text-lg font-bold text-purple-800">{guestParticipants}</div>
+                <div className="text-xs text-purple-600">Guest Contestants</div>
+              </div>
+              <div className="bg-gray-50 border border-gray-200 rounded-lg p-3">
+                <div className="text-lg font-bold text-gray-700">{unofficialParticipants}</div>
+                <div className="text-xs text-gray-600">Unofficial Contestants</div>
+              </div>
+              <div className="bg-amber-50 border border-amber-200 rounded-lg p-3">
+                <div className="text-lg font-bold text-amber-800">{resultsData.length}</div>
+                <div className="text-xs text-amber-600">Total Contestants</div>
               </div>
             </div>
           </div>
@@ -214,6 +242,7 @@ export default function ResultsPage() {
                     <td className="px-2 py-2 border-r border-amber-100">
                       <span className={`inline-flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold ${
                         contestant.isUnofficial ? 'bg-gray-400 text-white' : 
+                        contestant.country === 'Pakistan (Guest)' ? 'bg-purple-300 text-purple-900' :
                         contestant.specialAward === 'DAY 1 HM' ? 'bg-blue-300 text-blue-900' :
                         contestant.rank >= 1 && contestant.rank <= 9 ? 'bg-yellow-300 text-yellow-900' :
                         contestant.rank >= 10 && contestant.rank <= 21 ? 'bg-gray-300 text-gray-800' :
@@ -298,28 +327,79 @@ export default function ResultsPage() {
         </div>
 
         {/* Footer Info */}
-        <div className="mt-8">
+        <div className="mt-8 space-y-6">
+          {/* Official Competition Summary */}
           <div className="bg-white rounded-lg border border-amber-200 p-8 text-center">
-            <h3 className="text-2xl font-bold text-gray-800 mb-6">Competition Summary</h3>
+            <h3 className="text-2xl font-bold text-gray-800 mb-6">Official Competition Summary</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-600 mb-2">{competitionStats.goldMedals}</div>
+                <div className="text-3xl font-bold text-yellow-600 mb-2">5</div>
                 <div className="text-sm text-gray-600">Gold Medals</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-gray-500 mb-2">{competitionStats.silverMedals}</div>
+                <div className="text-3xl font-bold text-gray-500 mb-2">10</div>
                 <div className="text-sm text-gray-600">Silver Medals</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-amber-600 mb-2">{competitionStats.bronzeMedals}</div>
+                <div className="text-3xl font-bold text-amber-600 mb-2">13</div>
                 <div className="text-sm text-gray-600">Bronze Medals</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">{competitionStats.honorableMentions}</div>
+                <div className="text-3xl font-bold text-blue-600 mb-2">5</div>
                 <div className="text-sm text-gray-600">Honorable Mentions</div>
               </div>
             </div>
           </div>
+
+          {/* Guest Participants Summary */}
+          {guestParticipants > 0 && (
+            <div className="bg-purple-50 rounded-lg border border-purple-200 p-8 text-center">
+              <h3 className="text-2xl font-bold text-purple-800 mb-6">Guest Participants Summary</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-yellow-600 mb-2">4</div>
+                  <div className="text-sm text-purple-600">Gold Medals</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-gray-500 mb-2">2</div>
+                  <div className="text-sm text-purple-600">Silver Medals</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-amber-600 mb-2">0</div>
+                  <div className="text-sm text-purple-600">Bronze Medals</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-600 mb-2">0</div>
+                  <div className="text-sm text-purple-600">Honorable Mentions</div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Unofficial Participants Summary */}
+          {unofficialParticipants > 0 && (
+            <div className="bg-gray-50 rounded-lg border border-gray-200 p-8 text-center">
+              <h3 className="text-2xl font-bold text-gray-700 mb-6">Unofficial Participants Summary</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-yellow-600 mb-2">0</div>
+                  <div className="text-sm text-gray-600">Gold Medals</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-gray-500 mb-2">0</div>
+                  <div className="text-sm text-gray-600">Silver Medals</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-amber-600 mb-2">1</div>
+                  <div className="text-sm text-gray-600">Bronze Medals</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-600 mb-2">1</div>
+                  <div className="text-sm text-gray-600">Honorable Mentions</div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
