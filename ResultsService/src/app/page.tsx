@@ -54,6 +54,7 @@ export default function ResultsPage() {
     if (contestant.rank >= 1 && contestant.rank <= 9) {
       return 'bg-yellow-200'; // Gold highlighting for ranks 1-9
     }
+    
     if (contestant.rank >= 10 && contestant.rank <= 21) {
       return 'bg-gray-100'; // Silver highlighting for ranks 10-21
     }
