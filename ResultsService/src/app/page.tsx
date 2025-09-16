@@ -1,14 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import { Filter, ArrowLeft, Home } from 'lucide-react';
+import { Home } from 'lucide-react';
 import { resultsData, competitionStats, type ContestantResult } from '@/data/results';
 import { CONFIG } from '@/config/constants';
 
 export default function ResultsPage() {
   const [selectedDay, setSelectedDay] = useState<'all' | 'day1' | 'day2'>('all');
   const [selectedCountry, setSelectedCountry] = useState<string>('all');
-  const [showFilters, setShowFilters] = useState(false);
 
   // Function to scroll to competition summary
   const scrollToSummary = () => {
@@ -80,14 +79,6 @@ export default function ResultsPage() {
                 href={CONFIG.MAIN_SYSTEM_URL}
                 className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
               >
-                <ArrowLeft className="w-4 h-4" />
-                <span className="text-sm font-medium">Back to Main System</span>
-              </a>
-              <div className="h-4 w-px bg-gray-300"></div>
-              <a
-                href={CONFIG.MAIN_SYSTEM_URL}
-                className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
-              >
                 <Home className="w-4 h-4" />
                 <span className="text-sm font-medium">PAIO Home</span>
               </a>
@@ -100,9 +91,6 @@ export default function ResultsPage() {
               >
                 <span>Summary</span>
               </button>
-              <div className="text-sm text-gray-500">
-                {CONFIG.COMPETITION.SHORT_NAME} {CONFIG.COMPETITION.YEAR} Results
-              </div>
             </div>
 
           </div>
@@ -127,7 +115,7 @@ export default function ResultsPage() {
                 <div className="text-sm text-gray-600">Official Contestants</div>
               </div>
               <div className="bg-white border border-amber-200 rounded-lg p-4">
-                <div className="text-2xl font-bold text-gray-800">16</div>
+                <div className="text-2xl font-bold text-gray-800">13</div>
                 <div className="text-sm text-gray-600">Countries + 1 Guest Country</div>
               </div>
               <div className="bg-white border border-amber-200 rounded-lg p-4">
@@ -164,48 +152,9 @@ export default function ResultsPage() {
         {/* Filter Controls */}
         <div className="mb-8">
           <div className="bg-white rounded-lg border border-amber-200 p-6">
-            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-              <div className="flex items-center gap-4">
-                <button
-                  onClick={() => setShowFilters(!showFilters)}
-                  className="flex items-center gap-2 px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
-                >
-                  <Filter className="w-4 h-4" />
-                  Filters
-                </button>
-                <div className="text-sm text-gray-600">
-                  Showing {filteredData.length} of {resultsData.length} contestants
-                </div>
-              </div>
+            <div className="flex items-end justify-end gap-4">
 
-              {showFilters && (
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <div className="flex gap-2">
-                    <button
-                      onClick={() => setSelectedDay('all')}
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                        selectedDay === 'all' ? 'bg-amber-600 text-white' : 'bg-white text-gray-700 hover:bg-amber-50 border border-amber-200'
-                      }`}
-                    >
-                      All Days
-                    </button>
-                    <button
-                      onClick={() => setSelectedDay('day1')}
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                        selectedDay === 'day1' ? 'bg-amber-600 text-white' : 'bg-white text-gray-700 hover:bg-amber-50 border border-amber-200'
-                      }`}
-                    >
-                      Day 1 Only
-                    </button>
-                    <button
-                      onClick={() => setSelectedDay('day2')}
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                        selectedDay === 'day2' ? 'bg-amber-600 text-white' : 'bg-white text-gray-700 hover:bg-amber-50 border border-amber-200'
-                      }`}
-                    >
-                      Day 2 Only
-                    </button>
-                  </div>
+                <div className="flex justify-end gap-4">
 
                   <select
                     value={selectedCountry}
@@ -218,7 +167,7 @@ export default function ResultsPage() {
                     ))}
                   </select>
                 </div>
-              )}
+              
             </div>
           </div>
         </div>
