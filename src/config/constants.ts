@@ -29,7 +29,7 @@ export const CONFIG = {
     COMMITTEE: '/committee',
     SPONSORS: '/sponsors',
     FAQS: '/faqs',
-    RESULTS: 'https://results.pafricanoi.com/',
+    RESULTS: 'https://results.panafricanio.com/',
     RESOURCES: '/resources'
   }
 } as const;
