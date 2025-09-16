@@ -22,10 +22,9 @@ export default function ResultsPage() {
   const countries = Array.from(new Set(resultsData.map(r => r.country).filter(c => c && c !== '')));
   
   // Calculate statistics
-  const officialParticipants = resultsData.filter(r => !r.isUnofficial && r.country !== 'Pakistan (Guest)').length;
-  const guestParticipants = resultsData.filter(r => r.country === 'Pakistan (Guest)').length;
-  const unofficialParticipants = resultsData.filter(r => r.isUnofficial).length;
-  const officialCountries = Array.from(new Set(resultsData.filter(r => !r.isUnofficial && r.country !== 'Pakistan (Guest)').map(r => r.country).filter(c => c && c !== ''))).length;
+  const officialContestants = resultsData.filter(r => !r.isUnofficial && r.country !== 'Pakistan (Guest)').length;
+  const guestContestants = resultsData.filter(r => r.country === 'Pakistan (Guest)').length;
+  const unofficialContestants = resultsData.filter(r => r.isUnofficial).length;
   
 
   // Filter data based on selections
@@ -46,11 +45,6 @@ export default function ResultsPage() {
       return 'bg-gray-200';
     }
     
-    // Guest contestants (Pakistan) get purple highlighting and are skipped from rank-based highlighting
-    if (contestant.country === 'Pakistan (Guest)') {
-      return 'bg-purple-100';
-    }
-
     // Special awards override rank-based coloring (only for official contestants)
     if (contestant.specialAward === 'DAY 1 HM') {
       return 'bg-blue-100'; // Blue for Day 1 honorable mention (rank 45)
@@ -109,7 +103,7 @@ export default function ResultsPage() {
                 {CONFIG.COMPETITION.SHORT_NAME} {CONFIG.COMPETITION.YEAR} Results
               </div>
             </div>
-            
+
           </div>
         </div>
       </nav>
@@ -128,7 +122,7 @@ export default function ResultsPage() {
             {/* Simple Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto text-center">
               <div className="bg-white border border-amber-200 rounded-lg p-4">
-                <div className="text-2xl font-bold text-gray-800">{officialParticipants}</div>
+                <div className="text-2xl font-bold text-gray-800">{officialContestants}</div>
                 <div className="text-sm text-gray-600">Official Contestants</div>
               </div>
               <div className="bg-white border border-amber-200 rounded-lg p-4">
@@ -148,11 +142,11 @@ export default function ResultsPage() {
             {/* Additional Stats */}
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-xl mx-auto text-center mt-4">
               <div className="bg-purple-50 border border-purple-200 rounded-lg p-3">
-                <div className="text-lg font-bold text-purple-800">{guestParticipants}</div>
+                <div className="text-lg font-bold text-purple-800">{guestContestants}</div>
                 <div className="text-xs text-purple-600">Guest Contestants</div>
               </div>
               <div className="bg-gray-50 border border-gray-200 rounded-lg p-3">
-                <div className="text-lg font-bold text-gray-700">{unofficialParticipants}</div>
+                <div className="text-lg font-bold text-gray-700">{unofficialContestants}</div>
                 <div className="text-xs text-gray-600">Unofficial Contestants</div>
               </div>
               <div className="bg-amber-50 border border-amber-200 rounded-lg p-3">
@@ -255,7 +249,7 @@ export default function ResultsPage() {
                 {filteredData.map((contestant, index) => (
                   <tr 
                     key={index}
-                    className={`hover:bg-gray-100 transition-colors ${getRowBackgroundColor(contestant)}`}
+                    className={`hover:bg-white transition-colors ${getRowBackgroundColor(contestant)}`}
                   >
                     <td className="px-2 py-2 border-r border-amber-100">
                       <span className={`inline-flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold ${
@@ -369,10 +363,10 @@ export default function ResultsPage() {
             </div>
           </div>
 
-          {/* Guest Participants Summary */}
-          {guestParticipants > 0 && (
+          {/* Guest Contestants Summary */}
+          {guestContestants > 0 && (
             <div className="bg-purple-50 rounded-lg border border-purple-200 p-8 text-center">
-              <h3 className="text-2xl font-bold text-purple-800 mb-6">Guest Participants Summary</h3>
+              <h3 className="text-2xl font-bold text-purple-800 mb-6">Guest Contestants Summary</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-yellow-600 mb-2">4</div>
@@ -394,10 +388,10 @@ export default function ResultsPage() {
             </div>
           )}
 
-          {/* Unofficial Participants Summary */}
-          {unofficialParticipants > 0 && (
+          {/* Unofficial Contestants Summary */}
+          {unofficialContestants > 0 && (
             <div className="bg-gray-50 rounded-lg border border-gray-200 p-8 text-center">
-              <h3 className="text-2xl font-bold text-gray-700 mb-6">Unofficial Participants Summary</h3>
+              <h3 className="text-2xl font-bold text-gray-700 mb-6">Unofficial Contestants Summary</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-yellow-600 mb-2">0</div>
