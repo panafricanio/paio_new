@@ -1,7 +1,36 @@
 // src/mocks/resources.ts
 export type LinkItem = { title: string; href: string; desc?: string };
+export type ProblemItem = { title: string; filename: string; downloadUrl: string };
+export type ContestDay = { day: string; problems: ProblemItem[] };
+export type ContestYear = { year: string; livePracticeUrl?: string; days: ContestDay[] };
 
 export const resources = {
+  pastPAIOContests: [
+    {
+      year: "2025",
+      livePracticeUrl: "https://basecamp.eolymp.com/en/contests?series=paio",
+      days: [
+        {
+          day: "Day 1",
+          problems: [
+            { title: "CARDS", filename: "CARDS.pdf", downloadUrl: "/paio-contests/2025/day1/CARDS.pdf" },
+            { title: "GCD", filename: "gcd day1.pdf", downloadUrl: "/paio-contests/2025/day1/gcd day1.pdf" },
+            { title: "ROOKS", filename: "rooks day1.pdf", downloadUrl: "/paio-contests/2025/day1/rooks day1.pdf" },
+            { title: "XOR", filename: "xor day1.pdf", downloadUrl: "/paio-contests/2025/day1/xor day1.pdf" },
+          ],
+        },
+        {
+          day: "Day 2",
+          problems: [
+            { title: "ADVENTURE", filename: "advanture day2.pdf", downloadUrl: "/paio-contests/2025/day2/advanture day2.pdf" },
+            { title: "CAKE", filename: "cake day2.pdf", downloadUrl: "/paio-contests/2025/day2/cake day2.pdf" },
+            { title: "EXHIBITION", filename: "exhibition day2.pdf", downloadUrl: "/paio-contests/2025/day2/exhibition day2.pdf" },
+            { title: "TOWERS", filename: "towers day2.pdf", downloadUrl: "/paio-contests/2025/day2/towers day2.pdf" },
+          ],
+        },
+      ],
+    },
+  ],
   books: [
     {
       title: "Competitive Programmer’s Handbook",
