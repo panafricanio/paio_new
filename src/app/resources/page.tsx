@@ -8,7 +8,7 @@ interface ResourcesPageProps {
 
 export default async function ResourcesPage({ searchParams }: ResourcesPageProps) {
   const params = await searchParams;
-  const activeTab = typeof params.tab === 'string' ? params.tab : 'paio-contests';
+  const activeTab = typeof params.tab === 'string' ? params.tab : 'books';
 
   return (
     <main className="min-h-screen py-12 px-4 md:px-8 bg-gradient-to-br from-white to-amber-50">
