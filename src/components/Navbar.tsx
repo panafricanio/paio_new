@@ -14,6 +14,13 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { CONFIG } from "@/config/constants";
 
 const navItems = [
+  { path: CONFIG.NAVIGATION.TASKS, label: "Tasks", priority: "high" },
+  {
+    path: CONFIG.NAVIGATION.RESULTS,
+    label: "Results",
+    external: true,
+    priority: "high",
+  },
   { path: CONFIG.NAVIGATION.REGULATIONS, label: "Regulations", priority: "high" },
   { path: CONFIG.NAVIGATION.RULES, label: "Rules", priority: "high" },
   {
@@ -26,12 +33,6 @@ const navItems = [
   { path: CONFIG.NAVIGATION.COMMITTEE, label: "Committee", priority: "high" },
   { path: CONFIG.NAVIGATION.SPONSORS, label: "Sponsors", priority: "high" },
   { path: CONFIG.NAVIGATION.FAQS, label: "FAQs", priority: "high" },
-  {
-    path: CONFIG.NAVIGATION.RESULTS,
-    label: "Results",
-    external: true,
-    priority: "high",
-  },
   { path: CONFIG.NAVIGATION.RESOURCES, label: "Resources", priority: "low" },
 ];
 
@@ -41,10 +42,31 @@ const othersNavItems = navItems.filter(
   (item) => item.priority === "medium" || item.priority === "low"
 );
 
+// For medium screens, show only the most important items
+const essentialNavItems = primaryNavItems.slice(0, 5); // Show first 5 items
+const overflowNavItems = primaryNavItems.slice(5); // Remaining items go in existing "Others" dropdown
+
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [othersDropdownOpen, setOthersDropdownOpen] = useState(false);
   const [othersCollapsedMobile, setOthersCollapsedMobile] = useState(true);
+
+  // Close dropdown when clicking outside
+  React.useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (othersDropdownOpen) {
+        setOthersDropdownOpen(false);
+      }
+    };
+
+    if (othersDropdownOpen) {
+      document.addEventListener('click', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [othersDropdownOpen]);
   const [scrolled, setScrolled] = useState(false);
 
   // Handle scroll effect
@@ -113,31 +135,64 @@ const Navbar = () => {
           <nav className="flex-1 flex justify-center">
             <NavigationMenu>
               <NavigationMenuList className="space-x-1">
-                {primaryNavItems.map((item) => (
-                  <NavigationMenuItem key={item.path}>
-                    {item.external ? (
-                      <motion.div whileHover={{ scale: 1.05 }}>
-                        <Link
-                          href={item.path}
-                          className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-gradient-to-r hover:from-amber-500/5 hover:to-green-500/10`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {item.label}
-                        </Link>
-                      </motion.div>
-                    ) : (
-                      <motion.div whileHover={{ scale: 1.05 }}>
-                        <Link
-                          href={item.path}
-                          className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-gradient-to-r hover:from-amber-500/5 hover:to-green-500/10`}
-                        >
-                          {item.label}
-                        </Link>
-                      </motion.div>
-                    )}
-                  </NavigationMenuItem>
-                ))}
+                {/* Large screens: show all items */}
+                <div className="hidden lg:flex">
+                  {primaryNavItems.map((item) => (
+                    <NavigationMenuItem key={item.path}>
+                      {item.external ? (
+                        <motion.div whileHover={{ scale: 1.05 }}>
+                          <Link
+                            href={item.path}
+                            className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-gradient-to-r hover:from-amber-500/5 hover:to-green-500/10`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {item.label}
+                          </Link>
+                        </motion.div>
+                      ) : (
+                        <motion.div whileHover={{ scale: 1.05 }}>
+                          <Link
+                            href={item.path}
+                            className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-gradient-to-r hover:from-amber-500/5 hover:to-green-500/10`}
+                          >
+                            {item.label}
+                          </Link>
+                        </motion.div>
+                      )}
+                    </NavigationMenuItem>
+                  ))}
+                </div>
+                
+                {/* Medium screens: show essential items + dropdown */}
+                <div className="lg:hidden flex">
+                  {essentialNavItems.map((item) => (
+                    <NavigationMenuItem key={item.path}>
+                      {item.external ? (
+                        <motion.div whileHover={{ scale: 1.05 }}>
+                          <Link
+                            href={item.path}
+                            className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-gradient-to-r hover:from-amber-500/5 hover:to-green-500/10`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {item.label}
+                          </Link>
+                        </motion.div>
+                      ) : (
+                        <motion.div whileHover={{ scale: 1.05 }}>
+                          <Link
+                            href={item.path}
+                            className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-gradient-to-r hover:from-amber-500/5 hover:to-green-500/10`}
+                          >
+                            {item.label}
+                          </Link>
+                        </motion.div>
+                      )}
+                    </NavigationMenuItem>
+                  ))}
+                  
+                </div>
               </NavigationMenuList>
             </NavigationMenu>
           </nav>
@@ -161,6 +216,26 @@ const Navbar = () => {
                 exit={{ opacity: 0, y: -10 }}
                 className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg border border-gray-100 py-1 z-50"
               >
+                {/* Show overflow items on medium screens */}
+                {overflowNavItems.length > 0 && (
+                  <>
+                    {overflowNavItems.map((item) => (
+                      <Link
+                        key={item.path}
+                        href={item.path}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-amber-500/5 hover:to-green-500/10 hover:text-amber-700 transition-all"
+                        onClick={() => setOthersDropdownOpen(false)}
+                        target={item.external ? "_blank" : undefined}
+                        rel={item.external ? "noopener noreferrer" : undefined}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                    {othersNavItems.length > 0 && <div className="border-t border-gray-100 my-1"></div>}
+                  </>
+                )}
+                
+                {/* Show original low-priority items */}
                 {othersNavItems.map((item) => (
                   <Link
                     key={item.path}

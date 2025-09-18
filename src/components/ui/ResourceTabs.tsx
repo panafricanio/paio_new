@@ -2,18 +2,36 @@
 "use client";
 
 import React from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import Tabs from "./Tabs";
 import { resources } from "../../../data/resources";
 
 const tabsDef = [
   { id: "books", label: "Books" },
-  { id: "links", label: "Useful Links" },
+  { id: "links", label: "Links" },
   { id: "contests", label: "Contests" },
   { id: "problemsets", label: "Problem Sets" },
 ];
 
-export default function ResourceTabs() {
-  const [active, setActive] = React.useState<string>("books");
+interface ResourceTabsProps {
+  activeTab?: string;
+}
+
+export default function ResourceTabs({ activeTab = "books" }: ResourceTabsProps) {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const [active, setActive] = React.useState<string>(activeTab);
+
+  React.useEffect(() => {
+    setActive(activeTab);
+  }, [activeTab]);
+
+  const handleTabChange = (tabId: string) => {
+    setActive(tabId);
+    const params = new URLSearchParams(searchParams);
+    params.set('tab', tabId);
+    router.push(`/resources?${params.toString()}`);
+  };
 
   const renderList = () => {
     switch (active) {
@@ -27,7 +45,7 @@ export default function ResourceTabs() {
           />
         ));
       case "links":
-        return resources.usefulLinks.map((l) => (
+        return resources.links.map((l) => (
           <ResourceCard
             key={l.href}
             title={l.title}
@@ -60,8 +78,8 @@ export default function ResourceTabs() {
 
   return (
     <div>
-      <Tabs tabs={tabsDef} activeId={active} onChange={(id) => setActive(id)} />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <Tabs tabs={tabsDef} activeId={active} onChange={handleTabChange} />
+      <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
         {renderList()}
       </div>
     </div>

@@ -9,7 +9,7 @@ export const resources = {
       desc: "Classic CP book with problems and techniques.",
     },
   ],
-  usefulLinks: [
+  links: [
     {
       title: "CP-Algorithms (e-maxx)",
       href: "https://cp-algorithms.com/",
@@ -29,6 +29,11 @@ export const resources = {
       title: "Codeforces EDU",
       href: "https://codeforces.com/edu/courses",
       desc: "Step-by-step tutorials and practice problems.",
+    },
+    {
+      title: "QOJ.ac - PAIO Problems",
+      href: "https://qoj.ac/problems?search=PAIO",
+      desc: "PAIO contest problems on QOJ.ac online judge platform.",
     },
   ],
   contests: [

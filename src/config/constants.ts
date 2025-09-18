@@ -22,6 +22,8 @@ export const CONFIG = {
   
   // Navigation items
   NAVIGATION: {
+    TASKS: '/tasks',
+    RESULTS: 'https://results.panafricanio.com/',
     REGULATIONS: '/regulations',
     RULES: '/competition-rules',
     REGISTER: 'https://docs.google.com/forms/d/e/1FAIpQLSe6S7qJlBiPr_HlunCuNPiXoGJsYfaV8oOkEhoFouxFTJ_arg/viewform',
@@ -29,7 +31,6 @@ export const CONFIG = {
     COMMITTEE: '/committee',
     SPONSORS: '/sponsors',
     FAQS: '/faqs',
-    RESULTS: 'https://results.panafricanio.com/',
     RESOURCES: '/resources'
   }
 } as const;

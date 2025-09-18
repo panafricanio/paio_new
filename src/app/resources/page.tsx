@@ -2,7 +2,14 @@
 import ResourceTabs from "@/components/ui/ResourceTabs";
 import React from "react";
 
-export default function ResourcesPage() {
+interface ResourcesPageProps {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}
+
+export default async function ResourcesPage({ searchParams }: ResourcesPageProps) {
+  const params = await searchParams;
+  const activeTab = typeof params.tab === 'string' ? params.tab : 'books';
+
   return (
     <main className="min-h-screen py-12 px-4 md:px-8 bg-gradient-to-br from-white to-amber-50">
       <div className="max-w-5xl mx-auto">
@@ -16,7 +23,7 @@ export default function ResourcesPage() {
           </p>
         </header>
 
-        <ResourceTabs />
+        <ResourceTabs activeTab={activeTab} />
       </div>
     </main>
   );
