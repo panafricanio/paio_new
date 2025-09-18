@@ -4,13 +4,11 @@
 import React from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Tabs from "./Tabs";
-import { resources, ContestYear } from "../../../data/resources";
-import { Download, ExternalLink } from "lucide-react";
+import { resources } from "../../../data/resources";
 
 const tabsDef = [
-  { id: "paio-contests", label: "Past PAIO Contest" },
   { id: "books", label: "Books" },
-  { id: "links", label: "Useful Links" },
+  { id: "links", label: "Links" },
   { id: "contests", label: "Contests" },
   { id: "problemsets", label: "Problem Sets" },
 ];
@@ -19,7 +17,7 @@ interface ResourceTabsProps {
   activeTab?: string;
 }
 
-export default function ResourceTabs({ activeTab = "paio-contests" }: ResourceTabsProps) {
+export default function ResourceTabs({ activeTab = "books" }: ResourceTabsProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [active, setActive] = React.useState<string>(activeTab);
@@ -37,10 +35,6 @@ export default function ResourceTabs({ activeTab = "paio-contests" }: ResourceTa
 
   const renderList = () => {
     switch (active) {
-      case "paio-contests":
-        return resources.pastPAIOContests.map((contest) => (
-          <PAIOContestCard key={contest.year} contest={contest} />
-        ));
       case "books":
         return resources.books.map((b) => (
           <ResourceCard
@@ -51,7 +45,7 @@ export default function ResourceTabs({ activeTab = "paio-contests" }: ResourceTa
           />
         ));
       case "links":
-        return resources.usefulLinks.map((l) => (
+        return resources.links.map((l) => (
           <ResourceCard
             key={l.href}
             title={l.title}
@@ -85,50 +79,8 @@ export default function ResourceTabs({ activeTab = "paio-contests" }: ResourceTa
   return (
     <div>
       <Tabs tabs={tabsDef} activeId={active} onChange={handleTabChange} />
-      <div className={`grid gap-4 ${active === "paio-contests" ? "grid-cols-1" : "grid-cols-1 md:grid-cols-2"}`}>
+      <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
         {renderList()}
-      </div>
-    </div>
-  );
-}
-
-function PAIOContestCard({ contest }: { contest: ContestYear }) {
-  return (
-    <div className="col-span-full bg-white rounded-lg border p-6">
-      <div className="flex items-center justify-between mb-4">
-        <h3 className="text-xl font-bold text-gray-800">PAIO {contest.year}</h3>
-        {contest.livePracticeUrl && (
-          <a
-            href={contest.livePracticeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 bg-amber-600 text-white rounded-md hover:bg-amber-700 transition-colors"
-          >
-            <ExternalLink size={16} />
-            Live Practice
-          </a>
-        )}
-      </div>
-      
-      <div className="space-y-6">
-        {contest.days.map((day) => (
-          <div key={day.day} className="border-l-4 border-amber-500 pl-4">
-            <h4 className="font-semibold text-gray-700 mb-3">{day.day}</h4>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-              {day.problems.map((problem) => (
-                <a
-                  key={problem.filename}
-                  href={problem.downloadUrl}
-                  download={problem.filename}
-                  className="flex items-center justify-between p-3 bg-gray-50 rounded-md hover:bg-gray-100 transition-colors border"
-                >
-                  <span className="font-medium text-gray-800">{problem.title}</span>
-                  <Download size={16} className="text-amber-600" />
-                </a>
-              ))}
-            </div>
-          </div>
-        ))}
       </div>
     </div>
   );

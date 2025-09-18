@@ -68,6 +68,41 @@ export default function ResultsPage() {
     return 'bg-white';
   };
 
+  const getMedalInfo = (contestant: ContestantResult) => {
+    // Use the same logic as highlighting - this is the source of truth
+    // Unofficial contestants can still get medals based on their rank
+    if (contestant.rank >= 1 && contestant.rank <= 9) {
+      return {
+        medal: 'GOLD',
+        class: 'bg-gradient-to-r from-yellow-400 to-yellow-600 text-white border-yellow-500'
+      };
+    } else if (contestant.rank >= 10 && contestant.rank <= 21) {
+      return {
+        medal: 'SILVER',
+        class: 'bg-gradient-to-r from-gray-300 to-gray-500 text-white border-gray-400'
+      };
+    } else if (contestant.rank >= 22 && contestant.rank <= 36) {
+      return {
+        medal: 'BRONZE',
+        class: 'bg-gradient-to-r from-amber-600 to-orange-600 text-white border-amber-600'
+      };
+    } else if (contestant.rank >= 37 && contestant.rank <= 41) {
+      return {
+        medal: 'HM',
+        class: 'bg-gradient-to-r from-green-400 to-green-600 text-white border-green-500'
+      };
+    } else if (contestant.rank === 45) {
+      // Day 1 HM - special case from highlighting logic
+      return {
+        medal: 'HM',
+        class: 'bg-gradient-to-r from-green-400 to-green-600 text-white border-green-500'
+      };
+    }
+    
+    // No medal for ranks 42-44, 46+ (same as highlighting logic - no highlighting)
+    return null;
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Navigation Header */}
@@ -258,19 +293,18 @@ export default function ResultsPage() {
                     </td>
                     <td className="px-2 py-2 text-center">
                       <div className="flex flex-col items-center gap-1">
-                        {contestant.medal && (
-                          <div className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-bold border ${
-                            contestant.medal === 'GOLD' ? 'bg-gradient-to-r from-yellow-400 to-yellow-600 text-white border-yellow-500' :
-                            contestant.medal === 'SILVER' ? 'bg-gradient-to-r from-gray-300 to-gray-500 text-white border-gray-400' :
-                            'bg-gradient-to-r from-amber-600 to-orange-600 text-white border-amber-600'
-                          }`}>
-                            <span>{contestant.medal}</span>
-                          </div>
-                        )}
+                        {(() => {
+                          const medalInfo = getMedalInfo(contestant);
+                          return medalInfo ? (
+                            <div className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-bold border ${medalInfo.class}`}>
+                              <span>{medalInfo.medal}</span>
+                            </div>
+                          ) : null;
+                        })()}
                         {contestant.specialAward && (
                           <div className={`text-xs font-medium px-2 py-1 rounded-full ${
                             contestant.specialAward === 'DAY 2 HM' ? 'bg-green-200 text-green-900 border border-green-300' :
-                            contestant.specialAward === 'DAY 1 HM' ? 'bg-blue-200 text-blue-900 border border-blue-300' :
+                            contestant.specialAward === 'DAY 1 HM' ? 'bg-green-200 text-green-900 border border-green-300' :
                             'bg-purple-200 text-purple-900 border border-purple-300'
                           }`}>
                             {contestant.specialAward}
