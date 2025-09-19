@@ -65,32 +65,34 @@ function PAIOContestCard({ contest }: { contest: typeof paioContestData }) {
     <div className="bg-white rounded-lg border p-6">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-xl font-bold text-gray-800">PAIO {contest.year}</h3>
-        {contest.livePracticeUrl && (
-          <a
-            href={contest.livePracticeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 bg-amber-600 text-white rounded-md hover:bg-amber-700 transition-colors"
-          >
-            <ExternalLink size={16} />
-            Live Practice
-          </a>
-        )}
-      </div>
 
-      <div className="flex items-center justify-between mb-4">
-        <h3 className="text-xl font-bold text-gray-800">PAIO {contest.year}</h3>
-        {contest.livePracticeUrl && (
-          <a
-            href={contest.livePracticeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 bg-amber-600 text-white rounded-md hover:bg-amber-700 transition-colors"
-          >
-            <ExternalLink size={16} />
-            Live Practice
-          </a>
-        )}
+        <span className="flex items-center justify-between mb-4">
+          {contest.livePracticeUrl && (
+            <a
+              href={contest.livePracticeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-amber-600 text-white rounded-md hover:bg-amber-700 transition-colors"
+            >
+              <ExternalLink size={16} />
+              Live Practice 1
+            </a>
+          )}
+        </span>
+
+        <span className="flex items-center justify-between mb-4">
+          {contest.livePracticeUrl && (
+            <a
+              href={contest.livePracticeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-amber-600 text-white rounded-md hover:bg-amber-700 transition-colors"
+            >
+              <ExternalLink size={16} />
+              Live Practice 2
+            </a>
+          )}
+        </span>
       </div>
 
       <div className="space-y-6">
