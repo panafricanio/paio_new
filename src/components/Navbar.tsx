@@ -109,13 +109,13 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2 font-semibold">
-          <span className="sr-only">Pan African Informatics Olympiad</span>
+          {/* <span className="sr-only">Pan African Informatics Olympiad</span> */}
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="flex items-center"
           >
             <Image
-              src="/logo.png"
+              src="/images/logo.png"
               alt="PAIO 2025 Logo"
               width={40}
               height={40}
