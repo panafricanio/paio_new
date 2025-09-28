@@ -15,25 +15,15 @@ import { CONFIG } from "@/config/constants";
 
 const navItems = [
   { path: CONFIG.NAVIGATION.TASKS, label: "Tasks", priority: "high" },
-  {
-    path: CONFIG.NAVIGATION.RESULTS,
-    label: "Results",
-    external: true,
-    priority: "high",
-  },
+  { path: CONFIG.NAVIGATION.RESULTS, label: "Results", external: true, priority: "high" },
   { path: CONFIG.NAVIGATION.REGULATIONS, label: "Regulations", priority: "high" },
   { path: CONFIG.NAVIGATION.RULES, label: "Rules", priority: "high" },
-  {
-    path: CONFIG.NAVIGATION.REGISTER,
-    label: "Register",
-    external: true,
-    priority: "high",
-  },
+  { path: CONFIG.NAVIGATION.REGISTER, label: "Register", external: true, priority: "high"},
   { path: CONFIG.NAVIGATION.IMPORTANT_DATES, label: "Important Dates", priority: "high" },
   { path: CONFIG.NAVIGATION.COMMITTEE, label: "Committee", priority: "high" },
   { path: CONFIG.NAVIGATION.SPONSORS, label: "Sponsors", priority: "high" },
-  { path: CONFIG.NAVIGATION.FAQS, label: "FAQs", priority: "high" },
-  { path: CONFIG.NAVIGATION.RESOURCES, label: "Resources", priority: "low" },
+  { path: CONFIG.NAVIGATION.FAQS, label: "FAQs", priority: "low" },
+  { path: CONFIG.NAVIGATION.RESOURCES, label: "Resources", priority: "high" },
 ];
 
 // Filter items for primary navigation (high priority only)
@@ -44,6 +34,7 @@ const othersNavItems = navItems.filter(
 
 // For medium screens, show only the most important items
 const essentialNavItems = primaryNavItems.slice(0, 5); // Show first 5 items
+// Show remaining items in overflow on medium screens, but not on large screens
 const overflowNavItems = primaryNavItems.slice(5); // Remaining items go in existing "Others" dropdown
 
 const Navbar = () => {
@@ -191,7 +182,6 @@ const Navbar = () => {
                       )}
                     </NavigationMenuItem>
                   ))}
-                  
                 </div>
               </NavigationMenuList>
             </NavigationMenu>
@@ -216,26 +206,24 @@ const Navbar = () => {
                 exit={{ opacity: 0, y: -10 }}
                 className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg border border-gray-100 py-1 z-50"
               >
-                {/* Show overflow items on medium screens */}
-                {overflowNavItems.length > 0 && (
-                  <>
-                    {overflowNavItems.map((item) => (
-                      <Link
-                        key={item.path}
-                        href={item.path}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-amber-500/5 hover:to-green-500/10 hover:text-amber-700 transition-all"
-                        onClick={() => setOthersDropdownOpen(false)}
-                        target={item.external ? "_blank" : undefined}
-                        rel={item.external ? "noopener noreferrer" : undefined}
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
-                    {othersNavItems.length > 0 && <div className="border-t border-gray-100 my-1"></div>}
-                  </>
-                )}
+                {/* Show overflow items on medium screens only */}
+                <div className="lg:hidden">
+                  {overflowNavItems.map((item) => (
+                    <Link
+                      key={item.path}
+                      href={item.path}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-amber-500/5 hover:to-green-500/10 hover:text-amber-700 transition-all"
+                      onClick={() => setOthersDropdownOpen(false)}
+                      target={item.external ? "_blank" : undefined}
+                      rel={item.external ? "noopener noreferrer" : undefined}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                  {othersNavItems.length > 0 && <div className="border-t border-gray-100 my-1"></div>}
+                </div>
                 
-                {/* Show original low-priority items */}
+                {/* Show low-priority items */}
                 {othersNavItems.map((item) => (
                   <Link
                     key={item.path}
