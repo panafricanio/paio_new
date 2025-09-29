@@ -1,9 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import { Home } from 'lucide-react';
 import { resultsData, competitionStats, type ContestantResult } from '@/data/results';
 import { CONFIG } from '@/config/constants';
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function ResultsPage() {
   const [selectedDay, setSelectedDay] = useState<'all' | 'day1' | 'day2'>('all');
@@ -19,21 +20,21 @@ export default function ResultsPage() {
 
   // Get unique countries
   const countries = Array.from(new Set(resultsData.map(r => r.country).filter(c => c && c !== '')));
-  
+
   // Calculate statistics
   const officialContestants = resultsData.filter(r => !r.isUnofficial && r.country !== 'Pakistan (Guest)').length;
   const guestContestants = resultsData.filter(r => r.country === 'Pakistan (Guest)').length;
   const unofficialContestants = resultsData.filter(r => r.isUnofficial).length;
-  
+
 
   // Filter data based on selections
   const filteredData = resultsData.filter(contestant => {
-    const dayFilter = selectedDay === 'all' || 
+    const dayFilter = selectedDay === 'all' ||
       (selectedDay === 'day1' && contestant.day1Total >= 0) ||
       (selectedDay === 'day2' && contestant.day2Total >= 0);
-    
+
     const countryFilter = selectedCountry === 'all' || contestant.country === selectedCountry;
-    
+
     return dayFilter && countryFilter;
   });
 
@@ -43,7 +44,7 @@ export default function ResultsPage() {
     if (contestant.isUnofficial) {
       return 'bg-gray-200';
     }
-    
+
     // Special awards override rank-based coloring (only for official contestants)
     if (contestant.specialAward === 'DAY 1 HM') {
       return 'bg-blue-100'; // Blue for Day 1 honorable mention (rank 45)
@@ -98,7 +99,7 @@ export default function ResultsPage() {
         class: 'bg-gradient-to-r from-green-400 to-green-600 text-white border-green-500'
       };
     }
-    
+
     // No medal for ranks 42-44, 46+ (same as highlighting logic - no highlighting)
     return null;
   };
@@ -114,8 +115,24 @@ export default function ResultsPage() {
                 href={CONFIG.MAIN_SYSTEM_URL}
                 className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
               >
-                <Home className="w-4 h-4" />
-                <span className="text-sm font-medium">PAIO Home</span>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className="flex items-center"
+                >
+                  <Image
+                    src="/images/logo.png"
+                    alt="PAIO 2025 Logo"
+                    width={40}
+                    height={40}
+                    className="w-8 h-8 md:w-10 md:h-10"
+                  />
+                  <span className="text-xl md:text-2xl font-bold bg-gradient-to-br from-amber-700 via-orange-600 to-green-600 bg-clip-text text-transparent ml-2">
+                    PAIO
+                  </span>
+                  <span className="hidden lg:inline-block ml-2 text-amber-800 font-medium">
+                    2025
+                  </span>
+                </motion.div>
               </a>
             </div>
 
@@ -142,7 +159,7 @@ export default function ResultsPage() {
             <p className="text-lg text-gray-600 mb-6">
               {CONFIG.COMPETITION.NAME} - Official Competition Results
             </p>
-            
+
             {/* Simple Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto text-center">
               <div className="bg-white border border-amber-200 rounded-lg p-4">
@@ -162,7 +179,7 @@ export default function ResultsPage() {
                 <div className="text-sm text-gray-600">Medals</div>
               </div>
             </div>
-            
+
             {/* Additional Stats */}
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-xl mx-auto text-center mt-4">
               <div className="bg-purple-50 border border-purple-200 rounded-lg p-3">
@@ -189,20 +206,20 @@ export default function ResultsPage() {
           <div className="bg-white rounded-lg border border-amber-200 p-6">
             <div className="flex items-end justify-end gap-4">
 
-                <div className="flex justify-end gap-4">
+              <div className="flex justify-end gap-4">
 
-                  <select
-                    value={selectedCountry}
-                    onChange={(e) => setSelectedCountry(e.target.value)}
-                    className="px-4 py-2 rounded-lg border border-amber-200 bg-white text-gray-700 focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
-                  >
-                    <option value="all">All Countries</option>
-                    {countries.map(country => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
-                  </select>
-                </div>
-              
+                <select
+                  value={selectedCountry}
+                  onChange={(e) => setSelectedCountry(e.target.value)}
+                  className="px-4 py-2 rounded-lg border border-amber-200 bg-white text-gray-700 focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
+                >
+                  <option value="all">All Countries</option>
+                  {countries.map(country => (
+                    <option key={country} value={country}>{country}</option>
+                  ))}
+                </select>
+              </div>
+
             </div>
           </div>
         </div>
@@ -232,21 +249,20 @@ export default function ResultsPage() {
               </thead>
               <tbody className="divide-y divide-gray-200">
                 {filteredData.map((contestant, index) => (
-                  <tr 
+                  <tr
                     key={index}
                     className={`hover:bg-white transition-colors ${getRowBackgroundColor(contestant)}`}
                   >
                     <td className="px-2 py-2 border-r border-amber-100">
-                      <span className={`inline-flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold ${
-                        contestant.isUnofficial ? 'bg-gray-400 text-white' : 
-                        contestant.country === 'Pakistan (Guest)' ? 'bg-purple-300 text-purple-900' :
-                        contestant.specialAward === 'DAY 1 HM' ? 'bg-blue-300 text-blue-900' :
-                        contestant.rank >= 1 && contestant.rank <= 9 ? 'bg-yellow-300 text-yellow-900' :
-                        contestant.rank >= 10 && contestant.rank <= 21 ? 'bg-gray-300 text-gray-800' :
-                        contestant.rank >= 22 && contestant.rank <= 36 ? 'bg-amber-300 text-amber-900' :
-                        contestant.rank >= 37 && contestant.rank <= 41 ? 'bg-green-300 text-green-900' :
-                        'bg-gray-200 text-gray-700'
-                      }`}>
+                      <span className={`inline-flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold ${contestant.isUnofficial ? 'bg-gray-400 text-white' :
+                          contestant.country === 'Pakistan (Guest)' ? 'bg-purple-300 text-purple-900' :
+                            contestant.specialAward === 'DAY 1 HM' ? 'bg-blue-300 text-blue-900' :
+                              contestant.rank >= 1 && contestant.rank <= 9 ? 'bg-yellow-300 text-yellow-900' :
+                                contestant.rank >= 10 && contestant.rank <= 21 ? 'bg-gray-300 text-gray-800' :
+                                  contestant.rank >= 22 && contestant.rank <= 36 ? 'bg-amber-300 text-amber-900' :
+                                    contestant.rank >= 37 && contestant.rank <= 41 ? 'bg-green-300 text-green-900' :
+                                      'bg-gray-200 text-gray-700'
+                        }`}>
                         {contestant.rank}
                       </span>
                     </td>
@@ -302,11 +318,10 @@ export default function ResultsPage() {
                           ) : null;
                         })()}
                         {contestant.specialAward && (
-                          <div className={`text-xs font-medium px-2 py-1 rounded-full ${
-                            contestant.specialAward === 'DAY 2 HM' ? 'bg-green-200 text-green-900 border border-green-300' :
-                            contestant.specialAward === 'DAY 1 HM' ? 'bg-green-200 text-green-900 border border-green-300' :
-                            'bg-purple-200 text-purple-900 border border-purple-300'
-                          }`}>
+                          <div className={`text-xs font-medium px-2 py-1 rounded-full ${contestant.specialAward === 'DAY 2 HM' ? 'bg-green-200 text-green-900 border border-green-300' :
+                              contestant.specialAward === 'DAY 1 HM' ? 'bg-green-200 text-green-900 border border-green-300' :
+                                'bg-purple-200 text-purple-900 border border-purple-300'
+                            }`}>
                             {contestant.specialAward}
                           </div>
                         )}

@@ -25,7 +25,7 @@ export default function Sponsors() {
   const sponsors = [
     {
       name: "African Olympiad Academy",
-      logo: "./AOA.svg",
+      logo: "/images/AOA.svg",
       url: "https://africanolympiadfoundation.org/",
     },
   ];

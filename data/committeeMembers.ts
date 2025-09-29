@@ -24,12 +24,12 @@ export const internationalScientificCommittee: CommitteeMember[] = [
   },
   {
     name: "Bernard Ibrahimcha",
-    image: "/Bernard.jpg",
+    image: "/images/Bernard.jpg",
     roles: ["IOI 2023 Honorable Mention", "Syrian National Scientific Committee & International Informatics Olympiad in Teams (IIOT) Scientific Committee"],
   },
   {
     name: "Qingyu Shi",
-    image: "/qingyu.jpg",
+    image: "/images/qingyu.jpg",
     roles: ["Asia Pacific Informatics Olympiad Scientific Committee", "Co-President of Universal Cup"],
   },
 ];
@@ -37,7 +37,7 @@ export const internationalScientificCommittee: CommitteeMember[] = [
 export const hostCommittee: CommitteeMember[] = [
   {
     name: "Dr. Papias Niyigena",
-    image: "/placeholder-profile.svg", 
+    image: "/images/placeholder-profile.svg", 
     roles: ["Principal, Rwanda Coding Academy"],
   },
   {
@@ -57,7 +57,7 @@ export const hostCommittee: CommitteeMember[] = [
   },
   {
     name: "Norbert Ndayisenga",
-    image: "/norbert.jpg", 
+    image: "/images/norbert.webp",
     roles: ["Software Engineer, Rwanda Informatics Olympiad Coach"],
   },
   {
@@ -80,12 +80,12 @@ export const internationalCommittee: CommitteeMember[] = [
   },
   {
     name: "Obed Nsanzimfura",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQHW7RVcmxA88w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1685408455466?e=1758153600&v=beta&t=FFapzmuCdkEbpLAcHymPOhSOXoYo8MI8_ZCYw5xJa-I",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQHW7RVcmxA88w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1685408455466?e=1761782400&v=beta&t=gin0IBZI5orrQVqSkpqZ_fvMHFil_c-z0dneJxOcdRw",
     roles: ["Rwanda Olympiad Program"],
   },
   {
     name: "Sihine Negede",
-    image: "https://media.licdn.com/dms/image/v2/D5603AQElDG0wuAe6qA/profile-displayphoto-shrink_800_800/B56ZPadxmNG4Ao-/0/1734537060324?e=1758153600&v=beta&t=JuIfe02aH28ZkOD7yCHg8fAlzaVUOmsPLSPnTWtzpyE",
+    image: "https://media.licdn.com/dms/image/v2/D5603AQElDG0wuAe6qA/profile-displayphoto-shrink_400_400/B56ZPadxmNG4As-/0/1734537060288?e=1761782400&v=beta&t=i2D7nkFzPhzruxZF13JXkd5u9jQNB4DRxqINfQZH6NY",
     roles: ["African Olympiad Academy"],
   },
   {
@@ -101,14 +101,14 @@ export const teamLeaders: CommitteeMember[] = [
     image: "https://stats.ioinformatics.org/img/photos/2024/8241.png",
     roles: ["Algeria"],
   },
-  {
-    name: "Mr. Mmoloki Lekhutile",
-    image: "https://media.licdn.com/dms/image/v2/D5603AQFWz8DnhEEMMA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1693863258352?e=1758153600&v=beta&t=J0h_DibSEplfy6QO_QOXJyZ6iW4XpngU2VcMb-rWi3c",
-    roles: ["Botswana"],
-  },
+  // {
+  //   name: "Mr. Mmoloki Lekhutile",
+  //   image: "https://media.licdn.com/dms/image/v2/D5603AQFWz8DnhEEMMA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1693863258352?e=1758153600&v=beta&t=J0h_DibSEplfy6QO_QOXJyZ6iW4XpngU2VcMb-rWi3c",
+  //   roles: ["Botswana"],
+  // },
   {
     name: "Dr. Houssein Ahmed Assoweh",
-    image: "/DrHoussein.jpg",
+    image: "/images/DrHoussein.jpg",
     roles: ["Djibouti"],
   },
   {
@@ -118,17 +118,17 @@ export const teamLeaders: CommitteeMember[] = [
   },
   {
     name: "Elias Konadu",
-    image: "/placeholder-profile.svg", 
+    image: "/images/placeholder-profile.svg", 
     roles: ["Ghana"],
   },
   {
     name: "Prof James Katende",
-    image: "/placeholder-profile.svg", 
+    image: "/images/katende.jpeg", 
     roles: ["Kenya"],
   },
   {
     name: "Sébastian Diarra",
-    image: "/placeholder-profile.svg", 
+    image: "/images/placeholder-profile.svg", 
     roles: ["Mali"],
   },
   {
@@ -138,7 +138,7 @@ export const teamLeaders: CommitteeMember[] = [
   },
   {
     name: 'Valentine Sherekete',
-    image: "/placeholder-profile.svg",
+    image: "/images/sherekete.jpeg",
     roles: ["Zimbabwe"],
   },
   {
@@ -153,7 +153,7 @@ export const teamLeaders: CommitteeMember[] = [
   },
   {
     name: "Noah Jacobsen",
-    image: "/placeholder-profile.svg", 
+    image: "https://stats.ioinformatics.org/img/photos/2025/8773.jpeg", 
     roles: ["South Africa"],
   },
   {
@@ -166,9 +166,9 @@ export const teamLeaders: CommitteeMember[] = [
     image: "https://stats.ioinformatics.org/img/photos/2024/8483.png",
     roles: ["Pakistan (Guest)"],
   },
-  {
-    name: "João Ndombele",
-    image: "//placeholder-profile.svg",
-    roles: ["Angola"]
-  }
+  // {
+  //   name: "João Ndombele",
+  //   image: "/images/placeholder-profile.svg",
+  //   roles: ["Angola"]
+  // }
 ];
