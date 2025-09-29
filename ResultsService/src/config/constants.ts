@@ -1,7 +1,7 @@
 // Configuration constants for PAIO Results Service
 export const CONFIG = {
   // Main system URLs
-  MAIN_SYSTEM_URL: 'https://www.pafricanoi.com/',
+  MAIN_SYSTEM_URL: 'https://www.panafricanio.com/',
   RESULTS_SERVICE_URL: 'https://results.pafricanoi.com/',
   
   // Competition information

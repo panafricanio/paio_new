@@ -38,7 +38,7 @@ export default function Home() {
     a.name.localeCompare(b.name)
   );
 
-   const totalCountries = countries.length - 1; // -1 for Pakistan (Guest)
+   const totalCountries = countries.length; // -1 for Pakistan (Guest)
 
 
   return (
@@ -75,7 +75,7 @@ export default function Home() {
               transition={{ delay: 0.2, duration: 0.8 }}
             >
               <Image
-                src="/logo.png"
+                src="/images/logo.png"
                 alt="PAIO 2025 Logo"
                 width={120}
                 height={120}
@@ -215,9 +215,8 @@ export default function Home() {
                   transition={{ delay: 2.5, duration: 0.6 }}
                 >
                   <div className="text-sm md:text-base opacity-75">
-                    Total:{" "}
                     <span className="font-semibold">
-                      {totalCountries} Countries + 1 Guest Country.
+                      {totalCountries - 1} African Countries + 1 Guest Country.
                     </span>
                   </div>
                 </motion.div>

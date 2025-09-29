@@ -5,20 +5,20 @@ export const missingImagePlaceholders = {
   "Dr. Papias Niyigena": {
     // This member had a base64 image that got truncated
     // TODO: Restore the full base64 image data
-    fallback: "/logo.png"
+    fallback: "/images/logo.png"
   },
   "Sébastian Diarra": {
     // Mali representative - no image available
-    fallback: "/logo.png"
+    fallback: "/images/logo.png"
   },
   "Noah Jacobsen": {
     // South Africa representative - no image available  
-    fallback: "/logo.png"
+    fallback: "/images/logo.png"
   },
   "Etienne Kagaba": {
     // This member had a base64 image that got truncated
     // TODO: Restore the full base64 image data
-    fallback: "/logo.png"
+    fallback: "/images/logo.png"
   }
 };
 
@@ -36,5 +36,5 @@ export const getImageForMember = (memberName: string, originalImage: string): st
   }
   
   // Default fallback
-  return "/logo.png";
+  return "/images/logo.png";
 };
