@@ -8,7 +8,7 @@ import { resources } from "../../../data/resources";
 
 const tabsDef = [
   { id: "books", label: "Books" },
-  { id: "links", label: "Links" },
+  { id: "Websites", label: "Websites" },
   { id: "contests", label: "Contests" },
   { id: "problemsets", label: "Problem Sets" },
 ];
@@ -44,8 +44,8 @@ export default function ResourceTabs({ activeTab = "books" }: ResourceTabsProps)
             desc={b.desc}
           />
         ));
-      case "links":
-        return resources.links.map((l) => (
+      case "Websites":
+        return resources.websites.map((l) => (
           <ResourceCard
             key={l.href}
             title={l.title}
