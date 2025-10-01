@@ -65,34 +65,17 @@ function PAIOContestCard({ contest }: { contest: typeof paioContestData }) {
     <div className="bg-white rounded-lg border p-6">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-xl font-bold text-gray-800">PAIO {contest.year}</h3>
-
-        <span className="flex items-center justify-between mb-4">
-          {contest.livePracticeUrl && (
-            <a
-              href={contest.livePracticeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-amber-600 text-white rounded-md hover:bg-amber-700 transition-colors"
-            >
-              <ExternalLink size={16} />
-              Live Practice 1
-            </a>
-          )}
-        </span>
-
-        <span className="flex items-center justify-between mb-4">
-          {contest.livePracticeUrl && (
-            <a
-              href={contest.livePracticeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-amber-600 text-white rounded-md hover:bg-amber-700 transition-colors"
-            >
-              <ExternalLink size={16} />
-              Live Practice 2
-            </a>
-          )}
-        </span>
+        {/* {contest.livePracticeUrl && (
+          <a
+            href={contest.livePracticeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-4 py-2 bg-amber-600 text-white rounded-md hover:bg-amber-700 transition-colors"
+          >
+            <ExternalLink size={16} />
+            Live Practice
+          </a>
+        )} */}
       </div>
 
       <div className="space-y-6">
@@ -129,11 +112,7 @@ export default function TasksPage() {
           <h1 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-700 to-green-600">
             PAIO Contest Tasks
           </h1>
-          <p className="text-gray-600 mt-2">
-            Download past PAIO contest problems and access live practice.
-          </p>
         </header>
-
         <PAIOContestCard contest={paioContestData} />
       </div>
     </main>

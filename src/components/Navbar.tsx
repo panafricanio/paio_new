@@ -15,15 +15,15 @@ import { CONFIG } from "@/config/constants";
 
 const navItems = [
   { path: CONFIG.NAVIGATION.TASKS, label: "Tasks", priority: "high" },
-  { path: CONFIG.NAVIGATION.RESULTS, label: "Results", external: true, priority: "high" },
+  { path: CONFIG.NAVIGATION.RESULTS, label: "Results", external: false, priority: "high" },
   { path: CONFIG.NAVIGATION.REGULATIONS, label: "Regulations", priority: "high" },
   { path: CONFIG.NAVIGATION.RULES, label: "Rules", priority: "high" },
-  { path: CONFIG.NAVIGATION.REGISTER, label: "Register", external: true, priority: "high"},
   { path: CONFIG.NAVIGATION.IMPORTANT_DATES, label: "Important Dates", priority: "high" },
   { path: CONFIG.NAVIGATION.COMMITTEE, label: "Committee", priority: "high" },
   { path: CONFIG.NAVIGATION.SPONSORS, label: "Sponsors", priority: "high" },
-  { path: CONFIG.NAVIGATION.FAQS, label: "FAQs", priority: "low" },
   { path: CONFIG.NAVIGATION.RESOURCES, label: "Resources", priority: "high" },
+  { path: CONFIG.NAVIGATION.REGISTER, label: "Register", external: true, priority: "high"},
+  { path: CONFIG.NAVIGATION.FAQS, label: "FAQs", priority: "low" },
 ];
 
 // Filter items for primary navigation (high priority only)

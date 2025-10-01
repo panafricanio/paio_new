@@ -8,8 +8,23 @@ export const resources = {
       href: "https://drive.google.com/file/d/16SljCkH38meglyDxmqlNudyFV-Ulr7Ld/view",
       desc: "Classic CP book with problems and techniques.",
     },
+    {
+      title: "Introduction to Algorithms",
+      href: "https://drive.google.com/file/d/1PwHRRkkjiE4tQJl5m1MOq6cNqAGSKPmV/view",
+      desc: "This book provides a comprehensive introduction to the modern study of computer algorithms.",
+    },
+    {
+      title: "Algorithm Design",
+      href: "https://drive.google.com/file/d/1wKy-wGuCYfRx1DH48vZHl5JA4nkhOmwC/view",
+      desc: "Convey approach to algorithms as a design process that begins with problems arising across the full range of computing applications.",
+    },
+    {
+      title: "Algorithmics: The Spirit of Computing",
+      href: "https://drive.google.com/file/d/1m9-9Kw8EM4sahuWgF8UONigmyXFad6Mz/view",
+      desc: "The book is intended to fill a rather disturbing gap in the literature related to the computer revolution.",
+    },
   ],
-  links: [
+  websites: [
     {
       title: "CP-Algorithms (e-maxx)",
       href: "https://cp-algorithms.com/",
@@ -21,29 +36,14 @@ export const resources = {
       desc: "Structured competitive programming learning paths and problems.",
     },
     {
-      title: "IOI — International Olympiad in Informatics (official)",
-      href: "https://ioinformatics.org/",
-      desc: "Official IOI site — past tasks and information.",
-    },
-    {
       title: "Codeforces EDU",
       href: "https://codeforces.com/edu/courses",
       desc: "Step-by-step tutorials and practice problems.",
-    },
-    {
-      title: "QOJ.ac - PAIO Problems",
-      href: "https://qoj.ac/problems?search=PAIO",
-      desc: "PAIO contest problems on QOJ.ac online judge platform.",
-    },
+    }
   ],
   contests: [
     {
-      title: "IOI — Training & Past Problems",
-      href: "https://ioinformatics.org/",
-      desc: "Official IOI tasks and archives (useful for year-to-year training).",
-    },
-    {
-      title: "Codeforces — Gym & Contests",
+      title: "Codeforces",
       href: "https://codeforces.com/",
       desc: "Regular contests and community problemsets.",
     },
@@ -52,17 +52,42 @@ export const resources = {
       href: "https://atcoder.jp/contests/",
       desc: "Contests with quality problems suitable for olympiad prep.",
     },
-  ],
-  problemSets: [
     {
-      title: "UVa Online Judge (Problem Archive)",
-      href: "https://onlinejudge.org/",
-      desc: "Large archive of classical competitive programming problems.",
+      title: "QOJ",
+      href: "https://qoj.ac/contest/2525",
+      desc: "PAIO 2025 day 1 contest problems on QOJ.",
+    },
+    {
+      title: "QOJ",
+      href: "https://qoj.ac/contest/2526",
+      desc: "PAIO 2025 day 2 contest problems on QOJ.",
+    },
+    {
+      title: "EOLYMP",
+      href: " https://basecamp.eolymp.com/en/contests?series=paio",
+      desc: "PAIO contest problems on EOLYMP.",
     },
     {
       title: "Kattis",
       href: "https://open.kattis.com/",
       desc: "Judge used by many competitions; good practice problems.",
+    },
+  ],
+  problemSets: [
+    {
+      title: "IOI — International Olympiad in Informatics (official)",
+      href: "https://ioinformatics.org/",
+      desc: "Official IOI site — past tasks and information.",
+    },
+    {
+        title: "Junior Traning Sheet",
+        href: "https://docs.google.com/spreadsheets/d/1-499z-WtsthQPYU_rmJ3PNCGALA4NBaEodBYyPhmjx8/edit?gid=84654839#gid=84654839",
+        desc: "The goal of this sheet is to enhance algorthmic probem solving skills for programming competitions",
+    },
+    {
+      title: "UVa Online Judge (Problem Archive)",
+      href: "https://onlinejudge.org/",
+      desc: "Large archive of classical competitive programming problems.",
     },
     {
       title: "SPOJ (Problems)",

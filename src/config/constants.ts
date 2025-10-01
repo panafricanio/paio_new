@@ -23,7 +23,7 @@ export const CONFIG = {
   // Navigation items
   NAVIGATION: {
     TASKS: '/tasks',
-    RESULTS: 'https://results.panafricanio.com/',
+    RESULTS: '/results',
     REGULATIONS: '/regulations',
     RULES: '/competition-rules',
     REGISTER: 'https://docs.google.com/forms/d/e/1FAIpQLSe6S7qJlBiPr_HlunCuNPiXoGJsYfaV8oOkEhoFouxFTJ_arg/viewform',

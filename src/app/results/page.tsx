@@ -106,49 +106,6 @@ export default function ResultsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Navigation Header */}
-      <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-3">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <a
-                href={CONFIG.MAIN_SYSTEM_URL}
-                className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
-              >
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  className="flex items-center"
-                >
-                  <Image
-                    src="/images/logo.png"
-                    alt="PAIO 2025 Logo"
-                    width={40}
-                    height={40}
-                    className="w-8 h-8 md:w-10 md:h-10"
-                  />
-                  <span className="text-xl md:text-2xl font-bold bg-gradient-to-br from-amber-700 via-orange-600 to-green-600 bg-clip-text text-transparent ml-2">
-                    PAIO
-                  </span>
-                  <span className="hidden lg:inline-block ml-2 text-amber-800 font-medium">
-                    2025
-                  </span>
-                </motion.div>
-              </a>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <button
-                onClick={scrollToSummary}
-                className="flex items-center gap-2 px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors text-sm font-medium"
-              >
-                <span>Summary</span>
-              </button>
-            </div>
-
-          </div>
-        </div>
-      </nav>
-
       {/* Simple Header */}
       <header className="bg-white border-b border-amber-200">
         <div className="container mx-auto px-4 py-8">
