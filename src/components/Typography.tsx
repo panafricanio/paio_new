@@ -5,6 +5,7 @@ interface TypographyProps {
   variant: 'h1' | 'h2' | 'h3' | 'h4' | 'body' | 'lead' | 'small' | 'muted';
   children: React.ReactNode;
   className?: string;
+  /** When true, applies the brand heading color (solid; gradients removed). */
   gradient?: boolean;
 }
 
@@ -12,7 +13,7 @@ const Typography: React.FC<TypographyProps> = ({
   variant, 
   children, 
   className,
-  gradient = false 
+  gradient = false,
 }) => {
   const baseStyles = {
     h1: 'text-4xl md:text-5xl font-bold leading-tight',
@@ -25,15 +26,13 @@ const Typography: React.FC<TypographyProps> = ({
     muted: 'text-gray-600 leading-normal'
   };
 
-  const gradientStyle = gradient 
-    ? 'bg-gradient-to-r from-amber-700 to-green-600 text-transparent bg-clip-text'
-    : '';
+  const brandHeadingColor = gradient ? 'text-amber-900' : '';
 
   const Component = variant.startsWith('h') ? variant as keyof JSX.IntrinsicElements : 'p';
 
   return (
     <Component 
-      className={cn(baseStyles[variant], gradientStyle, className)}
+      className={cn(baseStyles[variant], brandHeadingColor, className)}
     >
       {children}
     </Component>

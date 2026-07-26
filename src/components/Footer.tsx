@@ -23,19 +23,13 @@ type NavItemType = {
 
 const navItems: NavItemType[] = [
   // Home removed as logo will serve this purpose
+  { path: "/results", label: "Results", priority: "high" },
   { path: "/regulations", label: "Regulations", priority: "high" },
-  {
-    path: "https://docs.google.com/forms/d/e/1FAIpQLSe6S7qJlBiPr_HlunCuNPiXoGJsYfaV8oOkEhoFouxFTJ_arg/viewform",
-    label: "Registration",
-    external: true,
-    priority: "high",
-  },
   { path: "/important-dates", label: "Important Dates", priority: "high" },
   { path: "/committee", label: "Committee", priority: "high" },
   { path: "/faqs", label: "FAQs", priority: "medium" },
   { path: "/sponsors", label: "Sponsors", priority: "medium" },
   { path: "/contact", label: "Contact", priority: "medium" },
-  { path: "/media", label: "Media", priority: "low" },
 ];
 
 // Filter items based on priority levels
@@ -70,7 +64,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gradient-to-br from-gray-50 to-amber-50 pt-12 pb-6 border-t border-gray-200">
+    <footer className="bg-gray-50 pt-12 pb-6 border-t border-gray-200">
       <div className="container mx-auto px-4">
         <motion.div
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
@@ -81,19 +75,19 @@ const Footer = () => {
         >
           {/* About Section */}
           <motion.div variants={childVariants} className="space-y-4">
-            <h3 className="text-lg font-semibold bg-gradient-to-br from-amber-700 to-green-600 bg-clip-text text-transparent">
+            <h3 className="text-lg font-semibold text-amber-800">
               About PAIO
             </h3>
             <p className="text-gray-600 text-sm">
-              The Pan African Informatics Olympiad is an informatics
-              competition that brings together talented young programmers from
-              across the African continent.
+              The Pan African Informatics Olympiad 2025 brought together
+              talented young programmers from across the African continent.
+              Registration is now closed.
             </p>
           </motion.div>
 
           {/* Quick Links Section */}
           <motion.div variants={childVariants} className="space-y-4">
-            <h3 className="text-lg font-semibold bg-gradient-to-br from-amber-700 to-green-600 bg-clip-text text-transparent">
+            <h3 className="text-lg font-semibold text-amber-800">
               Quick Links
             </h3>
             <ul className="space-y-2">
@@ -127,7 +121,7 @@ const Footer = () => {
 
           {/* Contact Information */}
           <motion.div variants={childVariants} className="space-y-4">
-            <h3 className="text-lg font-semibold bg-gradient-to-br from-amber-700 to-green-600 bg-clip-text text-transparent">
+            <h3 className="text-lg font-semibold text-amber-800">
               Contact Us
             </h3>
             <ul className="space-y-3">
