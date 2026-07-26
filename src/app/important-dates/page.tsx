@@ -26,8 +26,8 @@ export default function ImportantDates() {
 
   return (
     <div className="overflow-hidden">
-      {/* Page Header with Gradient */}
-      <section className="relative py-16 bg-gradient-to-br from-amber-50 via-orange-50 to-green-100">
+      {/* Page Header */}
+      <section className="relative py-16 bg-amber-50">
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             className="text-center"
@@ -36,7 +36,7 @@ export default function ImportantDates() {
             transition={{ duration: 0.7 }}
           >
             <motion.div
-              className="inline-flex items-center justify-center bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full text-primary mb-6"
+              className="inline-flex items-center justify-center bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full text-amber-800 mb-6"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.5 }}
@@ -61,8 +61,8 @@ export default function ImportantDates() {
               transition={{ delay: 0.4, duration: 0.7 }}
             >
               <Typography variant="body" className="text-gray-700 max-w-3xl mx-auto">
-                Mark your calendar with these crucial dates for the Pan African
-                Informatics Olympiad 2025
+                Key dates from the Pan African Informatics Olympiad 2025.
+                Registration and the call for tasks are closed.
               </Typography>
             </motion.div>
           </motion.div>
@@ -97,14 +97,15 @@ export default function ImportantDates() {
             {activeTab === 'overview' && (
               <div>
                 <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                  Mark your calendar with these crucial dates for the Pan African Informatics Olympiad 2025
+                  These were the key dates for the Pan African Informatics Olympiad 2025.
+                  The event has concluded, and registration is closed.
                 </p>
               </div>
             )}
             {activeTab === 'criteria' && (
               <div className="prose max-w-3xl mx-auto text-gray-700">
                 <h3>Task Criteria</h3>
-                <p>Task submission approximately mirrors IOI task submission - please use the Google Form provided. A task submission must contain:</p>
+                <p>Task submission approximately mirrored IOI task submission. The call for tasks is now closed. A task submission had to contain:</p>
                 <ul>
                   <li>A link to Statement in English, preferably formatted in PDF with required diagrams and pictures included.</li>
                   <li>Description of the desired solution (a description of an algorithm which should get full score).</li>
@@ -118,14 +119,14 @@ export default function ImportantDates() {
                   <li>Test data or ideas for generating test data.</li>
                   <li>The motivation behind the task.</li>
                 </ul>
-                <p>As this is the first edition the ISC</p>
-                <p>Submitted tasks must be kept in strict confidence until the end of PAIO 2025. After that, authors are free to do whatever they wish with the tasks, but may be asked to have them considered for PAIO 2026, in which case strict confidence would have to be maintained through until PAIO 2026.</p>
-                <p>ISC will reach out with respect to feedback on tasks as needed and the final tasks used in the competition will be decided by the ISC.</p>
+                <p>As this was the first edition, the ISC reviewed submissions carefully.</p>
+                <p>Submitted tasks had to be kept in strict confidence until the end of PAIO 2025. After that, authors were free to use the tasks as they wished, unless asked to keep them confidential for consideration in a later edition.</p>
+                <p>The ISC provided feedback on tasks as needed and decided the final tasks used in the competition.</p>
               </div>
             )}
             {activeTab === 'schedule' && (
               <div>
-                <div className="mb-8 p-6 bg-blue-50 rounded-xl border border-blue-200">
+                <div className="mb-8 p-6 bg-amber-50 rounded-xl border border-amber-200">
                   <h3 className="text-xl font-bold mb-4 text-gray-900">{practiceContestInfo.title}</h3>
                   <p className="text-gray-700 mb-4">{practiceContestInfo.description}</p>
                   <p className="text-gray-700">{practiceContestInfo.briefingInfo}</p>
@@ -158,21 +159,23 @@ export default function ImportantDates() {
 
           <motion.div
             variants={fadeInUp}
-            className="p-6 rounded-xl border border-amber-100 bg-gradient-to-r from-white to-amber-50 shadow-sm"
+            className="p-6 rounded-xl border border-amber-100 bg-white shadow-sm"
           >
             <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
-              <div className="bg-gradient-to-br from-amber-600 to-orange-600 p-4 rounded-xl text-white flex items-center justify-center min-w-[80px] h-[80px]">
+              <div className="bg-amber-600 p-4 rounded-xl text-white flex items-center justify-center min-w-[80px] h-[80px]">
                 <BookOpen className="h-10 w-10" />
               </div>
               <div>
                 <Typography variant="h3" className="text-gray-900 mb-2">
-                  Call For Tasks Open
+                  Call For Tasks Opened
                 </Typography>
-                <Typography variant="body" className="font-semibold text-primary mb-1">
-                  April 23, 2025
+                <Typography variant="body" className="font-semibold text-amber-800 mb-1">
+                  April 23, 2025 · Closed
                 </Typography>
                 <Typography variant="body" className="text-gray-600">
-                  Submit proposals for contest questions. See <a href="https://ioi2025.bo/call-for-tasks.html" target="_blank" rel="noopener noreferrer" className="text-amber-700 underline">IOI 2025 Call For Tasks</a> for task criteria. Submit <a href="https://docs.google.com/forms/d/1Lsto7UKJrIBOKl5JBcjLyFA4-qfaE5cdeAhYvp-ZnD8/edit" target="_blank" rel="noopener noreferrer" className="text-amber-700 underline">here</a>.
+                  The call for task proposals opened on this date. Criteria followed the{" "}
+                  <a href="https://ioi2025.bo/call-for-tasks.html" target="_blank" rel="noopener noreferrer" className="text-amber-700 underline">IOI 2025 Call For Tasks</a>.
+                  Submissions are no longer accepted.
                 </Typography>
               </div>
               
@@ -181,21 +184,21 @@ export default function ImportantDates() {
           </motion.div>
           <motion.div
             variants={fadeInUp}
-            className="p-6 rounded-xl border border-amber-100 bg-gradient-to-r from-white to-amber-50 shadow-sm my-4"
+            className="p-6 rounded-xl border border-amber-100 bg-white shadow-sm my-4"
           >
             <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
-              <div className="bg-gradient-to-br from-amber-600 to-orange-600 p-4 rounded-xl text-white flex items-center justify-center min-w-[80px] h-[80px]">
+              <div className="bg-amber-600 p-4 rounded-xl text-white flex items-center justify-center min-w-[80px] h-[80px]">
                 <BookCheck className="h-10 w-10" />
               </div>
               <div>
                 <Typography variant="h3" className="text-gray-900 mb-2">
-                  Call For Tasks Close
+                  Call For Tasks Closed
                 </Typography>
-                <Typography variant="body" className="font-semibold text-primary mb-1">
-                  July 4, 2025
+                <Typography variant="body" className="font-semibold text-amber-800 mb-1">
+                  July 4, 2025 · Closed
                 </Typography>
                 <Typography variant="body" className="text-gray-600">
-                  Finalize contest questions
+                  The call for tasks closed and contest questions were finalized.
                 </Typography>
               </div>
               
@@ -204,21 +207,21 @@ export default function ImportantDates() {
           </motion.div>
           <motion.div
             variants={fadeInUp}
-            className="p-6 rounded-xl border border-amber-100 bg-gradient-to-r from-white to-amber-50 shadow-sm my-4"
+            className="p-6 rounded-xl border border-amber-100 bg-white shadow-sm my-4"
           >
             <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
-              <div className="bg-gradient-to-br from-amber-600 to-orange-600 p-4 rounded-xl text-white flex items-center justify-center min-w-[80px] h-[80px]">
+              <div className="bg-amber-600 p-4 rounded-xl text-white flex items-center justify-center min-w-[80px] h-[80px]">
                 <Calendar className="h-10 w-10" />
               </div>
               <div>
                 <Typography variant="h3" className="text-gray-900 mb-2">
-                  Registration Deadline
+                  Registration Closed
                 </Typography>
-                <Typography variant="body" className="font-semibold text-primary mb-1">
-                  June 30, 2025
+                <Typography variant="body" className="font-semibold text-amber-800 mb-1">
+                  June 30, 2025 · Closed
                 </Typography>
                 <Typography variant="body" className="text-gray-600">
-                  Last day to confirm your team's participation in PAIO 2025
+                  Last day to confirm team participation in PAIO 2025. Registration is no longer open.
                 </Typography>
               </div>
               
@@ -245,7 +248,7 @@ export default function ImportantDates() {
             className="overflow-x-auto bg-white p-4 md:p-6 rounded-xl border border-amber-100 shadow-sm"
           >
             <table className="min-w-full divide-y divide-gray-200">
-              <thead className="bg-gradient-to-r from-amber-50 to-orange-50">
+              <thead className="bg-amber-50">
                 <tr>
                   <th
                     scope="col"
@@ -275,7 +278,7 @@ export default function ImportantDates() {
                     </Typography>
                   </td>
                   <td className="py-6 px-6 whitespace-nowrap">
-                    <Typography variant="body" className="text-primary font-medium">
+                    <Typography variant="body" className="text-amber-800 font-medium">
                       Opening Ceremony
                     </Typography>
                   </td>
@@ -294,7 +297,7 @@ export default function ImportantDates() {
                     </Typography>
                   </td>
                   <td className="py-6 px-6 whitespace-nowrap">
-                    <Typography variant="body" className="font-semibold text-primary">
+                    <Typography variant="body" className="font-semibold text-amber-800">
                       Contest Day 1
                     </Typography>
                   </td>
@@ -304,14 +307,14 @@ export default function ImportantDates() {
                     </Typography>
                   </td>
                 </tr>
-                <tr className="bg-gradient-to-r from-amber-50/50 to-transparent transition-colors hover:bg-amber-50/80">
+                <tr className="bg-amber-50/50 transition-colors hover:bg-amber-50/80">
                   <td className="py-6 px-6 whitespace-nowrap">
                     <Typography variant="body" className="font-medium text-gray-900">
                       Sun, Sep 14
                     </Typography>
                   </td>
                   <td className="py-6 px-6 whitespace-nowrap">
-                    <Typography variant="body" className="text-primary font-semibold">
+                    <Typography variant="body" className="text-amber-800 font-semibold">
                       Contest Day 2 & Closing Ceremony
                     </Typography>
                   </td>
@@ -346,55 +349,55 @@ export default function ImportantDates() {
           >
             <motion.div
               variants={fadeInUp}
-              className="p-6 rounded-xl border border-amber-100 bg-gradient-to-br from-amber-50 to-orange-50/50 shadow-sm hover:shadow-md transition-shadow"
+              className="p-6 rounded-xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="flex items-center mb-4">
                 <div className="rounded-full bg-amber-100 p-2 mr-3">
-                  <Award className="h-6 w-6 text-amber-600" />
+                  <Award className="h-6 w-6 text-amber-700" />
                 </div>
                 <h3 className="font-semibold text-lg text-gray-900">
                   Competition Days
                 </h3>
               </div>
               <p className="text-gray-700">
-                September 13: The main competition day where contestants solve
-                challenging informatics problems.
+                September 13–14: Contestants solved challenging informatics
+                problems across two competition days.
               </p>
             </motion.div>
 
             <motion.div
               variants={fadeInUp}
-              className="p-6 rounded-xl border border-amber-100 bg-gradient-to-br from-green-50 to-emerald-50/50 shadow-sm hover:shadow-md transition-shadow"
+              className="p-6 rounded-xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="flex items-center mb-4">
-                <div className="rounded-full bg-green-100 p-2 mr-3">
-                  <Users className="h-6 w-6 text-green-600" />
+                <div className="rounded-full bg-amber-100 p-2 mr-3">
+                  <Users className="h-6 w-6 text-amber-700" />
                 </div>
                 <h3 className="font-semibold text-lg text-gray-900">
                   Ceremonies
                 </h3>
               </div>
               <p className="text-gray-700">
-                September 12 & September 14: Opening and closing ceremonies to celebrate
-                participants and winners.
+                September 12 & September 14: Opening and closing ceremonies
+                celebrated participants and winners.
               </p>
             </motion.div>
 
             <motion.div
               variants={fadeInUp}
-              className="p-6 rounded-xl border border-amber-100 bg-gradient-to-br from-orange-50 to-amber-50/50 shadow-sm hover:shadow-md transition-shadow"
+              className="p-6 rounded-xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="flex items-center mb-4">
-                <div className="rounded-full bg-orange-100 p-2 mr-3">
-                  <Clock className="h-6 w-6 text-orange-600" />
+                <div className="rounded-full bg-amber-100 p-2 mr-3">
+                  <Clock className="h-6 w-6 text-amber-700" />
                 </div>
                 <h3 className="font-semibold text-lg text-gray-900">
                   Registration
                 </h3>
               </div>
               <p className="text-gray-700">
-                July 13: Final deadline to register your team for the
-                competition.
+                Registration closed on June 30, 2025. Team sign-ups are no
+                longer accepted.
               </p>
             </motion.div>
           </motion.div>

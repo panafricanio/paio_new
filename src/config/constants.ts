@@ -2,7 +2,8 @@
 export const CONFIG = {
   // External URLs
   RESULTS_SERVICE_URL: 'https://results.panafricanio.com/',
-  REGISTRATION_FORM_URL: 'https://docs.google.com/forms/d/e/1FAIpQLSe6S7qJlBiPr_HlunCuNPiXoGJsYfaV8oOkEhoFouxFTJ_arg/viewform',
+  /** Registration is closed for PAIO 2025. */
+  REGISTRATION_CLOSED: true,
   
   // Competition information
   COMPETITION: {
@@ -11,7 +12,8 @@ export const CONFIG = {
     SHORT_NAME: 'PAIO',
     DATES: 'September 12-14, 2025',
     FORMAT: 'Online competition',
-    DURATION: 'Three-day event with two rounds of five hours each'
+    DURATION: 'Three-day event with two rounds of five hours each',
+    STATUS: 'concluded' as const,
   },
   
   // Contact information
@@ -26,7 +28,6 @@ export const CONFIG = {
     RESULTS: '/results',
     REGULATIONS: '/regulations',
     RULES: '/competition-rules',
-    REGISTER: 'https://docs.google.com/forms/d/e/1FAIpQLSe6S7qJlBiPr_HlunCuNPiXoGJsYfaV8oOkEhoFouxFTJ_arg/viewform',
     IMPORTANT_DATES: '/important-dates',
     COMMITTEE: '/committee',
     SPONSORS: '/sponsors',

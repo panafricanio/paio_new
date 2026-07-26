@@ -41,7 +41,7 @@ export default function Committee() {
     <div className="overflow-hidden">
       <PageHeader
         title="Committee Members"
-        description="Meet the dedicated professionals who make PAIO possible"
+        description="Meet the dedicated professionals who made PAIO 2025 possible"
       />
 
       <div className="container mx-auto px-4 py-10">

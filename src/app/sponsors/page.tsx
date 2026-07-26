@@ -32,23 +32,8 @@ export default function Sponsors() {
 
   return (
     <div className="overflow-hidden">
-      {/* Page Header with Gradient */}
-      <section className="relative py-16 bg-gradient-to-br from-amber-50 via-orange-50 to-green-100">
-        <div className="absolute inset-0 overflow-hidden">
-          {/* Decorative gradients */}
-          <div className="absolute -top-24 -left-24 w-72 h-72 bg-amber-300/20 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-green-300/20 rounded-full blur-3xl"></div>
-
-          <svg
-            className="absolute bottom-0 left-0 right-0 transform translate-y-1/2 opacity-10"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-            style={{ height: "60px" }}
-          >
-            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
-          </svg>
-        </div>
+      {/* Page Header */}
+      <section className="relative py-16 bg-amber-50">
 
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -68,7 +53,7 @@ export default function Sponsors() {
             </motion.div>
 
             <motion.h1
-              className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-700 via-orange-600 to-green-600 text-transparent bg-clip-text"
+              className="text-4xl md:text-5xl font-bold mb-4 text-amber-800"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.7 }}
@@ -82,8 +67,8 @@ export default function Sponsors() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.7 }}
             >
-              PAIO 2025 would not be possible without the generous support of
-              our sponsors
+              PAIO 2025 would not have been possible without the generous
+              support of our sponsors
             </motion.p>
           </motion.div>
         </div>
@@ -103,10 +88,10 @@ export default function Sponsors() {
                 key={index}
                 variants={fadeInUp}
                 whileHover={{ y: -5 }}
-                className="bg-gradient-to-br from-white to-amber-50 p-6 rounded-xl shadow-sm text-center border border-amber-100 transition-all"
+                className="bg-white p-6 rounded-xl shadow-sm text-center border border-amber-100 transition-all"
               >
                 <div className="flex justify-center mb-6">
-                  <div className="w-32 h-32 bg-gradient-to-br from-gray-50 to-white rounded-full flex items-center justify-center p-2 shadow-sm">
+                  <div className="w-32 h-32 bg-gray-50 rounded-full flex items-center justify-center p-2 shadow-sm">
                     <Image
                       src={sponsor.logo}
                       alt={`${sponsor.name} logo`}
@@ -116,7 +101,7 @@ export default function Sponsors() {
                     />
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-3 bg-gradient-to-r from-amber-700 to-green-600 text-transparent bg-clip-text">
+                <h3 className="text-xl font-semibold mb-3 text-amber-800">
                   {sponsor.name}
                 </h3>
                 <motion.div
@@ -138,17 +123,17 @@ export default function Sponsors() {
           </motion.div>
 
           <motion.div
-            className="mt-16 text-center p-8 bg-gradient-to-br from-white to-green-50 rounded-xl shadow-sm border border-green-100"
+            className="mt-16 text-center p-8 bg-white rounded-xl shadow-sm border border-amber-100"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <div className="inline-flex items-center justify-center bg-green-100 p-3 rounded-full text-green-600 mb-6">
+            <div className="inline-flex items-center justify-center bg-amber-100 p-3 rounded-full text-amber-600 mb-6">
               <HeartHandshake className="h-8 w-8" />
             </div>
 
-            <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-green-700 to-emerald-600 text-transparent bg-clip-text">
+            <h3 className="text-2xl font-bold mb-4 text-amber-800">
               Become a Sponsor
             </h3>
             <p className="text-lg mb-6 text-gray-700">
@@ -163,7 +148,7 @@ export default function Sponsors() {
             >
               <Link
                 href="mailto:joel@pafricanoi.com"
-                className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-medium px-6 py-3 rounded-lg inline-flex items-center gap-2 transition-all shadow-sm"
+                className="bg-amber-600 hover:bg-amber-700 text-white font-medium px-6 py-3 rounded-lg inline-flex items-center gap-2 transition-all shadow-sm"
               >
                 Contact Us About Sponsorship
                 <ExternalLink className="h-4 w-4" />

@@ -3,29 +3,29 @@ import { SectionConfig } from "@/types/committee";
 export const committeeSections: SectionConfig[] = [
   {
     title: "International Scientific Committee",
-    description: "Our committee members bring extensive experience and expertise to ensure the highest standards of competition",
+    description: "Committee members who brought extensive experience and expertise to ensure the highest standards of competition",
     colorScheme: "amber",
   },
   {
     title: "Host Committee", 
-    description: "Meet the team behind the organization and website of PAIO 2025",
-    colorScheme: "green",
+    description: "The team behind the organization and website of PAIO 2025",
+    colorScheme: "amber",
   },
   {
     title: "International Committee",
-    description: "Our international committee members providing global perspective and expertise", 
-    colorScheme: "orange",
+    description: "International committee members who provided global perspective and expertise", 
+    colorScheme: "amber",
     gridCols: "grid-cols-1 md:grid-cols-2 lg:grid-cols-5",
   },
   {
     title: "Team Leaders",
-    description: "Meet the team leaders from participating countries",
+    description: "Team leaders from the countries that participated in PAIO 2025",
     colorScheme: "amber",
   },
   /**{
     title: "Coaches",
     description: "Pan-African Informatic Olympiad coaches.",
-    colorScheme: "orange"
+    colorScheme: "amber"
   }
     */
 ];

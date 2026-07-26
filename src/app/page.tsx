@@ -12,7 +12,6 @@ import {
   BookOpen,
   Users,
   ChevronRight,
-  ExternalLink,
   Code,
   Brain,
   GraduationCap,
@@ -43,23 +42,8 @@ export default function Home() {
 
   return (
     <div className="overflow-hidden">
-      {/* Hero Section with Enhanced Gradients */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-amber-50 via-orange-50 to-green-100 pt-20 pb-16 md:pt-28 md:pb-24">
-        <div className="absolute inset-0 overflow-hidden">
-          {/* Decorative gradients */}
-          <div className="absolute -top-24 -left-24 w-96 h-96 bg-amber-300/20 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-green-300/20 rounded-full blur-3xl"></div>
-
-          <svg
-            className="absolute bottom-0 left-0 right-0 transform translate-y-1/2 opacity-10"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
-          </svg>
-        </div>
-
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-amber-50 pt-20 pb-16 md:pt-28 md:pb-24">
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             className="flex flex-col items-center text-center"
@@ -90,7 +74,7 @@ export default function Home() {
               transition={{ delay: 0.3, duration: 0.5 }}
             >
               <Calendar className="h-4 w-4 mr-2" />
-              <span>September 13, 2025</span>
+              <span>September 12–14, 2025 · Concluded</span>
             </motion.div>
 
             <motion.div
@@ -98,13 +82,8 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.7 }}
             >
-              <Typography variant="h1" className="mb-6 tracking-tight text-4xl md:text-5xl lg:text-6xl">
-                <span className="bg-gradient-to-r from-amber-700 via-orange-600 to-amber-800 bg-clip-text text-transparent">
-                  Pan African
-                </span>{" "}
-                <span className="bg-gradient-to-r from-green-600 to-emerald-700 bg-clip-text text-transparent">
-                  Informatics Olympiad
-                </span>
+              <Typography variant="h1" className="mb-6 tracking-tight text-4xl md:text-5xl lg:text-6xl text-amber-900">
+                Pan African Informatics Olympiad
               </Typography>
             </motion.div>
 
@@ -114,9 +93,9 @@ export default function Home() {
               transition={{ delay: 0.6, duration: 0.7 }}
             >
               <Typography variant="lead" className="text-gray-700 mb-8 max-w-3xl">
-                An informatics competition bringing together talented young
-                programmers from across the African continent for two days to
-                showcase excellence and innovation.
+                An informatics competition that brought together talented young
+                programmers from across the African continent for two days of
+                excellence and innovation. Registration is now closed.
               </Typography>
             </motion.div>
 
@@ -127,20 +106,18 @@ export default function Home() {
               transition={{ delay: 0.7, duration: 0.5 }}
             >
               <Link
-                href="https://docs.google.com/forms/d/e/1FAIpQLSe6S7qJlBiPr_HlunCuNPiXoGJsYfaV8oOkEhoFouxFTJ_arg/viewform"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white font-medium px-8 py-3 rounded-lg flex items-center justify-center transition-all shadow-lg hover:shadow-xl"
+                href="/results"
+                className="bg-amber-600 hover:bg-amber-700 text-white font-medium px-8 py-3 rounded-lg flex items-center justify-center transition-all shadow-lg hover:shadow-xl"
               >
-                Register Now
+                View Results
                 <ChevronRight className="h-4 w-4 ml-2" />
               </Link>
 
               <Link
-                href="/regulations"
-                className="bg-white hover:bg-gray-50 text-green-800 border border-green-200 font-medium px-8 py-3 rounded-lg flex items-center justify-center transition-colors hover:border-green-300"
+                href="/tasks"
+                className="bg-white hover:bg-gray-50 text-amber-800 border border-amber-200 font-medium px-8 py-3 rounded-lg flex items-center justify-center transition-colors hover:border-amber-300"
               >
-                Learn More
+                View Tasks
               </Link>
             </motion.div>
           </motion.div>
@@ -152,13 +129,7 @@ export default function Home() {
             transition={{ delay: 0.8, duration: 0.7 }}
           >
             <div className="relative h-[240px] sm:h-[300px] md:h-[380px] w-full max-w-[800px] rounded-xl overflow-hidden shadow-2xl">
-              {/* Animated gradient background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-600 via-orange-500 to-green-600">
-                <div className="absolute inset-0 opacity-30">
-                  <div className="absolute top-0 left-0 right-0 h-1/2 bg-gradient-to-b from-white/10 to-transparent"></div>
-                  <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/20 to-transparent"></div>
-                </div>
-              </div>
+              <div className="absolute inset-0 bg-amber-700"></div>
 
               {/* Content */}
               <div className="relative z-10 h-full flex flex-col justify-center items-center text-white p-8">
@@ -172,7 +143,7 @@ export default function Home() {
                     Participating Countries
                   </div>
                   <div className="text-lg md:text-xl opacity-90">
-                    {totalCountries} Nations United
+                    {totalCountries} Nations Took Part
                   </div>
                 </motion.div>
 
@@ -226,8 +197,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section with Gradient Cards */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-white to-amber-50/50">
+      {/* Features Section */}
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -237,11 +208,11 @@ export default function Home() {
             transition={{ duration: 0.5 }}
           >
             <Typography variant="h2" gradient className="mb-4">
-              Why Participate?
+              Highlights of PAIO 2025
             </Typography>
             <Typography variant="lead" className="text-gray-600 max-w-3xl mx-auto">
-              The Pan African Informatics Olympiad offers unique opportunities
-              for young programmers to grow and excel
+              The Pan African Informatics Olympiad gave young programmers a
+              platform to grow, compete, and connect across Africa
             </Typography>
           </motion.div>
 
@@ -253,52 +224,52 @@ export default function Home() {
             viewport={{ once: true, margin: "-100px" }}
           >
             <motion.div
-              className="bg-gradient-to-br from-white to-amber-50 border border-amber-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
+              className="bg-white border border-amber-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
               variants={fadeIn}
               whileHover={{ y: -5 }}
             >
-              <div className="bg-gradient-to-br from-amber-600 to-orange-600 p-3 rounded-lg inline-block mb-4 text-white">
+              <div className="bg-amber-600 p-3 rounded-lg inline-block mb-4 text-white">
                 <Award className="h-6 w-6" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 bg-gradient-to-r from-amber-700 to-orange-600 bg-clip-text text-transparent">
+              <h3 className="text-xl font-semibold mb-3 text-amber-800">
                 Recognition & Achievement
               </h3>
               <p className="text-gray-600">
-                Earn awards and recognition at a continental level for your
-                programming abilities.
+                Contestants earned awards and recognition at a continental level
+                for their programming abilities.
               </p>
             </motion.div>
 
             <motion.div
-              className="bg-gradient-to-br from-white to-green-50 border border-green-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
+              className="bg-white border border-amber-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
               variants={fadeIn}
               whileHover={{ y: -5 }}
             >
-              <div className="bg-gradient-to-br from-green-600 to-emerald-600 p-3 rounded-lg inline-block mb-4 text-white">
+              <div className="bg-amber-600 p-3 rounded-lg inline-block mb-4 text-white">
                 <Users className="h-6 w-6" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 bg-gradient-to-r from-green-700 to-emerald-600 bg-clip-text text-transparent">
+              <h3 className="text-xl font-semibold mb-3 text-amber-800">
                 Community
               </h3>
               <p className="text-gray-600">
-                Connect with like-minded peers from across Africa, share
-                knowledge, and collaborate to tackle challenging problems.
+                Participants connected with peers from across Africa, shared
+                knowledge, and collaborated on challenging problems.
               </p>
             </motion.div>
 
             <motion.div
-              className="bg-gradient-to-br from-white to-orange-50 border border-orange-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
+              className="bg-white border border-amber-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-all"
               variants={fadeIn}
               whileHover={{ y: -5 }}
             >
-              <div className="bg-gradient-to-br from-orange-600 to-amber-700 p-3 rounded-lg inline-block mb-4 text-white">
+              <div className="bg-amber-600 p-3 rounded-lg inline-block mb-4 text-white">
                 <Brain className="h-6 w-6" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 bg-gradient-to-r from-orange-700 to-amber-700 bg-clip-text text-transparent">
+              <h3 className="text-xl font-semibold mb-3 text-amber-800">
                 Problem-Solving Skills
               </h3>
               <p className="text-gray-600">
-                Challenge yourself with complex algorithms that deepen your
+                Contestants tackled complex algorithms that deepened their
                 understanding of computational concepts.
               </p>
             </motion.div>
@@ -306,12 +277,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Key Information with Curved Gradient Border */}
-      <section className="py-16 md:py-24 relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-white via-amber-50/70 to-green-50/50"></div>
-        <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-white to-transparent"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
-
+      {/* Key Information */}
+      <section className="py-16 md:py-24 relative bg-amber-50/40">
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             className="max-w-3xl mx-auto"
@@ -326,19 +293,19 @@ export default function Home() {
 
             <div className="space-y-8">
               <motion.div
-                className="bg-white p-6 rounded-xl border-l-4 border-blue-500 shadow-sm border border-blue-100"
+                className="bg-white p-6 rounded-xl border-l-4 border-amber-500 shadow-sm border border-amber-100"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1, duration: 0.5 }}
               >
-                <h3 className="text-xl font-semibold mb-4 flex items-center bg-gradient-to-r from-amber-700 to-orange-600 bg-clip-text text-transparent">
-                  <Calendar className="h-5 w-5 mr-2 text-blue-500" />
+                <h3 className="text-xl font-semibold mb-4 flex items-center text-amber-800">
+                  <Calendar className="h-5 w-5 mr-2 text-amber-500" />
                   Date & Format
                 </h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start">
-                    <span className="h-5 w-5 rounded-full bg-gradient-to-br from-amber-600 to-orange-600 flex items-center justify-center text-xs text-white font-bold mr-2 mt-0.5">
+                    <span className="h-5 w-5 rounded-full bg-amber-600 flex items-center justify-center text-xs text-white font-bold mr-2 mt-0.5">
                       •
                     </span>
                     <span>
@@ -346,7 +313,7 @@ export default function Home() {
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="h-5 w-5 rounded-full bg-gradient-to-br from-amber-600 to-orange-600 flex items-center justify-center text-xs text-white font-bold mr-2 mt-0.5">
+                    <span className="h-5 w-5 rounded-full bg-amber-600 flex items-center justify-center text-xs text-white font-bold mr-2 mt-0.5">
                       •
                     </span>
                     <span>
@@ -354,7 +321,7 @@ export default function Home() {
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="h-5 w-5 rounded-full bg-gradient-to-br from-amber-600 to-orange-600 flex items-center justify-center text-xs text-white font-bold mr-2 mt-0.5">
+                    <span className="h-5 w-5 rounded-full bg-amber-600 flex items-center justify-center text-xs text-white font-bold mr-2 mt-0.5">
                       •
                     </span>
                     <span>
@@ -366,28 +333,28 @@ export default function Home() {
               </motion.div>
 
               <motion.div
-                className="bg-white p-6 rounded-xl border-l-4 border-indigo-500 shadow-sm border border-indigo-100"
+                className="bg-white p-6 rounded-xl border-l-4 border-amber-500 shadow-sm border border-amber-100"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2, duration: 0.5 }}
               >
-                <h3 className="text-xl font-semibold mb-4 flex items-center bg-gradient-to-r from-green-700 to-emerald-600 bg-clip-text text-transparent">
-                  <GraduationCap className="h-5 w-5 mr-2 text-indigo-500" />
+                <h3 className="text-xl font-semibold mb-4 flex items-center text-amber-800">
+                  <GraduationCap className="h-5 w-5 mr-2 text-amber-500" />
                   Participation
                 </h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start">
-                    <span className="h-5 w-5 rounded-full bg-gradient-to-br from-green-600 to-emerald-600 flex items-center justify-center text-xs text-white font-bold mr-2 mt-0.5">
+                    <span className="h-5 w-5 rounded-full bg-amber-600 flex items-center justify-center text-xs text-white font-bold mr-2 mt-0.5">
                       •
                     </span>
                     <span>
-                      <strong>Eligibility:</strong> Open to high school students
-                      from African countries
+                      <strong>Eligibility:</strong> High school students from
+                      African countries
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="h-5 w-5 rounded-full bg-gradient-to-br from-green-600 to-emerald-600 flex items-center justify-center text-xs text-white font-bold mr-2 mt-0.5">
+                    <span className="h-5 w-5 rounded-full bg-amber-600 flex items-center justify-center text-xs text-white font-bold mr-2 mt-0.5">
                       •
                     </span>
                     <span>
@@ -396,7 +363,7 @@ export default function Home() {
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="h-5 w-5 rounded-full bg-gradient-to-br from-green-600 to-emerald-600 flex items-center justify-center text-xs text-white font-bold mr-2 mt-0.5">
+                    <span className="h-5 w-5 rounded-full bg-amber-600 flex items-center justify-center text-xs text-white font-bold mr-2 mt-0.5">
                       •
                     </span>
                     <span>
@@ -417,7 +384,7 @@ export default function Home() {
             >
               <Link
                 href="/important-dates"
-                className="text-primary hover:text-primary/80 font-medium flex items-center transition-colors bg-white py-2 px-4 rounded-full shadow-sm border border-blue-100"
+                className="text-amber-800 hover:text-amber-900 font-medium flex items-center transition-colors bg-white py-2 px-4 rounded-full shadow-sm border border-amber-100"
               >
                 View all important dates
                 <ChevronRight className="h-4 w-4 ml-1" />
@@ -427,16 +394,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section with Enhanced Gradient */}
-      <section className="py-16 md:py-20 bg-gradient-to-br from-amber-700 via-orange-600 to-green-700 text-white relative overflow-hidden">
-        <div className="absolute inset-0">
-          {/* Decorative gradient overlays */}
-          <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-white/10 to-transparent"></div>
-          <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/10 to-transparent"></div>
-          <div className="absolute -top-24 -right-24 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl"></div>
-        </div>
-
+      {/* CTA Section */}
+      <section className="py-16 md:py-20 bg-amber-700 text-white relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             className="text-center max-w-3xl mx-auto"
@@ -445,13 +404,13 @@ export default function Home() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
           >
-            <Typography variant="h2" className="mb-6">
-              Ready to Participate?
+            <Typography variant="h2" className="mb-6 text-white">
+              PAIO 2025 Has Concluded
             </Typography>
-            <Typography variant="lead" className="mb-8 text-blue-100">
-              Join the Pan African Informatics Olympiad and be part of this
-              educational event that celebrates programming excellence across
-              Africa.
+            <Typography variant="lead" className="mb-8 text-amber-100">
+              Thank you to every contestant, leader, and supporter who made the
+              first Pan African Informatics Olympiad a success. Registration and
+              calls for participation are closed.
             </Typography>
 
             <motion.div
@@ -460,13 +419,11 @@ export default function Home() {
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
               <Link
-                href="https://docs.google.com/forms/d/e/1FAIpQLSe6S7qJlBiPr_HlunCuNPiXoGJsYfaV8oOkEhoFouxFTJ_arg/viewform"
-                className="inline-flex items-center bg-gradient-to-r from-white/95 to-amber-50/95 text-green-700 font-medium px-8 py-3 rounded-lg hover:from-white hover:to-amber-100 transition-all shadow-lg"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/results"
+                className="inline-flex items-center bg-white/95 text-amber-700 font-medium px-8 py-3 rounded-lg hover:bg-amber-50 transition-all shadow-lg"
               >
-                Register Your Team
-                <ExternalLink className="h-4 w-4 ml-2" />
+                Explore the Results
+                <ChevronRight className="h-4 w-4 ml-2" />
               </Link>
             </motion.div>
           </motion.div>

@@ -22,7 +22,6 @@ const navItems = [
   { path: CONFIG.NAVIGATION.COMMITTEE, label: "Committee", priority: "high" },
   { path: CONFIG.NAVIGATION.SPONSORS, label: "Sponsors", priority: "high" },
   { path: CONFIG.NAVIGATION.RESOURCES, label: "Resources", priority: "high" },
-  { path: CONFIG.NAVIGATION.REGISTER, label: "Register", external: true, priority: "high"},
   { path: CONFIG.NAVIGATION.FAQS, label: "FAQs", priority: "low" },
 ];
 
@@ -93,8 +92,8 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
       className={`w-full sticky top-0 z-50 transition-all duration-300 border-b ${
         scrolled
-          ? "bg-gradient-to-r from-white/95 to-amber-50/95 backdrop-blur-md shadow-sm"
-          : "bg-gradient-to-r from-white to-amber-50/40"
+          ? "bg-white/95 backdrop-blur-md shadow-sm"
+          : "bg-white"
       }`}
     >
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
@@ -112,7 +111,7 @@ const Navbar = () => {
               height={40}
               className="w-8 h-8 md:w-10 md:h-10"
             />
-            <span className="text-xl md:text-2xl font-bold bg-gradient-to-br from-amber-700 via-orange-600 to-green-600 bg-clip-text text-transparent ml-2">
+            <span className="text-xl md:text-2xl font-bold text-amber-800 ml-2">
               PAIO
             </span>
             <span className="hidden lg:inline-block ml-2 text-amber-800 font-medium">
@@ -134,7 +133,7 @@ const Navbar = () => {
                         <motion.div whileHover={{ scale: 1.05 }}>
                           <Link
                             href={item.path}
-                            className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-gradient-to-r hover:from-amber-500/5 hover:to-green-500/10`}
+                            className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-amber-50`}
                             target="_blank"
                             rel="noopener noreferrer"
                           >
@@ -145,7 +144,7 @@ const Navbar = () => {
                         <motion.div whileHover={{ scale: 1.05 }}>
                           <Link
                             href={item.path}
-                            className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-gradient-to-r hover:from-amber-500/5 hover:to-green-500/10`}
+                            className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-amber-50`}
                           >
                             {item.label}
                           </Link>
@@ -163,7 +162,7 @@ const Navbar = () => {
                         <motion.div whileHover={{ scale: 1.05 }}>
                           <Link
                             href={item.path}
-                            className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-gradient-to-r hover:from-amber-500/5 hover:to-green-500/10`}
+                            className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-amber-50`}
                             target="_blank"
                             rel="noopener noreferrer"
                           >
@@ -174,7 +173,7 @@ const Navbar = () => {
                         <motion.div whileHover={{ scale: 1.05 }}>
                           <Link
                             href={item.path}
-                            className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-gradient-to-r hover:from-amber-500/5 hover:to-green-500/10`}
+                            className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-amber-50`}
                           >
                             {item.label}
                           </Link>
@@ -212,7 +211,7 @@ const Navbar = () => {
                     <Link
                       key={item.path}
                       href={item.path}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-amber-500/5 hover:to-green-500/10 hover:text-amber-700 transition-all"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-amber-50 hover:text-amber-700 transition-all"
                       onClick={() => setOthersDropdownOpen(false)}
                       target={item.external ? "_blank" : undefined}
                       rel={item.external ? "noopener noreferrer" : undefined}
@@ -228,7 +227,7 @@ const Navbar = () => {
                   <Link
                     key={item.path}
                     href={item.path}
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-amber-500/5 hover:to-green-500/10 hover:text-amber-700 transition-all"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-amber-50 hover:text-amber-700 transition-all"
                     onClick={() => setOthersDropdownOpen(false)}
                   >
                     {item.label}
@@ -261,7 +260,7 @@ const Navbar = () => {
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.3 }}
-          className="md:hidden bg-gradient-to-b from-white to-amber-50/50 border-t border-gray-100 shadow-sm"
+          className="md:hidden bg-white border-t border-gray-100 shadow-sm"
         >
           <div className="container mx-auto py-3 px-4">
             <ul className="space-y-3">

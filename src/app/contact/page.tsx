@@ -22,23 +22,8 @@ export default function Contact() {
 
   return (
     <div className="overflow-hidden">
-      {/* Page Header with Gradient */}
-      <section className="relative py-16 bg-gradient-to-br from-amber-50 via-orange-50 to-green-100">
-        <div className="absolute inset-0 overflow-hidden">
-          {/* Decorative gradients */}
-          <div className="absolute -top-24 -left-24 w-72 h-72 bg-amber-300/20 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-green-300/20 rounded-full blur-3xl"></div>
-
-          <svg
-            className="absolute bottom-0 left-0 right-0 transform translate-y-1/2 opacity-10"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-            style={{ height: "60px" }}
-          >
-            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
-          </svg>
-        </div>
+      {/* Page Header */}
+      <section className="relative py-16 bg-amber-50">
 
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -58,7 +43,7 @@ export default function Contact() {
             </motion.div>
 
             <motion.h1
-              className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-700 via-orange-600 to-green-600 text-transparent bg-clip-text"
+              className="text-4xl md:text-5xl font-bold mb-4 text-amber-800"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.7 }}
@@ -72,7 +57,8 @@ export default function Contact() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.7 }}
             >
-              Have questions about PAIO 2025? Our team is here to help.
+              Have questions about PAIO 2025? Our team is still here to help.
+              Registration is closed.
             </motion.p>
           </motion.div>
         </div>
@@ -90,12 +76,12 @@ export default function Contact() {
             {/* Contact Form Card */}
             <motion.div
               variants={fadeInUp}
-              className="bg-gradient-to-br from-white to-amber-50 p-8 rounded-xl shadow-sm border border-amber-100"
+              className="bg-white p-8 rounded-xl shadow-sm border border-amber-100"
             >
               <div className="mb-6 inline-flex items-center justify-center bg-amber-100 p-3 rounded-full text-amber-600">
                 <Mail className="h-6 w-6" />
               </div>
-              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-amber-700 to-orange-600 text-transparent bg-clip-text">
+              <h3 className="text-2xl font-bold mb-4 text-amber-800">
                 Email Us
               </h3>
 
@@ -120,7 +106,7 @@ export default function Contact() {
 
                 <div>
                   <h4 className="text-lg font-medium mb-2">
-                    Registration Support
+                    Participant Support
                   </h4>
                   <motion.div
                     whileHover={{ scale: 1.01 }}
@@ -141,12 +127,12 @@ export default function Contact() {
             {/* Contact Details Card */}
             <motion.div
               variants={fadeInUp}
-              className="bg-gradient-to-br from-white to-green-50 p-8 rounded-xl shadow-sm border border-green-100"
+              className="bg-white p-8 rounded-xl shadow-sm border border-amber-100"
             >
-              <div className="mb-6 inline-flex items-center justify-center bg-green-100 p-3 rounded-full text-green-600">
+              <div className="mb-6 inline-flex items-center justify-center bg-amber-100 p-3 rounded-full text-amber-600">
                 <PhoneCall className="h-6 w-6" />
               </div>
-              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-green-700 to-emerald-600 text-transparent bg-clip-text">
+              <h3 className="text-2xl font-bold mb-4 text-amber-800">
                 Key Contacts
               </h3>
 
@@ -160,7 +146,7 @@ export default function Contact() {
                   >
                     <Link
                       href="mailto:joel@pafricanoi.com"
-                      className="text-green-600 hover:text-green-800 flex items-center"
+                      className="text-amber-600 hover:text-amber-800 flex items-center"
                     >
                       <Mail className="h-4 w-4 mr-2" />
                       joel@pafricanoi.com
@@ -179,7 +165,7 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-amber-700 via-orange-600 to-green-600 text-transparent bg-clip-text">
+            <h3 className="text-2xl font-bold mb-6 text-amber-800">
               Follow Us
             </h3>
             <div className="flex items-center justify-center space-x-6"></div>
