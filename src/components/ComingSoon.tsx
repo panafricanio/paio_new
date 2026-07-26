@@ -12,7 +12,7 @@ interface ComingSoonProps {
 
 const ComingSoon: React.FC<ComingSoonProps> = ({ title, description }) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-green-50 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-amber-50 flex items-center justify-center px-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -32,7 +32,7 @@ const ComingSoon: React.FC<ComingSoonProps> = ({ title, description }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
-          className="text-4xl md:text-5xl font-bold bg-gradient-to-br from-amber-700 via-orange-600 to-green-600 bg-clip-text text-transparent mb-4"
+          className="text-4xl md:text-5xl font-bold text-amber-800 mb-4"
         >
           {title}
         </motion.h1>
@@ -64,7 +64,7 @@ const ComingSoon: React.FC<ComingSoonProps> = ({ title, description }) => {
         >
           <Link
             href="/"
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white font-medium rounded-lg transition-all shadow-sm"
+            className="inline-flex items-center px-6 py-3 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-lg transition-all shadow-sm"
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Home

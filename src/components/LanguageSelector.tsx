@@ -59,19 +59,19 @@ export default function LanguageSelector() {
     >
       <div className="relative" ref={dropdownRef}>
         <motion.button
-          className="flex items-center space-x-2 bg-gradient-to-r from-white to-blue-50 border border-blue-200/50 px-4 py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all"
+          className="flex items-center space-x-2 bg-white border border-amber-200/50 px-4 py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all"
           onClick={toggleDropdown}
           aria-label={`Language selected: ${selectedLanguage.name}`}
           whileHover={{
             scale: 1.02,
-            boxShadow: "0 10px 25px -5px rgba(59, 130, 246, 0.2)",
+            boxShadow: "0 10px 25px -5px rgba(217, 119, 6, 0.2)",
           }}
           whileTap={{ scale: 0.98 }}
         >
-          <Globe className="h-4 w-4 text-blue-600 mr-2" />
+          <Globe className="h-4 w-4 text-amber-600 mr-2" />
           <span className="flex items-center">
             <span className="mr-1">{selectedLanguage.flag}</span>
-            <span className="font-medium text-sm bg-gradient-to-r from-blue-700 to-indigo-600 bg-clip-text text-transparent">
+            <span className="font-medium text-sm text-amber-800">
               {selectedLanguage.name}
             </span>
           </span>
@@ -85,7 +85,7 @@ export default function LanguageSelector() {
               viewBox="0 0 12 12"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="ml-1 text-blue-500"
+              className="ml-1 text-amber-500"
             >
               <path
                 d="M2.5 4.5L6 8L9.5 4.5"
@@ -101,7 +101,7 @@ export default function LanguageSelector() {
         <AnimatePresence>
           {isOpen && (
             <motion.ul
-              className="absolute bottom-full mb-2 w-[200px] right-0 bg-gradient-to-b from-white to-blue-50/90 border border-blue-200/50 rounded-lg shadow-lg overflow-hidden"
+              className="absolute bottom-full mb-2 w-[200px] right-0 bg-white border border-amber-200/50 rounded-lg shadow-lg overflow-hidden"
               role="listbox"
               initial={{ opacity: 0, y: 10, height: 0 }}
               animate={{ opacity: 1, y: 0, height: "auto" }}
@@ -111,7 +111,7 @@ export default function LanguageSelector() {
               {languages.map((language, index) => (
                 <motion.li
                   key={language.code}
-                  className={`px-4 py-3 cursor-pointer hover:bg-blue-50/80 flex items-center justify-between`}
+                  className={`px-4 py-3 cursor-pointer hover:bg-amber-50/80 flex items-center justify-between`}
                   onClick={() => handleLanguageSelect(language)}
                   role="option"
                   aria-selected={selectedLanguage.code === language.code}
@@ -119,9 +119,7 @@ export default function LanguageSelector() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.05 }}
                   whileHover={{
-                    backgroundColor: "rgba(59, 130, 246, 0.1)",
-                    backgroundImage:
-                      "linear-gradient(to right, rgba(59, 130, 246, 0.1), rgba(79, 70, 229, 0.1))",
+                    backgroundColor: "rgba(255, 251, 235, 1)",
                   }}
                 >
                   <span className="flex items-center">
@@ -140,7 +138,7 @@ export default function LanguageSelector() {
                         damping: 17,
                       }}
                     >
-                      <Check size={16} className="text-blue-600" />
+                      <Check size={16} className="text-amber-600" />
                     </motion.div>
                   )}
                 </motion.li>

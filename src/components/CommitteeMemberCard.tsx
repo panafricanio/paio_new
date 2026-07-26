@@ -58,7 +58,7 @@ const CommitteeMemberCard: React.FC<CommitteeMemberCardProps> = ({
             }}
           />
         ) : (
-          <div className="w-32 h-32 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center text-gray-500 text-xs">
+          <div className="w-32 h-32 bg-gray-100 flex items-center justify-center text-gray-500 text-xs">
             <div className="text-center">
               <div className="font-semibold">
                 {member.name

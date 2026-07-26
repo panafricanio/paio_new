@@ -47,12 +47,12 @@ export default function ResultsPage() {
 
     // Special awards override rank-based coloring (only for official contestants)
     if (contestant.specialAward === 'DAY 1 HM') {
-      return 'bg-blue-100'; // Blue for Day 1 honorable mention (rank 45)
+      return 'bg-amber-100'; // Blue for Day 1 honorable mention (rank 45)
     }
 
     // Use actual rank numbers for highlighting ranges (as per original request)
     if (contestant.rank >= 1 && contestant.rank <= 9) {
-      return 'bg-yellow-200'; // Gold highlighting for ranks 1-9
+      return 'bg-amber-200'; // Gold highlighting for ranks 1-9
     }
 
     if (contestant.rank >= 10 && contestant.rank <= 21) {
@@ -62,7 +62,7 @@ export default function ResultsPage() {
       return 'bg-amber-600'; // Bronze highlighting for ranks 22-36
     }
     if (contestant.rank >= 37 && contestant.rank <= 41) {
-      return 'bg-green-100'; // Green highlighting for Day 2 HM range (37-41)
+      return 'bg-amber-100'; // Green highlighting for Day 2 HM range (37-41)
     }
 
     // Default background for other official contestants
@@ -75,28 +75,28 @@ export default function ResultsPage() {
     if (contestant.rank >= 1 && contestant.rank <= 9) {
       return {
         medal: 'GOLD',
-        class: 'bg-gradient-to-r from-yellow-400 to-yellow-600 text-white border-yellow-500'
+        class: 'bg-amber-500 text-white border-amber-500'
       };
     } else if (contestant.rank >= 10 && contestant.rank <= 21) {
       return {
         medal: 'SILVER',
-        class: 'bg-gradient-to-r from-gray-300 to-gray-500 text-white border-gray-400'
+        class: 'bg-gray-400 text-white border-gray-400'
       };
     } else if (contestant.rank >= 22 && contestant.rank <= 36) {
       return {
         medal: 'BRONZE',
-        class: 'bg-gradient-to-r from-amber-600 to-orange-600 text-white border-amber-600'
+        class: 'bg-amber-600 text-white border-amber-600'
       };
     } else if (contestant.rank >= 37 && contestant.rank <= 41) {
       return {
         medal: 'HM',
-        class: 'bg-gradient-to-r from-green-400 to-green-600 text-white border-green-500'
+        class: 'bg-gray-600 text-white border-gray-600'
       };
     } else if (contestant.rank === 45) {
       // Day 1 HM - special case from highlighting logic
       return {
         medal: 'HM',
-        class: 'bg-gradient-to-r from-green-400 to-green-600 text-white border-green-500'
+        class: 'bg-gray-600 text-white border-gray-600'
       };
     }
 
@@ -139,9 +139,9 @@ export default function ResultsPage() {
 
             {/* Additional Stats */}
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-xl mx-auto text-center mt-4">
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-3">
-                <div className="text-lg font-bold text-purple-800">{guestContestants}</div>
-                <div className="text-xs text-purple-600">Guest Contestants</div>
+              <div className="bg-amber-50 border border-amber-200 rounded-lg p-3">
+                <div className="text-lg font-bold text-amber-800">{guestContestants}</div>
+                <div className="text-xs text-amber-600">Guest Contestants</div>
               </div>
               <div className="bg-gray-50 border border-gray-200 rounded-lg p-3">
                 <div className="text-lg font-bold text-gray-700">{unofficialContestants}</div>
@@ -200,7 +200,7 @@ export default function ResultsPage() {
                   <th className="px-2 py-2 text-center text-sm font-semibold border-r border-amber-400">Exh</th>
                   <th className="px-2 py-2 text-center text-sm font-semibold border-r border-amber-400">Towers</th>
                   <th className="px-2 py-2 text-center text-sm font-semibold border-r border-amber-400 bg-amber-700">Day 2</th>
-                  <th className="px-2 py-2 text-center text-sm font-semibold border-r border-amber-400 bg-green-600">Total</th>
+                  <th className="px-2 py-2 text-center text-sm font-semibold border-r border-amber-400 bg-amber-600">Total</th>
                   <th className="px-2 py-2 text-center text-sm font-semibold">Awards</th>
                 </tr>
               </thead>
@@ -212,12 +212,12 @@ export default function ResultsPage() {
                   >
                     <td className="px-2 py-2 border-r border-amber-100">
                       <span className={`inline-flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold ${contestant.isUnofficial ? 'bg-gray-400 text-white' :
-                          contestant.country === 'Pakistan (Guest)' ? 'bg-purple-300 text-purple-900' :
-                            contestant.specialAward === 'DAY 1 HM' ? 'bg-blue-300 text-blue-900' :
-                              contestant.rank >= 1 && contestant.rank <= 9 ? 'bg-yellow-300 text-yellow-900' :
+                          contestant.country === 'Pakistan (Guest)' ? 'bg-amber-300 text-amber-900' :
+                            contestant.specialAward === 'DAY 1 HM' ? 'bg-amber-300 text-amber-900' :
+                              contestant.rank >= 1 && contestant.rank <= 9 ? 'bg-amber-300 text-amber-900' :
                                 contestant.rank >= 10 && contestant.rank <= 21 ? 'bg-gray-300 text-gray-800' :
                                   contestant.rank >= 22 && contestant.rank <= 36 ? 'bg-amber-300 text-amber-900' :
-                                    contestant.rank >= 37 && contestant.rank <= 41 ? 'bg-green-300 text-green-900' :
+                                    contestant.rank >= 37 && contestant.rank <= 41 ? 'bg-amber-300 text-amber-900' :
                                       'bg-gray-200 text-gray-700'
                         }`}>
                         {contestant.rank}
@@ -261,7 +261,7 @@ export default function ResultsPage() {
                     <td className="px-2 py-2 text-center border-r border-amber-100 bg-amber-50">
                       <span className="text-sm font-bold text-gray-900">{contestant.day2Total}</span>
                     </td>
-                    <td className="px-2 py-2 text-center border-r border-amber-100 bg-green-50">
+                    <td className="px-2 py-2 text-center border-r border-amber-100 bg-amber-50">
                       <span className="text-sm font-bold text-gray-900">{contestant.globalTotal}</span>
                     </td>
                     <td className="px-2 py-2 text-center">
@@ -275,9 +275,9 @@ export default function ResultsPage() {
                           ) : null;
                         })()}
                         {contestant.specialAward && (
-                          <div className={`text-xs font-medium px-2 py-1 rounded-full ${contestant.specialAward === 'DAY 2 HM' ? 'bg-green-200 text-green-900 border border-green-300' :
-                              contestant.specialAward === 'DAY 1 HM' ? 'bg-green-200 text-green-900 border border-green-300' :
-                                'bg-purple-200 text-purple-900 border border-purple-300'
+                          <div className={`text-xs font-medium px-2 py-1 rounded-full ${contestant.specialAward === 'DAY 2 HM' ? 'bg-amber-200 text-amber-900 border border-amber-300' :
+                              contestant.specialAward === 'DAY 1 HM' ? 'bg-amber-200 text-amber-900 border border-amber-300' :
+                                'bg-amber-200 text-amber-900 border border-amber-300'
                             }`}>
                             {contestant.specialAward}
                           </div>
@@ -298,7 +298,7 @@ export default function ResultsPage() {
             <h3 className="text-2xl font-bold text-gray-800 mb-6">Official Competition Summary</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-600 mb-2">5</div>
+                <div className="text-3xl font-bold text-amber-600 mb-2">5</div>
                 <div className="text-sm text-gray-600">Gold Medals</div>
               </div>
               <div className="text-center">
@@ -310,7 +310,7 @@ export default function ResultsPage() {
                 <div className="text-sm text-gray-600">Bronze Medals</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">5</div>
+                <div className="text-3xl font-bold text-amber-600 mb-2">5</div>
                 <div className="text-sm text-gray-600">Honorable Mentions</div>
               </div>
             </div>
@@ -318,24 +318,24 @@ export default function ResultsPage() {
 
           {/* Guest Contestants Summary */}
           {guestContestants > 0 && (
-            <div className="bg-purple-50 rounded-lg border border-purple-200 p-8 text-center">
-              <h3 className="text-2xl font-bold text-purple-800 mb-6">Guest Contestants Summary</h3>
+            <div className="bg-amber-50 rounded-lg border border-amber-200 p-8 text-center">
+              <h3 className="text-2xl font-bold text-amber-800 mb-6">Guest Contestants Summary</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-yellow-600 mb-2">4</div>
-                  <div className="text-sm text-purple-600">Gold Medals</div>
+                  <div className="text-3xl font-bold text-amber-600 mb-2">4</div>
+                  <div className="text-sm text-amber-600">Gold Medals</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-gray-500 mb-2">2</div>
-                  <div className="text-sm text-purple-600">Silver Medals</div>
+                  <div className="text-sm text-amber-600">Silver Medals</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-amber-600 mb-2">0</div>
-                  <div className="text-sm text-purple-600">Bronze Medals</div>
+                  <div className="text-sm text-amber-600">Bronze Medals</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">0</div>
-                  <div className="text-sm text-purple-600">Honorable Mentions</div>
+                  <div className="text-3xl font-bold text-amber-600 mb-2">0</div>
+                  <div className="text-sm text-amber-600">Honorable Mentions</div>
                 </div>
               </div>
             </div>
@@ -347,7 +347,7 @@ export default function ResultsPage() {
               <h3 className="text-2xl font-bold text-gray-700 mb-6">Unofficial Contestants Summary</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-yellow-600 mb-2">0</div>
+                  <div className="text-3xl font-bold text-amber-600 mb-2">0</div>
                   <div className="text-sm text-gray-600">Gold Medals</div>
                 </div>
                 <div className="text-center">
@@ -359,7 +359,7 @@ export default function ResultsPage() {
                   <div className="text-sm text-gray-600">Bronze Medals</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">1</div>
+                  <div className="text-3xl font-bold text-amber-600 mb-2">1</div>
                   <div className="text-sm text-gray-600">Honorable Mentions</div>
                 </div>
               </div>

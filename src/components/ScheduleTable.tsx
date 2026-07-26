@@ -13,7 +13,7 @@ export default function ScheduleTable({
   return (
     <div className="overflow-x-auto bg-white p-4 md:p-6 rounded-xl border border-amber-100 shadow-sm">
       <table className="min-w-full divide-y divide-gray-200">
-        <thead className="bg-gradient-to-r from-amber-50 to-orange-50">
+        <thead className="bg-amber-50">
           <tr>
             {headers.map((header, index) => (
               <th
@@ -31,7 +31,7 @@ export default function ScheduleTable({
               <td className="py-4 px-6 text-md font-medium text-gray-900">
                 {event.time}
               </td>
-              <td className="py-4 px-6 text-md text-primary font-medium">
+              <td className="py-4 px-6 text-md text-amber-800 font-medium">
                 {event.participant}
               </td>
               <td className="py-4 px-6 text-md text-gray-700">

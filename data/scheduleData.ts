@@ -2,8 +2,8 @@ import { ScheduleSection } from "@/types/schedule";
 
 export const practiceContestInfo = {
   title: "Practice Contest",
-  description: "The practice contest will be held asynchronously. Countries may book slots from 7th September till 12th September for the practice contest. We will put out a form shortly.",
-  briefingInfo: "To accommodate different schedules, we will hold two different briefing slots. One on 7th September and another on 10th September. Participants and leaders will only need to attend one of the two briefing slots."
+  description: "The practice contest was held asynchronously. Countries booked slots from 7th September till 12th September for the practice contest.",
+  briefingInfo: "To accommodate different schedules, two briefing slots were held: one on 7th September and another on 10th September. Participants and leaders attended one of the two briefing slots."
 };
 
 export const scheduleData: ScheduleSection[] = [
@@ -103,6 +103,6 @@ export const scheduleData: ScheduleSection[] = [
         teamLeader: ""
       }
     ],
-    notes: ["Medals will be handed out at IOI or the next major event. Electronic certificates will be given out at the prize presentation."]
+    notes: ["Medals were to be handed out at IOI or the next major event. Electronic certificates were given out at the prize presentation."]
   }
 ];
