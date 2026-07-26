@@ -13,38 +13,39 @@ export default function FAQs() {
 
   const faqs = [
     {
-      question: "Who can participate in PAIO?",
+      question: "Who could participate in PAIO 2025?",
       answer:
-        "The Pan African Informatics Olympiad (PAIO) is open to high school students from African countries.",
+        "The Pan African Informatics Olympiad (PAIO) 2025 was open to high school students from African countries.",
     },
     {
-      question: "How are teams composed?",
+      question: "How were teams composed?",
       answer:
-        "Each participating country team consists of up to six contestants, a team leader, a deputy team leader and observers.",
+        "Each participating country team consisted of up to six contestants, a team leader, a deputy team leader, and observers.",
     },
     {
-      question: "What is the format of the competition?",
+      question: "What was the format of the competition?",
       answer:
-        "The competition usually spans two days and includes five hours of problems that test various areas of computer science such as algorithms, data structures, and programming.",
+        "The competition spanned two contest days and included five hours of problems that tested algorithms, data structures, and programming.",
     },
     {
-      question: "When and where is PAIO 2025 taking place?",
-      answer: "PAIO 2025 will take place on 13th and 14th September September online.",
+      question: "When and where did PAIO 2025 take place?",
+      answer:
+        "PAIO 2025 took place online on 13th and 14th September 2025.",
     },
     {
-      question: "How do countries register for PAIO?",
+      question: "Is registration still open?",
       answer:
-        "Countries register through their national informatics olympiad organization or designated educational body. National coordinators will then fill the registration form on this website.",
+        "No. Registration for PAIO 2025 is closed. Countries registered through their national informatics olympiad organization or designated educational body before the deadline.",
     },
     {
-      question: "What programming languages are allowed?",
+      question: "What programming languages were allowed?",
       answer:
-        "Typically, participants may use C++, Java, and Python. The specific allowed languages for PAIO 2025 will be confirmed in the official regulations document.",
+        "Participants could use C++, Java, and Python, as confirmed in the official regulations.",
     },
     {
-      question: "Is there a registration fee?",
+      question: "Was there a registration fee?",
       answer:
-        "There is currently no registration fee this year thanks to our generous sponsor, African Olympiad Academy. There may be a fee in subsequent years though.",
+        "There was no registration fee for PAIO 2025 thanks to our sponsor, African Olympiad Academy. Future editions may introduce a fee.",
     },
   ];
 
@@ -64,8 +65,8 @@ export default function FAQs() {
 
   return (
     <div className="overflow-hidden">
-      {/* Page Header with Gradient */}
-      <section className="relative py-16 bg-gradient-to-br from-amber-50 via-orange-50 to-green-100">
+      {/* Page Header */}
+      <section className="relative py-16 bg-amber-50">
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             className="text-center"
@@ -84,7 +85,7 @@ export default function FAQs() {
             </motion.div>
 
             <motion.h1
-              className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-700 to-green-600 text-transparent bg-clip-text"
+              className="text-4xl md:text-5xl font-bold mb-4 text-amber-800"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.7 }}
@@ -118,13 +119,13 @@ export default function FAQs() {
               <motion.div
                 key={index}
                 variants={fadeInUp}
-                className="bg-gradient-to-br from-white to-amber-50 rounded-xl shadow-sm border border-amber-100 overflow-hidden"
+                className="bg-white rounded-xl shadow-sm border border-amber-100 overflow-hidden"
               >
                 <button
                   onClick={() => toggleFAQ(index)}
                   className="w-full p-5 flex items-center justify-between text-left focus:outline-none transition-all"
                 >
-                  <span className="text-xl font-semibold bg-gradient-to-r from-amber-700 to-green-600 text-transparent bg-clip-text">
+                  <span className="text-xl font-semibold text-amber-800">
                     {faq.question}
                   </span>
                   <div className="flex-shrink-0">
@@ -156,13 +157,13 @@ export default function FAQs() {
 
           {/* Contact section */}
           <motion.div
-            className="mt-16 p-8 bg-gradient-to-br from-white to-green-50 rounded-xl shadow-sm border border-green-100 text-center"
+            className="mt-16 p-8 bg-white rounded-xl shadow-sm border border-amber-100 text-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-green-700 to-emerald-600 text-transparent bg-clip-text">
+            <h3 className="text-2xl font-bold mb-4 text-amber-800">
               Still Have Questions?
             </h3>
             <p className="text-lg mb-6 text-gray-700">
@@ -173,7 +174,7 @@ export default function FAQs() {
               href="mailto:joel@pafricanoi.com"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white font-medium rounded-lg transition-all shadow-sm"
+              className="inline-flex items-center px-6 py-3 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-lg transition-all shadow-sm"
             >
               Contact Us
               <svg
